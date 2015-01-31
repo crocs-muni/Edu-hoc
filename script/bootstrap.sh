@@ -6,6 +6,7 @@ CWD=$(readlink -f "$SCRIPTS_DIR/..")
 SRC="$CWD/src"
 TEST="$CWD/test"
 ARDMK="$CWD/Arduino-Makefile"
+EDU_HOC_HOME="SCRIPTS_DIR/.."
 
 AVR_GCC="/usr/local/share/avr-gcc"
 ARDUINO="/usr/local/share/arduino"

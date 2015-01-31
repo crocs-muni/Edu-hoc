@@ -5,7 +5,7 @@
 
 ### PROJECT_DIR
 ### This is the path to project
-PROJECT_DIR       = /home/LukeMcNemee/Dokumenty/studijni_materialy/Edu-hoc
+PROJECT_DIR       = $(EDU_HOC_HOME)
 
 ### AVR_GCC_VERSION
 ### Check if the version is equal or higher than 4.9
@@ -40,19 +40,19 @@ AVR_TOOLS_DIR     = /usr
 AVRDDUDE          = /usr/bin/avrdude
 
 ### CFLAGS_STD
-#CFLAGS_STD        = -std=gnu11
+CFLAGS_STD        = -std=gnu11
 
 ### CXXFLAGS_STD
-#CXXFLAGS_STD      = -std=gnu++11
+CXXFLAGS_STD      = -std=gnu++11
 
 ### CPPFLAGS
 ### Flags you might want to set for debugging purpose. Comment to stop.
-#CXXFLAGS         = -pedantic -Wall -Wextra
+CXXFLAGS         = -pedantic -Wall -Wextra
 
 ### If avr-gcc -v is higher than 4.9, activate coloring of the output
-#ifeq "$(AVR_GCC_VERSION)" "1"
-#    CXXFLAGS += -fdiagnostics-color
-#endif
+ifeq "$(AVR_GCC_VERSION)" "1"
+    CXXFLAGS += -fdiagnostics-color
+endif
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
@@ -67,7 +67,4 @@ OBJDIR            = $(PROJECT_DIR)/bin/$(BOARD_TAG)/$(CURRENT_DIR)
 
 ### path to Arduino.mk, inside the ARDMK_DIR, don't touch.
 include $(ARDMK_DIR)/Arduino.mk
-
-### flags with node ID, group ID and parent ID 
-#CPPFLAGS     = -DID=10 -DGROUP=5 -DPARENTID=0 
 
