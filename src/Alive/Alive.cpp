@@ -1,11 +1,15 @@
 #include <Arduino.h>
-#include <RF12.h>
-#include <RadioUtils.h>
+#include "RF12.h"
+#include "RadioUtils.h"
+
+#define PARENTID 0
+#define ID 10
+#define GROUP 5
 
 int counter = 0; //
 int msgCounter = 0; 
 
-radioUtils ru = radioUtils();
+RadioUtils ru = RadioUtils();
 
 void setup () {
   Serial.begin(57600);
@@ -17,6 +21,7 @@ void setup () {
 
 void loop () {  
   //if incoming message received
+  
   if(rf12_recvDone()){
     if(RF12_WANTS_ACK){
       rf12_sendStart(RF12_ACK_REPLY,0,0);
@@ -45,4 +50,5 @@ void loop () {
     rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
     counter = 0;
   }
+  
 }
