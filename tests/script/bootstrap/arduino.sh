@@ -17,7 +17,8 @@ if [ -z "$ARDUINO_DIR" ] || ! test -e $ARDUINO_DIR || [ $OS == "cygwin" ]; then
         EXTRACT_COMMAND="unzip -q"
     else
         ARDUINO_FILE="$ARDUINO_BASENAME-linux64".tgz
-        EXTRACT_COMMAND="tar -xzf"
+        EXTRACT_COMMAND="tar xvf"
+        echo "linux"
     fi
 
     ARDUINO_URL=http://downloads.arduino.cc/$ARDUINO_FILE
