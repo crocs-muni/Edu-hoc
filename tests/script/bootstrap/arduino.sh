@@ -7,7 +7,7 @@ echo "Installing dependencies for building for the Arduino"
 if [ -z "$ARDUINO_DIR" ] || ! test -e $ARDUINO_DIR || [ $OS == "cygwin" ]; then
 
     echo "Installing Arduino..."
-    $ARDUINO_URL = "http://arduino.cc/download.php?f=/arduino-1.0.6-linux64.tgz"
+    ARDUINO_URL="http://arduino.cc/download.php?f=/arduino-1.0.6-linux64.tgz"
     
     #ARDUINO_BASENAME="arduino-1.0.6"
     #if [ $OS == "cygwin" ]; then
@@ -22,7 +22,7 @@ if [ -z "$ARDUINO_DIR" ] || ! test -e $ARDUINO_DIR || [ $OS == "cygwin" ]; then
     #    echo "linux"
     #fi
     
-    $ARDUINO_FILE = "arduino-1.0.6-linux64.tgz"
+    ARDUINO_FILE="arduino-1.0.6-linux64.tgz"
     
     #ARDUINO_URL=http://downloads.arduino.cc/$ARDUINO_FILE
 
@@ -36,7 +36,7 @@ if [ -z "$ARDUINO_DIR" ] || ! test -e $ARDUINO_DIR || [ $OS == "cygwin" ]; then
     if ! test -d $ARDUINO_BASENAME
     then
         echo "Installing Arduino to local folder..."
-        //file $ARDUINO_FILE
+        
         ls -la
         tar xvf *.tgz
         echo "Arduino installed"
