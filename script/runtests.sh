@@ -2,6 +2,7 @@
 
 failures=()
 
+echo "${bldgreen} $SRC"
 cd "$SRC"
 for dir in *; do
 
