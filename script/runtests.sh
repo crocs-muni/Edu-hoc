@@ -2,8 +2,8 @@
 
 failures=()
 
-echo "${bldgreen} $SRC"
-cd "$SRC"
+#echo "${bldgreen} $SRC"
+cd src
 for dir in *; do
 
 	if [ -d "${dir}" ]; then
@@ -29,7 +29,7 @@ for dir in *; do
 
 done
 
-cd "$TEST"
+cd test
 for dir in *; do
 
 	if [ -d "${dir}" ]; then
