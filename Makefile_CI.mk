@@ -9,7 +9,7 @@ AVR_GCC_VERSION := $(shell expr `avr-gcc -dumpversion | cut -f1` \>= 4.9)
 
 ### ARDMK_DIR
 ### Path to the Arduino-Makefile directory.
-ARDMK_DIR = $(PROJECT_DIR)/Arduino-Makefile
+ARDMK_DIR = $(PROJECT_DIR)/Bare-Arduino-Project/Arduino-Makefile
 
 ### ARDUINO_DIR
 ### Path to the Arduino application and ressources directory.

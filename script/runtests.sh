@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 failures=()
+echo "DIRECTORY CONTENT:"
+ls -la
+echo "BUILDS"
 
-#echo "${bldgreen} $SRC"
 cd src
 for dir in *; do
 
@@ -13,7 +15,7 @@ for dir in *; do
 		echo $CWD
 		cd $dir
 
-		cp $CWD/Makefile-CI.mk Makefile
+		cp ../../Makefile-CI.mk Makefile
 
 		make clean
 		make PROJECT_DIR=$CWD ARDUINO_DIR=$ARDUINO AVR_TOOLS_DIR=$AVR_GCC
@@ -30,6 +32,9 @@ for dir in *; do
 done
 
 cd test
+
+echo "TESTS"
+
 for dir in *; do
 
 	if [ -d "${dir}" ]; then
@@ -38,7 +43,7 @@ for dir in *; do
 
 		cd $dir
 
-		cp $CWD/Makefile-CI.mk Makefile
+		cp ../../Makefile-CI.mk Makefile
 
 		make clean
 		make PROJECT_DIR=$CWD ARDUINO_DIR=$ARDUINO AVR_TOOLS_DIR=$AVR_GCC
