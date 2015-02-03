@@ -2,7 +2,7 @@
 
 failures=()
 echo "DIRECTORY CONTENT:"
-ls -la
+ls -Rla
 echo "BUILDS"
 
 cd src
