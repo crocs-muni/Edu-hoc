@@ -12,3 +12,4 @@ Project is currently using Arduino compatible hardware for physical realization 
 
 Project is developed at the [Centre for Research on Cryptography and Security, Masaryk University, Brno, Czech Republic](http://crcs.cz). It's licensed under MIT licence, see the file in the repository root. The project uses some third party code as documented in following list:
 * **Bare-Arduino-Project** developed by Ladislas de Toldi under MIT license, details to this project can be found in corresponding folder in repository root.  
+* **RF12 library** developed by JeeLabs under MIT licence, details for this library can be found here [JeeLabs RF12](http://jeelabs.net/projects/jeelib/wiki)
