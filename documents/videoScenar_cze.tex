@@ -1,0 +1,90 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage[czech]{babel}
+\usepackage{multicol}
+\usepackage{hyperref}
+\title{Video}
+\author{Lukáš Němec}
+
+
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textsc{\LARGE Scénář}\\[1cm]
+\textsc{\Large WSN}\\[0.6cm]
+
+
+\Large{Lukáš Němec}\\[1cm]
+
+\bigskip
+\bigskip
+
+\Large{\today}
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+\newpage
+
+
+\section{Arduino všeobecně}
+Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozřířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje napčíklad specializované desky, jako jsou námi používané JeeLink a JeeNode.
+
+Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé platformy využijeme pouze vývojové prostředí, zatímco hardware použijeme specializovaný pro naše potřeby, především už bude obsahovat rádiový modul. Začněme však od úplných základů práce s Arduinem. Více všeobecných informací je možné najít na oficiálním webu 
+\url{www.arduino.cc}.
+
+	\subsection{Arduino IDE}
+	Arduino IDE je velmi jednoduché prostředí pro vyvíjení programů, z praktického hlediska se jedná spíše o upravený textový editor s podporou pro Arduino. 
+	Výhodou je podpora pro většinu běžných operačních systémů, tedy je možné vyvíjet jak pod linuxem, tak windows či OS X. Může fungovat buď bez instalace, nicméně tato varianta je vhodná pouze pro samotné programovaní v případě, že pouze potřebujete programovat a komunikace s Arduinem samotným Vás nezajímá. Pokud Vás však například zajímá komunikace s některou z desek přes sériové rozhraní, vyplatí se prostředí nainstalovat.
+	
+	Prostředí můžete využít i pokud se rozhodnete programovat ve svém oblíbeném textovém editoru a v Arduino IDE pouze kompilovat, či používat jiné nástroje které poskytuje.
+		\paragraph{Instalace}
+			Instalace samotná není složitý proces, spíše naopak. Spousta linuxových distribucí Vám práci usnadní, jelikož Arduino IDE se nachází v repositářích a jediné, co je potřeba pohlídat, je verze, která by měla být ideálně nejnovější dostupná, ideálně verze 1.5 a starší. 
+			
+			Pokud potřebujete instalovat jiným způsobem, pak veškeré potřebné informace naleznete na oficiálních stránkách \url{http://arduino.cc/en/Main/Software}.  
+		\paragraph{Základní nástroje}
+		\paragraph{Kompilace a upload}
+		\paragraph{Serial monitor}
+
+	\subsection{Základy syntaxe}
+		\paragraph{Setup}
+		\paragraph{Loop}
+		\paragraph{Serial}
+			\subparagraph{Print}
+			\subparagraph{Read}
+		
+\section{WSN uzel, JeeLib}
+  
+	\subsection{JeeNode hardware}
+		\paragraph{Všeobecná specifikace}
+		\paragraph{Rádio}
+		\paragraph{Piny}
+	
+	\subsection{JeeLib}
+		\paragraph{Přidání do IDE}
+		\paragraph{Formát hlavičky}
+		\paragraph{Poslání zprávy}
+		\paragraph{Přijetí zprávy}
+		\paragraph{Síť ze dvou uzlů}
+	
+\section{WSN síť}
+	\subsection{Ukázkové aplikace}
+		\paragraph{Alive}
+		\paragraph{Sniffer}
+	 
+	\subsection{Síť}
+		\paragraph{Všeobecné parametry}
+		\paragraph{Fixní routování}
+	
+
+
+\end{document}
+
+
+
+
