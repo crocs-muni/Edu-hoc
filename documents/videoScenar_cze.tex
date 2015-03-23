@@ -33,7 +33,7 @@
 
 
 \section{Arduino všeobecně}
-Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozřířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje napčíklad specializované desky, jako jsou námi používané JeeLink a JeeNode.
+Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozšířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje například specializované desky, jako jsou námi používané JeeLink a JeeNode.
 
 Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé platformy využijeme pouze vývojové prostředí, zatímco hardware použijeme specializovaný pro naše potřeby, především už bude obsahovat rádiový modul. Začněme však od úplných základů práce s Arduinem. Více všeobecných informací je možné najít na oficiálním webu 
 \url{www.arduino.cc}.
@@ -47,10 +47,24 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 			Instalace samotná není složitý proces, spíše naopak. Spousta linuxových distribucí Vám práci usnadní, jelikož Arduino IDE se nachází v repositářích a jediné, co je potřeba pohlídat, je verze, která by měla být ideálně nejnovější dostupná, ideálně verze 1.5 a starší. 
 			
 			Pokud potřebujete instalovat jiným způsobem, pak veškeré potřebné informace naleznete na oficiálních stránkách \url{http://arduino.cc/en/Main/Software}.  
-		\paragraph{Základní nástroje}
-		\paragraph{Kompilace a upload}
-		\paragraph{Serial monitor}
-
+		\paragraph{Nástroje}
+		
+		\subparagraph{Verifikátor}
+			Z nástrojů, které prostředí nabízí je tím nejdůležitějším verifikátor, který slouží k ověření syntaxe napsaného kódu. Tuto možnost bohužel prostředí nenabízí průběžně, tedy je vhodné relativně pravidelně syntaxi kontrolovat.
+			
+		\subparagraph{Kompilátor }
+			Druhým podstatným nástrojem je kompilátor spojený s nahráváním na desku. Nejdříve je potřeba zvolit konkrétní model Arduina, případně model nejvíce podobný pro veškeré odvozené modely a klony.  Dále je třeba zkontrolovat nastavení portu, na který je konkrétní deska připojena. V případě, že je připojena pouze jedna většinou prostředí port vybere správně, nicméně kontrola je vhodná. Zároveň je možné mít připojeno více desek a poté je potřeba zvolit jednu konkrétní.
+		
+			V případě problémů s nalezením desky je vhodné restartovat celé prostředí, případně desku připojovat před spuštěním prostředí.
+			
+		\subparagraph{Serial monitor}
+			Serial monitor je posledním důležitým nástrojem, který je vhodné znát. Jeho funkcionalitu sice lze nahradit pomocí jakéhokoliv programu, který umožňuje komunikovat přes sériový port (například PySerial), na druhou stranu je Serial Monitor tou nejednoduší variantou. 
+			
+			Při spuštění je třeba nastavit frekvenci komunikace (na stejnou hodnotu, jako ve zdrojovém kódu programu) a následně je možné číst informace zaslané z desky, nebo případně desce posílat instrukce. 
+			
+			Pokud ze zobrazují znaky, které však nedávají smysl, bude pravděpodobně problém s různě nastavenou frekvencí desky a Serial Monitoru. 
+		
+		
 	\subsection{Základy syntaxe}
 		\paragraph{Setup}
 		\paragraph{Loop}
