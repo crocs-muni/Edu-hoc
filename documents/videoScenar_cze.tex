@@ -66,11 +66,26 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		
 		
 	\subsection{Základy syntaxe}
-		\paragraph{Setup}
-		\paragraph{Loop}
+			Arduino je možné brát jako speciální případ jazyka C. Zůstává téměř vše a mění se pouze podoba funkce main, která je rozdělená na dvě části, \texttt{setup} a \texttt{loop}. 
+			Tedy je možné psát for cykly jako v jazyce C, stejně tak podmínky, funkce a téměř cokoliv dalšího, co budete potřebovat. Navíc Arduino přidává některé vlastní funkce a velké množství knihoven, které především slouží k příjemnější manipulaci s veškerým možným příslušenstvím. Nicméně můžeme nalézt i různé jiné knihovny, které především usnadňují psaní kódu. 
+			
+		\paragraph{\textbf{\texttt{setup}}}
+			Funkce sloužící k úvodnímu nastavení proměnných, počátečnímu spuštění a všem dalším úvodním nastavením. Při samotném spuštění se tato funkce zavolá jako první a právě jednou. Ideální je například ke spuštění komunikace po sériovém portu, nastavení pinů a inicializaci knihoven.
+		
+		\paragraph{\textbf{\texttt{loop}}}
+			Funkce která provádí samotný běh programu, jak napovídá její název, tuto funkci můžeme vnímat jako nekonečný cyklus. Zavolá se až po funkci \texttt{setup}, tedy již můžeme počítat s inicializovaným prostředím a bude se volat neustále až do restartu desky nebo ztráty napájení. Zdrojový kód v této funkci je vhodné psát s ohledem na neustálé opakování a zároveň v případě, že potřebujeme něco pravidelně kontrolovat (stisknutí tlačítka) je vhodné mít buď celý kód dostatečně rychlý tak, aby kontrola probíhala v krátkých intervalech, nebo kontrolu provést několikrát za jeden průběh cyklu.\footnote{některé desky umožňují využít speciální piny k přerušení funkce \texttt{loop} a okamžité reakci na událost. K přerušení je možné připojit k speciální vlastní funkci, která vykoná jeho obsluhu}
+			
 		\paragraph{Serial}
-			\subparagraph{Print}
-			\subparagraph{Read}
+			Jedna z nejdůležitějších knihoven slouží k ovládání sériového portu na straně desky. Na začátku je třeba ve funkci \texttt{setup} inicializovat společně s nastavením frekvence komunikace. Následně je možné jej začít používat, klidně již ve funkci \texttt{setup}. Všechny funkce této knihovny je třeba volat vždy jako \texttt{Serial.read()} nikoliv pouze \texttt{read()}.
+			
+			\subparagraph{\texttt{print}}
+				Slouží k výpisu hodnot a ladících informací přes sériový vstup. Je možné tisknout hodnotu samotnou, případně ji i formátovat (vhodné například pro hexadecimální hodnoty). Taktéž je možné použít funkci \texttt{println}, která navíc pošle i ukončení řádku. Při používání je třeba dát pozor, jelikož funkce je 
+				asynchronní, tedy vrátí návratovou hodnotu dříve, než začne odesílat znaky. 
+				
+				Pro obsluhu výstupu na sériovém portu je možné využít i funkce \texttt{write} (zápis binárních dat) nebo \texttt{flush} (počká na dokončení zápisu).
+			
+			\subparagraph{\texttt{read}}
+				Slouží ke čtení ze sériového portu, přečtenou hodnotu vrací jako návratovou hodnotu. Vhodné je její spojení s funkcí \texttt{available}, která vrací počet bytů dostupných k přečtení. Ideální použití je buď k ovládání desky pomocí příkazů z počítače, nebo k počátečnímu nastavení, které není možné nastavit v kódu napevno. 
 		
 \section{WSN uzel, JeeLib}
   
