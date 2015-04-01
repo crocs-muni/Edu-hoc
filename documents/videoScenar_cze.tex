@@ -46,7 +46,9 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		\paragraph{Instalace}
 			Instalace samotná není složitý proces, spíše naopak. Spousta linuxových distribucí Vám práci usnadní, jelikož Arduino IDE se nachází v repositářích a jediné, co je potřeba pohlídat, je verze, která by měla být ideálně nejnovější dostupná, ideálně verze 1.5 a starší. 
 			
-			Pokud potřebujete instalovat jiným způsobem, pak veškeré potřebné informace naleznete na oficiálních stránkách \url{http://arduino.cc/en/Main/Software}.  
+			V případě OS Windows je nejednodušším řešením stáhnout instalační soubor přímo z oficiálních stránek \url{http://arduino.cc/en/Main/Software}, kde naleznete jak instalátor, tak archiv pro případ, když nemáte administrátorské oprávnění na počítači, kde plánujete pracovat.
+			
+			Pokud z nejrůznějších důvodů potřebujete instalovat jiným způsobem (například kompilovat ze zdrojového kódu), pak veškeré potřebné informace opět naleznete na oficiálních stránkách \url{http://arduino.cc/en/Main/Software}.  
 		\paragraph{Nástroje}
 		
 		\subparagraph{Verifikátor}
@@ -85,14 +87,24 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 				Pro obsluhu výstupu na sériovém portu je možné využít i funkce \texttt{write} (zápis binárních dat) nebo \texttt{flush} (počká na dokončení zápisu).
 			
 			\subparagraph{\texttt{read}}
-				Slouží ke čtení ze sériového portu, přečtenou hodnotu vrací jako návratovou hodnotu. Vhodné je její spojení s funkcí \texttt{available}, která vrací počet bytů dostupných k přečtení. Ideální použití je buď k ovládání desky pomocí příkazů z počítače, nebo k počátečnímu nastavení, které není možné nastavit v kódu napevno. 
+				Slouží ke čtení ze sériového portu, přečtenou hodnotu vrací jako návratovou hodnotu. Vhodné je její spojení s funkcí \texttt{available}, která vrací počet bytů dostupných k přečtení. Ideální použití je buď k ovládání desky pomocí příkazů z počítače, nebo k počátečnímu nastavení, které není možné astavit v kódu napevno. 
 		
 \section{WSN uzel, JeeLib}
-  
+	
+	Pokud odhlédneme od obecně zaměřeného Arduina a zaměříme se na bezdrátovou komunikaci, pak můžeme buď k běžné desce připojit ten správný modul a tím vytvořit jeden uzel bezdrátové sítě, nebo můžeme vybrat klon arduina, který je přímo tímto směrem zaměřený. Zajímá nás především přítomnost rádia a oproti ostatním aplikacím nepotřebujeme velké množství pinů pro další přídavné komponenty. 
+	
 	\subsection{JeeNode hardware}
+		JeeNode je klonem Arduina, navíc však obsahuje rádiový modul. Oproti nejvíce rozšířeným Arduino deskám nemá napětí 5V ale pouze 3.3V  a komponenty jsou na desce rozloženy odlišně. 
+	
+		Druhou variantou je JeeLink, který obsahuje prakticky totožný hardware, nicméně je celý uzavřený v plastovém krytu a neumožňuje přístup k pinům. Taktéž se liší použitým typem USB konektoru, jelikož JeeNode obsahuje mini USB, zatímco JeeLink má standardní USB A konektor, který můžeme připojit přímo do počítače. 
+		
 		\paragraph{Všeobecná specifikace}
-		\paragraph{Rádio}
+		Obě varianty, jak JeeLink, tak JeeNode jsou založené na Arduino mini s procesorem ATmega328P.\footnote{tuto desku je třeba nastavit v Arduino IDE při programování} 
+		
+		Rádio, které je na desce přítomné dokáže komunikovat na třech různých frekvencích, konkrétně 433, 868, nebo 915 MHz. 
 		\paragraph{Piny}
+	
+		Jsou kontakty, které umožňují připojení dalších komponent, ať už se jedná o obyčejnou LED diodu, nebo světelný, či gravitační senzor. Možnost připojení komponent nabízí pouze JeeLink. 
 	
 	\subsection{JeeLib}
 		\paragraph{Přidání do IDE}
@@ -102,6 +114,9 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		\paragraph{Síť ze dvou uzlů}
 	
 \section{WSN síť}
+
+	Bezdrátová sensorová síť je složená z velkého množství malých autonomních zařízení, které spolu navzájem komunikují přes rádiové spojení. Každé zařízení, nazývané sensorový uzel, je napájené pomocí 	baterií a je vybavené potřebnými sensory pro monitorování okolí. Typický scénář nasazení sensorové sítě je náhodné rozmístění stovek až tisíců uzlů a následný sběr dat pomocí jednotlivých sensorů. Jako příklady oborů, kde mohou bezdrátové sensorové sítě nalézt uplatnění, lze uvést například armádu, zdravotnictví, zemědělství a další.
+	
 	\subsection{Ukázkové aplikace}
 		\paragraph{Alive}
 		\paragraph{Sniffer}
