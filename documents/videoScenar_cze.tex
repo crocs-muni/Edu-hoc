@@ -33,7 +33,7 @@
 
 
 \section{Arduino všeobecně}
-Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozšířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje například specializované desky, jako jsou námi používané JeeLink a JeeNode.
+Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozšířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje například specializované desky, jako jsou námi používané JeeLink a JeeNode USB.
 
 Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé platformy využijeme pouze vývojové prostředí, zatímco hardware použijeme specializovaný pro naše potřeby, především už bude obsahovat rádiový modul. Začněme však od úplných základů práce s Arduinem. Více všeobecných informací je možné najít na oficiálním webu 
 \url{www.arduino.cc}.
@@ -93,18 +93,22 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 	
 	Pokud odhlédneme od obecně zaměřeného Arduina a zaměříme se na bezdrátovou komunikaci, pak můžeme buď k běžné desce připojit ten správný modul a tím vytvořit jeden uzel bezdrátové sítě, nebo můžeme vybrat klon arduina, který je přímo tímto směrem zaměřený. Zajímá nás především přítomnost rádia a oproti ostatním aplikacím nepotřebujeme velké množství pinů pro další přídavné komponenty. 
 	
-	\subsection{JeeNode hardware}
-		JeeNode je klonem Arduina, navíc však obsahuje rádiový modul. Oproti nejvíce rozšířeným Arduino deskám nemá napětí 5V ale pouze 3.3V  a komponenty jsou na desce rozloženy odlišně. 
+	Samotný uzel nemá příliš velké uplatnění, jeho síla přichází až při větších počtech, nicméně vyplatí se nejdříve seznámit se s aplikacemi pro jeden či dva uzly a pokročile varianty s výrazně větším množstvím uzlů nechat na později. S jedním uzlem je možné vyzkoušet veškerou komunikaci s počítačem a využití funkcí z běžných Arduino knihoven, jako například komunikace po sériovém portu pro počáteční nastavení proměnných. 
 	
-		Druhou variantou je JeeLink, který obsahuje prakticky totožný hardware, nicméně je celý uzavřený v plastovém krytu a neumožňuje přístup k pinům. Taktéž se liší použitým typem USB konektoru, jelikož JeeNode obsahuje mini USB, zatímco JeeLink má standardní USB A konektor, který můžeme připojit přímo do počítače. 
+	S dvěma uzly je poté již možné začít komunikovat přes rádiové spojení, vyzkoušet jednoduché odeslání, přijetí zprávy a další základní funkce, které nabízí knihovna JeeLib. 	
+	
+
+	\subsection{JeeLabs hardware}
+		JeeNode USB a JeeLib jsou klonem Arduina, navíc však obsahují rádiový modul. Oproti nejvíce rozšířeným Arduino deskám nemají napětí 5V ale pouze 3.3V  a komponenty jsou na desce rozloženy odlišně, tedy většina běžného příslušenství k Arduinu není s těmito deskami kompatibilní. JeeLink je navíc chráněn plastovým krytem, tedy není možné k němu cokoliv připojit.
+	
+		Druhou variantou je JeeLink, který obsahuje prakticky totožný hardware, nicméně je celý uzavřený v plastovém krytu a neumožňuje přístup k pinům. Taktéž se liší použitým typem USB konektoru, jelikož JeeNode USB obsahuje mini USB, zatímco JeeLink má standardní USB A konektor, který můžeme připojit přímo do počítače. 
+				
+		Obě varianty, jak JeeLink, tak JeeNode USB jsou založené na Arduino mini s procesorem ATmega328P.\footnote{tuto desku je třeba nastavit v Arduino IDE při programování} JeeLink navíc obsahuje 16 Mbit flash paměti, kterou lze využít pro uložení dat aplikace.
 		
-		\paragraph{Všeobecná specifikace}
-		Obě varianty, jak JeeLink, tak JeeNode jsou založené na Arduino mini s procesorem ATmega328P.\footnote{tuto desku je třeba nastavit v Arduino IDE při programování} 
-		
-		Rádio, které je na desce přítomné dokáže komunikovat na třech různých frekvencích, konkrétně 433, 868, nebo 915 MHz. 
+		Rádio, které je na desce přítomné dokáže komunikovat na třech různých frekvencích, konkrétně 433, 868, nebo 915 MHz. Frekvence je především důležitá pro správnou kalibraci antény, v případě běžného využití se nejedná o podstatný problém, ale při snaze získat co největší vysílací výkon a dosah je třeba mít délku antény a frekvenci rádia nastavenou ve vzájemné shodě.JeeLink má frekvenci nastavenou obvykle již z výroby a je označena barvou na čipu rádia. Žlutá barva znamená 868 MHz, zatímco zelená 433 MHz. \footnote{HW použitý při stavbě testbedu má frekvenci nastavenou na 868 MHz}
 		\paragraph{Piny}
 	
-		Jsou kontakty, které umožňují připojení dalších komponent, ať už se jedná o obyčejnou LED diodu, nebo světelný, či gravitační senzor. Možnost připojení komponent nabízí pouze JeeLink. 
+		Jsou kontakty, které umožňují připojení dalších komponent, ať už se jedná o obyčejnou LED diodu, nebo světelný, či gravitační senzor. Možnost připojení komponent nabízí pouze JeeNode USB. 
 	
 	\subsection{JeeLib}
 		\paragraph{Přidání do IDE}
