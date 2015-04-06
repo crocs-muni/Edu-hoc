@@ -8,6 +8,10 @@
 \title{Video}
 \author{Lukáš Němec}
 
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\newminted{cpp}{linenos=true,  bgcolor=bg, xleftmargin=2em, fontsize=\footnotesize}
+\newcommand{\codetitle}[1]{\bigskip \noindent {\scriptsize #1}\hrule}
 
 
 \begin{document}
@@ -134,16 +138,16 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		Pro přijetí zprávy je třeba se pravidelně v krátkých intervalech dotazovat pomocí funkce \texttt{rf12\_recvDone()}, která vrátí pravdivou hodnotu, pokud uzel přijal paket. V případě, že v časovém intervalu mezi dvěma dotazy uzel přijme více paketů, pak je možné zpracovat pouze ten poslední a obsah paketu nalezneme v globálních proměnných. 
 		
 		Po přijetí zprávy  je vhodné ověřit, zda-li odesílatel vyžaduje potvrzení o doručení, ideální řešení je pomocí následující podmínky:
+
 		
-\begin{verbatim}
+\codetitle{Ukázka podmínky pro odeslání ACK zprávy}
+\begin{cppcode*}{firstnumber=1}		
 if(RF12_WANTS_ACK){
     f12_sendStart(RF12_ACK_REPLY,0,0);
 }
-\end{verbatim}
-		
-		
-		
-	
+\end{cppcode*}		
+\hrule
+\bigskip
 	
 		\paragraph{Síť ze dvou uzlů}
 	
