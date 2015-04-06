@@ -44,7 +44,7 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 	
 	Prostředí můžete využít i pokud se rozhodnete programovat ve svém oblíbeném textovém editoru a v Arduino IDE pouze kompilovat, či používat jiné nástroje které poskytuje.
 		\paragraph{Instalace}
-			Instalace samotná není složitý proces, spíše naopak. Spousta linuxových distribucí Vám práci usnadní, jelikož Arduino IDE se nachází v repositářích a jediné, co je potřeba pohlídat, je verze, která by měla být ideálně nejnovější dostupná, ideálně verze 1.5 a starší. 
+			Instalace samotná není složitý proces, spíše naopak. Spousta linuxových distribucí Vám práci usnadní, jelikož Arduino IDE se nachází v repositářích a jediné, co je potřeba pohlídat, je verze, která by měla být ideálně nejnovější dostupná, ideálně verze 1.5 a novější. 
 			
 			V případě OS Windows je nejednodušším řešením stáhnout instalační soubor přímo z oficiálních stránek \url{http://arduino.cc/en/Main/Software}, kde naleznete jak instalátor, tak archiv pro případ, když nemáte administrátorské oprávnění na počítači, kde plánujete pracovat.
 			
@@ -111,10 +111,40 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		Jsou kontakty, které umožňují připojení dalších komponent, ať už se jedná o obyčejnou LED diodu, nebo světelný, či gravitační senzor. Možnost připojení komponent nabízí pouze JeeNode USB. 
 	
 	\subsection{JeeLib}
+		JeeLib je Arduino knihovna napsaná přímo pro uzly JeeLink, JeeNode USB a další kompatibilní zařízení. Umožňuje ovládání rádia a některých přídavných modulů. Více informací o této knihovně je možné zjistit přímo ze stránek projektu \url{http://jeelabs.net/projects/jeelib/wiki} nebo přímo z dokumentace knihovny, kterou je možné získat více způsoby, buď vygenerovat vlastní verzi přímo pro Vámi používanou verzi knihovny pomocí nástroje Doxygen, nebo použít oficiální dokumentaci na stránkách JeeLabs \url{http://jeelabs.net/pub/docs/jeelib/}.
+		
+		Z obsahu JeeLib je pro nás nejdůležitější komunikace s rádiem, kterou nalezneme pod ovladačem RF12 \url{http://jeelabs.net/pub/docs/jeelib/md_intro_rf12.html}. Tento obsahuje vše potřebné, od počátečního nastavení uzlu, přes odesílání a příjem zpráv, až po velmi jednoduchou variantu šifrování. 
+	
 		\paragraph{Přidání do IDE}
+		JeeLib vyžaduje Arduino IDE verze 1.5 a novější, se staršími verzemi není kompatibilní. Pokud je tento předpoklad splněn, pak je přidání knihovny otázka několika málo kliknutí. Nejdříve je však nutné získat knihovnu samotnou, ideálně přímo ze stránek JeeLabs \url{http://jeelabs.net/projects/jeelib/wiki}. 
+		
+		V záložce \textbf{Sketch}, nalezneme část \textbf{Import Library} a následně zvolíme buď novější variantu \textbf{Manage Libraries}, nebo starší verzi \textbf{Add Library}. Poté se již jedná o nalezení složky obsahující kód knihovny a její přidání. Knihovnu je taktéž možné přidat přímo ve formě ZIP archivu. 
+		
 		\paragraph{Formát hlavičky}
+		Hlavička je prvních 8 bitů každé zprávy. Určuje typ zprávy a jejího příjemce či odesílatele. První tři bity určují typ, tedy požadavek na ověření doručení zprávy a rozlišení unicast - broadcast. Zbylých 5 bitů určuje ID uzlu, buď se jedná o adresáta, pokud uzel tuto zprávu odesílá, nebo o odesílatele, pokud uzel tuto zprávu přijal (ke změně dochází při odeslání zprávy). 
+		
+		Jelikož máme na ID uzlu pouze 5 bitů, tak máme pouze 32 různých adres. Přidělujeme je v rozsahu 0-31 a krajní hodnoty jsou vyhrazeny pro speciální použití. ID 0 slouží jako univerzální ID pro broadcast při odesílání a uzel s ID 31 bude přijímat všechny zprávy v síti bez ohledu na adresáta.
+		
 		\paragraph{Poslání zprávy}
+		Aby bylo možné poslat zprávu, je před samotným odesláním zprávy třeba zajistit, že nevysílá žádný jiný uzel, aby nedošlo k rušení. Knihovna JeeLib nám tuto starost poměrně usnadňuje, protože nemusíme řešit přímo přístup k médiu, ale pouze se dotážeme, zdali můžeme odesílat pomocí volání funkce \texttt{rf12\_canSend()}, která nám odpoví, zdali můžeme poslat zprávu. 
+		
+		Zprávu následně odesíláme pomocí zavolání funkce \texttt{rf12\_sendStart()}, kde jako parametry použijeme, hlavičku, ukazatel na odesílaná data a délku odesílaných dat. Podrobnější informace k oběma funkcím naleznete v dokumentaci. V případě že se nejedná o náročnou aplikaci a nepředpokládá se velká frekvence posílaných zpráv, je možné použít volání funkce \texttt{rf12\_canSend()} v cyklu, dokud nevrátí pravdivou hodnotu. Celý tento kód je ještě možné zjednodušit pomocí funkce \texttt{rf12\_sendNow()} která již nekonečný čekací cyklus obsahuje uvnitř a parametry má stejné jako \texttt{rf12\_sendStart()}. 
+		
 		\paragraph{Přijetí zprávy}
+		Pro přijetí zprávy je třeba se pravidelně v krátkých intervalech dotazovat pomocí funkce \texttt{rf12\_recvDone()}, která vrátí pravdivou hodnotu, pokud uzel přijal paket. V případě, že v časovém intervalu mezi dvěma dotazy uzel přijme více paketů, pak je možné zpracovat pouze ten poslední a obsah paketu nalezneme v globálních proměnných. 
+		
+		Po přijetí zprávy  je vhodné ověřit, zda-li odesílatel vyžaduje potvrzení o doručení, ideální řešení je pomocí následující podmínky:
+		
+\begin{verbatim}
+if(RF12_WANTS_ACK){
+    f12_sendStart(RF12_ACK_REPLY,0,0);
+}
+\end{verbatim}
+		
+		
+		
+	
+	
 		\paragraph{Síť ze dvou uzlů}
 	
 \section{WSN síť}

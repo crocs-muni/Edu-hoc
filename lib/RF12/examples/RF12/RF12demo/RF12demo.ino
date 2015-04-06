@@ -260,7 +260,7 @@ static void kakuSend(char addr, byte device, byte on) {
 #include "dataflash.h"
 #else // DATAFLASH
 
-#define df_present() 0
+#define df_present() 1
 #define df_initialize()
 #define df_dump()
 #define df_replay(x,y)
