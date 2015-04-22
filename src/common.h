@@ -7,9 +7,9 @@
 
 #define FREQUENCY RF12_868MHZ
 
-#define INPUT_TAG_LEN 10;
+#define INPUT_TAG_LEN 10
 
-
+#define INPUT_PARAM_LEN 10
 
 
 #endif //COMMON_H
