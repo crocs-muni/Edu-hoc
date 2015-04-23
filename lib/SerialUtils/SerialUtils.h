@@ -14,7 +14,7 @@ enum Priority{
 class SerialUtils
 {
 public:
-    SerialUtils(int freq);
+    SerialUtils(long freq);
 
     void setUpNodeID(int* id, int* group, int* parent);
 
@@ -22,7 +22,7 @@ public:
     
     void println(char* text, Priority priority);
 private:
-    int freq;
+    long freq;
 
 };
 

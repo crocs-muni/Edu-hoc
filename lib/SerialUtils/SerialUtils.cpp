@@ -2,7 +2,7 @@
 //#include <RF12.h>
 #include <Arduino.h>
 
-SerialUtils::SerialUtils(int freq){
+SerialUtils::SerialUtils(long freq){
     this->freq = freq;
 }
 
