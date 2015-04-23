@@ -18,11 +18,15 @@ public:
 
     void setUpNodeID(int* id, int* group, int* parent);
 
-    void print(char* text, Priority priority);
+    void print(String text, Priority priority);
     
-    void println(char* text, Priority priority);
+    //just calls print and adds newline
+    void println(String text, Priority priority);
+    
+    int getNumErrors();
 private:
     long freq;
+    int errors;
 
 };
 

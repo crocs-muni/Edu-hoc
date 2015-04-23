@@ -15,6 +15,7 @@ byte parentID    = 0;
 
 SerialUtils su = SerialUtils(57600);
 
+#define NUM_TAGS 4
 
 enum tags{
     setup_tag, 
@@ -23,28 +24,52 @@ enum tags{
     parentID_tag
 } ;
 
-static const char *tags[] = { "setup", "nodeID", "groupID", "parentID"};
+static const String tags[] = { "setup", "nodeID", "groupID", "parentID"};
 
-int tagToInt(char* tagName){
+int tagToInt(String tagName){
     
-    //TODO from string to enum tags
-    return 0;
+#ifdef IGNORE_CASE
+    for(int i = 0; i < NUM_TAGS; i++){
+        if(tagName. equalsIgnoreCase(tags[i])){
+            return i;
+        }
+    }
+#else // do not ignore case
+    for(int i = 0; i < NUM_TAGS; i++){
+        if(tagName. equals(tags[i])){
+            return i;
+        }
+    }
+#endif 
+    su.println("Parser error, tag not recognized", error);
+    return -1;
 }
 
-char* tagToString(int tagID){
+/*
+String tagToString(int tagID){
     //currently not required
     //TODO from enum tags to string
     return "";
 }
+*/
 
-
-byte processNumber(char* param){ 
-    //TODO process char to number with error handling
-    return 0;
+byte processNumber(String param){ 
+    for (unsigned int i = 0; i < param.length(); i++ ){
+        
+       //check if all are numbers
+       if(!isDigit(param.charAt(i))){
+           su.println("Parser error, parameter not numeric", error);
+           return 0;
+       }
+    }
+    
+    //convert to number
+    return param.toInt();
 }
 
 StackArray <int> stack;
 
+//TODO change to String intead of char array
 char readTag [INPUT_TAG_LEN];
 char readParam [INPUT_PARAM_LEN];
 
@@ -56,9 +81,6 @@ void setup () {
 }
 
 void loop () {  
-    boolean finished = false;
-    
-    
     
     //read until first tag
     char input = 0;
@@ -66,10 +88,10 @@ void loop () {
             input = Serial.read();
     }
     
+    //push bottom into stack
+    stack.push(-1);
     //read until end tag
-    while ( !finished && !stack.isEmpty()){
-        
-        
+    while ( stack.isFull()){
         
         Serial.readBytesUntil('>', readTag, INPUT_TAG_LEN);
         readTag[strlen(readTag)-1] = '\0'; //discard end of tag '>'
@@ -81,12 +103,21 @@ void loop () {
                         break;
                     case nodeID_tag:
                         nodeID = processNumber(readParam);
+                        if(nodeID > MAX_NODE_ID ){
+                            su.println("Parser error, node ID out of bounds", error);
+                        }
                         break;
                     case groupID_tag:
                         groupID = processNumber(readParam);
+                        if(groupID > MAX_GROUP_ID || groupID < MIN_GROUP_ID){
+                            su.println("Parser error, group ID out of bounds", error);
+                        }
                         break;
                     case parentID_tag:
                         parentID = processNumber(readParam);
+                        if(parentID > MAX_NODE_ID ){
+                            su.println("Parser error, parent ID out of bounds", error);
+                        }
                         break;
                     default:
                         su.println("Parser error, Tag not recognized", error);
@@ -99,6 +130,10 @@ void loop () {
             }
             
             stack.pop();
+            if(stack.peek() == -1){
+                stack.pop();
+                continue;
+            }
         } else {
             stack.push(tagToInt(readTag));
             memset(readTag, 0, INPUT_TAG_LEN);
@@ -111,15 +146,24 @@ void loop () {
     }
     
     
+    if(su.getNumErrors() > 0){
+        
+        //permanent sleep
+        //TODO change to reset
+        set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+        sleep_enable(); 
+        sleep_mode();
+    }
+    
     //update config in EEPROM, EEPROM has limited number of write-erase cycles, so only write when values are different
-    if(EEPROM.read(0) != nodeID){
-        EEPROM.write(0, nodeID);
+    if(EEPROM.read(NODE_ID_LOCATION) != nodeID){
+        EEPROM.write(NODE_ID_LOCATION, nodeID);
     }
-    if(EEPROM.read(0) != groupID){
-        EEPROM.write(1, groupID);
+    if(EEPROM.read(GROUP_ID_LOCATION) != groupID){
+        EEPROM.write(GROUP_ID_LOCATION, groupID);
     }
-    if(EEPROM.read(0) != parentID){
-        EEPROM.write(2, parentID);
+    if(EEPROM.read(PARENT_ID_LOCATION) != parentID){
+        EEPROM.write(PARENT_ID_LOCATION, parentID);
     }
     
     

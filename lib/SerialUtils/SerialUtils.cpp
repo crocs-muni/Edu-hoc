@@ -4,6 +4,7 @@
 
 SerialUtils::SerialUtils(long freq){
     this->freq = freq;
+    errors = 0;
 }
 
 void SerialUtils::setUpNodeID(int* id, int* group, int* parent){
@@ -12,12 +13,20 @@ void SerialUtils::setUpNodeID(int* id, int* group, int* parent){
     *parent = Serial.parseInt();
 }
 
-void SerialUtils::print(char* text, Priority priority){
+void SerialUtils::print(String text, Priority priority){
     //TODO priority filtering
+    if(priority == error){
+        errors++;
+    }
+    
     Serial.print(text);
 }
     
-void SerialUtils::println(char* text, Priority priority){
-    //TODO priority filtering
-    Serial.println(text);
+void SerialUtils::println(String text, Priority priority){
+    print(text, priority);
+    Serial.println();
+}
+
+int SerialUtils::getNumErrors(){
+    return errors;
 }
