@@ -147,16 +147,77 @@ if(RF12_WANTS_ACK){
 }
 \end{cppcode*}		
 \hrule
-\bigskip
+\bigskip 
 	
 		\paragraph{Síť ze dvou uzlů}
-	
+        Při spojení mezi dvěma uzly musíme řešit periodické ověřování přijetí zprávy a pravidelné odesílání zprávy, případně odesílání zprávy na vnější příkaz (uzel může například umožnit odeslání zprávy v reakci na příkaz zaslaný přes sériový port). Jako ukázková aplikace pro tento účel nám poslouží ukázková aplikace z knihovny jeelib, konkrétně RF12demo, která umožňuje pomocí příkazů zaslaných přes sériový port ovládat většinu funkcí rádia, včetně odesílání zpráv. 
+        
+        Stačí tedy připojit dva uzly, na oba nahrát aplikaci RF12demo a například pomocí Serial Monitoru předávat příkazy uzlům. Ideální variantou je mít otevřené vše dvakrát tak, aby bylo možné pozorovat výstup obou uzlů zároveň. 
+
+\codetitle{Zjednodušená ukázka přijetí zprávy v RF12demo}
+\begin{cppcode*}{firstnumber=582}  
+if (rf12_recvDone()) {
+    byte n = rf12_len;
+    if (rf12_crc == 0)
+        showString(PSTR("OK"));
+    else {
+        if (config.quiet_mode)
+            return;
+        showString(PSTR(" ?"));
+        if (n > 20) // print at most 20 bytes if crc is wrong
+            n = 20;
+    }
+    ...
+    printOneChar(' ');
+    showByte(rf12_hdr);
+    for (byte i = 0; i < n; ++i) {        
+        printOneChar(' ');
+        showByte(rf12_data[i]);
+    }
+
+    Serial.println();
+    ...
+}
+\end{cppcode*}      
+\hrule
+\bigskip 
+
+    V ukázce kódu můžeme vidět, jak v aplikaci probíhá přijetí zprávy. Nejdříve je třeba splnit podmínku, že uzel přijal zprávu, následně dojde k ověření cyklického součtu, za účelem odhalení chyb při přenosu. Pokud při přenosu došlo k chybě, pak aplikace vypíše pouze prvních 20 znaků zprávy a zároveň ohlásí chybu. V případě správného doručení pak aplikace vypíše zprávy celou. Z ukázky byl pro přehlednost vynechán kód na hexadecimální výpis obsahu zprávy a signalizace činnosti uzlu pomocí led diody. V případě zájmu lze kompletní verzi nalézt přímo v kódu aplikace, počáteční číslo řádku je ponecháno shodné za účelem snadnějšího nalezení. 
+    
+    
+    
+\newpage
+\codetitle{Zjednodušená ukázka odeslání zprávy v RF12demo}
+\begin{cppcode*}{firstnumber=641}  
+if (cmd && rf12_canSend()) {
+    activityLed(1);
+
+    showString(PSTR(" -> "));
+    Serial.print((word) sendLen);
+    showString(PSTR(" b\n"));
+    byte header = cmd == 'a' ? RF12_HDR_ACK : 0;
+    if (dest)
+        header |= RF12_HDR_DST | dest;
+    rf12_sendStart(header, stack, sendLen);
+    cmd = 0;
+
+    activityLed(0);
+}
+\end{cppcode*}      
+\hrule
+\bigskip 
+Na ukázce odeslání zprávy můžeme vidět počáteční podmínku, kdy odesílat je možné pouze tehdy pokud nevysílá jiný uzel a zároveň tento uzel zprávu aktuálně nepřijímá. Následuje indikace pomocí led diody a samotné odeslání zprávy včetně vypsání informací o odesílání zprávy na sériový port. 
+
+Tyto dvě ukázky pokrývají prakticky celou základní funkcionalitu aplikace (obsah loop funkce), bez komentáře zůstávají pomocné funkce, které obstarávají zpracování příkazů přijatých přes sériový port, jelikož se jedná o použití velmi podobných principů jako při psaní běžného programu v jazyce C. taktéž bez komentáře zůstávají funkce sloužící k pokročilému ovládání rádia, jelikož jejich obsah přesahuje tento krátký manuál. V případě zájmu je možné více zjistit v oficiální dokumentaci ke knihovně JeeLib \url{http://jeelabs.net/pub/docs/jeelib/}. 
+
 \section{WSN síť}
 
 	Bezdrátová sensorová síť je složená z velkého množství malých autonomních zařízení, které spolu navzájem komunikují přes rádiové spojení. Každé zařízení, nazývané sensorový uzel, je napájené pomocí 	baterií a je vybavené potřebnými sensory pro monitorování okolí. Typický scénář nasazení sensorové sítě je náhodné rozmístění stovek až tisíců uzlů a následný sběr dat pomocí jednotlivých sensorů. Jako příklady oborů, kde mohou bezdrátové sensorové sítě nalézt uplatnění, lze uvést například armádu, zdravotnictví, zemědělství a další.
 	
 	\subsection{Ukázkové aplikace}
+	Pro provoz jednoduché sítě zde jsou dvě základní aplikace. První periodicky odesílá data (čítač) z každého uzlu, zatímco druhá neslouž ke komunikaci, ale umožňuje jedinému uzlu zachytávat veškerý provoz v síti. 
 		\paragraph{Alive}
+		Aplikace se statickým nastavením topologie sítě, každý uzel má pevně přidělené své ID a ID svého rodiče, ke kterému posílá vlastní zprávy a přeposílá veškeré zprávy přijaté. Takto je pevně ustanovený routovací strom a 
 		\paragraph{Sniffer}
 	 
 	\subsection{Síť}
