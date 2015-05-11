@@ -21,9 +21,55 @@ void SerialUtils::print(String text, Priority priority){
     
     Serial.print(text);
 }
+
+void SerialUtils::print(byte b, Priority priority){
+    //TODO priority filtering
+    if(priority == error){
+        errors++;
+    }
+    
+    Serial.print(b);
+}
+
+void SerialUtils::print(String text, int format, Priority priority){
+    //TODO priority filtering
+    if(priority == error){
+        errors++;
+    }
+    
+    Serial.print(text);
+}
+
+void SerialUtils::print(byte b, int format, Priority priority){
+    //TODO priority filtering
+    if(priority == error){
+        errors++;
+    }
+    
+    Serial.print(b);
+}
     
 void SerialUtils::println(String text, Priority priority){
     print(text, priority);
+    Serial.println();
+}
+
+void SerialUtils::println(String text, int format, Priority priority){
+    print(text, priority);
+    Serial.println();
+}
+
+void SerialUtils::println(byte b, Priority priority){
+    print(b, priority);
+    Serial.println();
+}
+
+void SerialUtils::println(byte b, int format, Priority priority){
+    print(b, priority);
+    Serial.println();
+}
+
+void SerialUtils::println(){
     Serial.println();
 }
 

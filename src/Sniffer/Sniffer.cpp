@@ -1,16 +1,32 @@
 ///Sniffer code used from http://forum.jeelabs.net/node/272.html
 ///author: jcw
 
-#include <Ports.h>
-#include <RF12.h>
+/// some changes by LukeMcNemee
+
+#include <Arduino.h>
+#include "RF12.h"
+
+#include "SerialUtils.h"
+#include <../common.h>
+
+//#include <Ports.h>
+//#include <RF12.h>
+//#include <../common.h>
+//#include "SerialUtils.h"
+
+
+#define GROUP 5
 
 byte saveHdr, saveLen, saveData[RF12_MAXDATA];
 word saveCrc;
 
+SerialUtils su = SerialUtils(57600);
+
+
 void setup () {
     Serial.begin(57600);
-    Serial.println("\n[sniffer] 868 MHz group 5");
-    rf12_initialize(31, RF12_868MHZ, 5);
+    su.println("\n[sniffer] 868 MHz group 5", output);
+    rf12_initialize(31, FREQUENCY, 5);
 }
 
 void loop () {
@@ -23,34 +39,36 @@ void loop () {
         rf12_recvDone();
         // release lock on info for next reception
         if (saveCrc != 0) {
-            Serial.print("CRC error #");
-            Serial.println(saveLen, DEC);
+            su.print("CRC error #", output);
+            su.println(saveLen, DEC, output);
         }
         else {
-            Serial.print("OK (");
-            for (byte i = 0;
-                 i < 8;
-                 ++i) Serial.print(bitRead(saveHdr, 7-i));
-            Serial.print("b) ");
-            Serial.print(saveHdr & RF12_HDR_ACK ? "REQ " : " ");
-            Serial.print(saveHdr & RF12_HDR_CTL ? "ACK " : " ");
-            Serial.print(saveHdr & RF12_HDR_DST ? "DST:" : "SRC:");
-            Serial.print(saveHdr & RF12_HDR_MASK);
-            Serial.print(" #");
-            Serial.println(saveLen,DEC);
+            su.print("OK (", output);
+            String header = "";
+            for (byte i = 0; i < 8; ++i) {
+                header.concat(bitRead(saveHdr, 7-i)); // read bytes of header individualy into string
+            }
+            su.print(header, output);
+            su.print("b) ", output);
+            su.print(saveHdr & RF12_HDR_ACK ? "REQ " : " ", output);
+            su.print(saveHdr & RF12_HDR_CTL ? "ACK " : " ", output);
+            su.print(saveHdr & RF12_HDR_DST ? "DST:" : "SRC:", output);
+            su.print(saveHdr & RF12_HDR_MASK, output);
+            su.print(" #", output);
+            su.println(saveLen,DEC, output);
             // print out all data bytes, wrapping long lines byte pos = 0;
 	    int pos = 0;
             for (byte i = 0; i < saveLen; ++i) {
-                Serial.print(' ');
-                Serial.print(saveData[i],HEX);
+                su.print(' ', output);
+                su.print(saveData[i],HEX, output);
                 pos += 2;
                 if (saveData[i] >= 16) ++pos;
                 if (pos > 75) {
-                    Serial.println();
+                    su.println();
                     pos = 0;
                 }
             }
-            if (pos > 0) Serial.println();
+            if (pos > 0) su.println();
         }
     }
 }

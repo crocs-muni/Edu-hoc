@@ -154,6 +154,41 @@ if(RF12_WANTS_ACK){
         
         Stačí tedy připojit dva uzly, na oba nahrát aplikaci RF12demo a například pomocí Serial Monitoru předávat příkazy uzlům. Ideální variantou je mít otevřené vše dvakrát tak, aby bylo možné pozorovat výstup obou uzlů zároveň. 
 
+
+\codetitle{Nastavení uzlu pomocí funkce setup v RF12demo}
+\begin{cppcode*}{firstnumber=537}  
+
+void setup () {
+    ...
+
+    Serial.begin(SERIAL_BAUD);
+    Serial.println();
+    displayVersion();
+
+    if (rf12_configSilent()) {
+        loadConfig();
+    } else {
+        memset(&config, 0, sizeof config);
+        config.nodeId = 0x81;       // 868 MHz, node 1
+        config.group = 0xD4;        // default group 212
+        config.frequency_offset = 1600;
+        config.quiet_mode = true;   // Default flags, quiet on
+        saveConfig();
+        rf12_configSilent();
+    }
+
+    rf12_configDump();
+    df_initialize();
+
+    ...
+}
+\end{cppcode*}      
+\hrule
+\bigskip 
+
+V ukázce funkce \texttt{setup} můžeme vidět počáteční nastavení sériového portu, kde nastavíme frekvenci na předem definovanou konstantu. Následně poté je podmínka, která ověřuje uložení nastavení hodnot pro rádiovou komunikaci v paměti, kde pokud jsou hodnoty již uloženy, pak je aplikace pouze obnoví, zatímco pokud ještě uloženy nebyly, pak dojde k jejich nastavení a následnému uložení do paměti. tento přístup není nutný, v případě malého množství uzlů je rychlejší nastavovat každý individuálně při spuštění, nicméně při stavbě větší sítě již je potřeba hodnoty ukládat a díky tomu výrazně urychlit jakoukoliv změnu v síti.
+
+\newpage
 \codetitle{Zjednodušená ukázka přijetí zprávy v RF12demo}
 \begin{cppcode*}{firstnumber=582}  
 if (rf12_recvDone()) {
@@ -182,7 +217,7 @@ if (rf12_recvDone()) {
 \hrule
 \bigskip 
 
-    V ukázce kódu můžeme vidět, jak v aplikaci probíhá přijetí zprávy. Nejdříve je třeba splnit podmínku, že uzel přijal zprávu, následně dojde k ověření cyklického součtu, za účelem odhalení chyb při přenosu. Pokud při přenosu došlo k chybě, pak aplikace vypíše pouze prvních 20 znaků zprávy a zároveň ohlásí chybu. V případě správného doručení pak aplikace vypíše zprávy celou. Z ukázky byl pro přehlednost vynechán kód na hexadecimální výpis obsahu zprávy a signalizace činnosti uzlu pomocí led diody. V případě zájmu lze kompletní verzi nalézt přímo v kódu aplikace, počáteční číslo řádku je ponecháno shodné za účelem snadnějšího nalezení. 
+    V ukázce kódu pro přijetí zprávy můžeme vidět, jak v aplikaci probíhá přijetí zprávy. Nejdříve je třeba splnit podmínku, že uzel přijal zprávu, následně dojde k ověření cyklického součtu, za účelem odhalení chyb při přenosu. Pokud při přenosu došlo k chybě, pak aplikace vypíše pouze prvních 20 znaků zprávy a zároveň ohlásí chybu. V případě správného doručení pak aplikace vypíše zprávy celou. Z ukázky byl pro přehlednost vynechán kód na hexadecimální výpis obsahu zprávy a signalizace činnosti uzlu pomocí led diody. V případě zájmu lze kompletní verzi nalézt přímo v kódu aplikace, počáteční číslo řádku je ponecháno shodné za účelem snadnějšího nalezení. 
     
     
     
@@ -206,24 +241,129 @@ if (cmd && rf12_canSend()) {
 \end{cppcode*}      
 \hrule
 \bigskip 
-Na ukázce odeslání zprávy můžeme vidět počáteční podmínku, kdy odesílat je možné pouze tehdy pokud nevysílá jiný uzel a zároveň tento uzel zprávu aktuálně nepřijímá. Následuje indikace pomocí led diody a samotné odeslání zprávy včetně vypsání informací o odesílání zprávy na sériový port. 
+Na ukázce kódu pro odeslání zprávy můžeme vidět počáteční podmínku, kdy odesílat je možné pouze tehdy pokud nevysílá jiný uzel a zároveň tento uzel zprávu aktuálně nepřijímá. Následuje indikace pomocí led diody a samotné odeslání zprávy včetně vypsání informací o odesílání zprávy na sériový port. 
 
-Tyto dvě ukázky pokrývají prakticky celou základní funkcionalitu aplikace (obsah loop funkce), bez komentáře zůstávají pomocné funkce, které obstarávají zpracování příkazů přijatých přes sériový port, jelikož se jedná o použití velmi podobných principů jako při psaní běžného programu v jazyce C. taktéž bez komentáře zůstávají funkce sloužící k pokročilému ovládání rádia, jelikož jejich obsah přesahuje tento krátký manuál. V případě zájmu je možné více zjistit v oficiální dokumentaci ke knihovně JeeLib \url{http://jeelabs.net/pub/docs/jeelib/}. 
+Tyto dvě ukázky pokrývají prakticky celou základní funkcionalitu aplikace (obsah \texttt{loop} funkce), bez komentáře zůstávají pomocné funkce, které obstarávají zpracování příkazů přijatých přes sériový port, jelikož se jedná o použití velmi podobných principů jako při psaní běžného programu v jazyce C. taktéž bez komentáře zůstávají funkce sloužící k pokročilému ovládání rádia, jelikož jejich obsah přesahuje tento krátký manuál. V případě zájmu je možné více zjistit v oficiální dokumentaci ke knihovně JeeLib \url{http://jeelabs.net/pub/docs/jeelib/}. 
 
 \section{WSN síť}
 
 	Bezdrátová sensorová síť je složená z velkého množství malých autonomních zařízení, které spolu navzájem komunikují přes rádiové spojení. Každé zařízení, nazývané sensorový uzel, je napájené pomocí 	baterií a je vybavené potřebnými sensory pro monitorování okolí. Typický scénář nasazení sensorové sítě je náhodné rozmístění stovek až tisíců uzlů a následný sběr dat pomocí jednotlivých sensorů. Jako příklady oborů, kde mohou bezdrátové sensorové sítě nalézt uplatnění, lze uvést například armádu, zdravotnictví, zemědělství a další.
 	
 	\subsection{Ukázkové aplikace}
-	Pro provoz jednoduché sítě zde jsou dvě základní aplikace. První periodicky odesílá data (čítač) z každého uzlu, zatímco druhá neslouž ke komunikaci, ale umožňuje jedinému uzlu zachytávat veškerý provoz v síti. 
-		\paragraph{Alive}
-		Aplikace se statickým nastavením topologie sítě, každý uzel má pevně přidělené své ID a ID svého rodiče, ke kterému posílá vlastní zprávy a přeposílá veškeré zprávy přijaté. Takto je pevně ustanovený routovací strom a 
-		\paragraph{Sniffer}
+	Pro provoz jednoduché sítě zde jsou dvě základní aplikace. První periodicky odesílá data (čítač) z každého uzlu, zatímco druhá neslouží ke komunikaci, ale umožňuje jedinému uzlu zachytávat veškerý provoz v síti, což je vhodně jednak na ladění vlastních aplikací, tak na počáteční zjištění informací o síti, kterou neznáme. 
+		\subsubsection{Alive}
+		Aplikace se statickým nastavením topologie sítě, každý uzel má pevně přidělené své ID a ID svého rodiče, ke kterému posílá vlastní zprávy a přeposílá veškeré zprávy přijaté. Takto je pevně ustanovený routovací strom a každý uzel periodicky zasílá zprávu svému rodiči. Zároveň každý uzel přeposílá všechny přijaté zprávy svému rodiči, tedy postupně všechny zprávy doputují k jednomu centrálnímu uzlu. 
+		
+		Pro správný provoz je třeba definovat cesty (routovací strom) tak, aby každý uzel měl svého rodiče v dosahu rádia a byl schopen jej nalézt. Pokud by tomu tak nebylo, tak by došlo k úplnému odříznutí jedné z větví stromu. Zároveň je třeba strom navrhnout tak, aby byla zátěž s přeposíláním zpráv rovnoměrně rozložená mezi všechny uzly, v ideálním případě by měl být routovací strom vyvážený a bez nepravidelností\footnote{toto není vždy možné, ale skutečný strom by se měl tomu ideálnímu co nejvíce přiblížit}. 
+		
+		Aplikace samotná funguje velmi jednoduše, podstatné části jsou popsány na následující ukázce funkce \texttt{loop}.
+
+\codetitle{Funkce \texttt{loop} v aplikaci Alive}
+\begin{cppcode*}{firstnumber=26}  
+void loop () {  
+  //if incoming message received
+  
+  if(rf12_recvDone()){
+    if(RF12_WANTS_ACK){
+      rf12_sendStart(RF12_ACK_REPLY,0,0);
+    }
+    
+    if(rf12_crc == 0){ //packet checksum is correct
+      //propagate to parent 
+      byte header = B00000000;
+      //fill header using radioUtils      
+      ru.resetAck(&header);
+      ru.setID(&header, parent);      
+      rf12_sendNow(header, (const void*)rf12_data, rf12_len);
+    }
+  }
+\end{cppcode*}
+
+\begin{cppcode*}{firstnumber=43}  
+
+  delay(10);  
+  counter++;
+  
+  if(counter%100 == 0){
+    msgCounter++;
+    //send still alive msg
+    byte header;
+    //fill header using radioUtils    
+    ru.resetAck(&header);
+    ru.setID(&header, parent);  
+    rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
+    counter = 0;
+  }
+
+}
+\end{cppcode*}
+\hrule
+\bigskip 
+
+V kódu funkce \texttt{loop} můžeme nejdříve vidět ověření, jestli uzel přijal zprávu. V případě kladného ověření probíhá ihned reakce na přijatou zprávu, tedy případné odeslání potvrzení přijetí a přeposlání zprávy dále, konkrétně uzlu, který je nastavený jako rodič. 
+
+Následuje krátká prodleva (aby uzel nebyl neustále vytížený) a poté zvýšení počítadla. Počítadlo je zde, aby uzel odesílal zprávy ve výrazně delších intervalech, než zprávy přijímá. Ideální stav je, když uzel přijme zprávu kdykoliv, zatímco odesílání musíme zpomalit, tedy provést jej pouze jednou za určitý počet cyklů. 
+
+Odesílání zprávy je poté již jednoduchý úkon, kde je využita knihovna radioUtils pro nastavení příjemce a všech dalších potřebných parametrů. Následně je zpráva odeslána pomocí funkce \texttt{rf12\_sendNow}. V případě této aplikace si můžeme dovolit odesílání s aktivním čekáním, protože nepředpokládáme velký provoz na síti a neočekáváme velké vytížení uzlu. V opačném případě by bylo potřeba čekání zajistit vlastní pomocí, ideálně jej ještě zkombinovat s přijímáním zpráv, právě z důvodu, aby uzel při snaze odeslat zprávu se na delší dobu nezastavil čekáním na jednu funkci, když by zatím mohl alespoň přijímat zprávy, provádět měření pomocí sensorů či jinak interagovat s okolím. 
+
+
+
+		\subsubsection{Sniffer}
+		Druhá aplikace slouží k zachycení veškerého provozu v síti. velmi dobře nám poslouží, když potřebujeme ladit vlastní aplikaci a pozorovat, co který uzel zasílá za zprávy. Zároveň ji taktéž můžeme použít v roli útočníka a velmi jednoduše pasivně odposlouchávat veškerou komunikaci v síti. Jediným omezením je dosah rádia. Aplikace používá trochu pokročilejší koncepty oproti Alive aplikaci, protože se předpokládá její nasazení i při testování sítě s velkým množstvím provozu. Ve funkci \texttt{setup} nastavíme ID rádia na hodnotu 31, tedy uzel, který přijímá všechny zprávy v síti. Toto je klíčová část této aplikace, ostatní je pouze již zpracování a výpis zpráv. Sniffer jako takový je speciální aplikací, protože jako jeden z mála neodesílá žádné zprávy. Opět se podíváme na obsah funkce \texttt{loop}.
+\newpage
+\codetitle{Funkce \texttt{loop} v aplikaci Sniffer}
+\begin{cppcode*}{firstnumber=32}  
+void loop () {
+
+    if (rf12_recvDone()) {
+        // quickly save a copy of all volatile data saveLen = rf12_len;
+        saveCrc = rf12_crc;
+        saveHdr = rf12_hdr;
+        memcpy(saveData, (const void*) rf12_data, sizeof saveData);
+        rf12_recvDone();
+        // release lock on info for next reception
+        if (saveCrc != 0) {
+            su.print("CRC error #", output);
+            su.println(saveLen, DEC, output);
+        }
+        else {
+            su.print("OK (", output);
+            String header = "";
+            for (byte i = 0; i < 8; ++i) {
+                header.concat(bitRead(saveHdr, 7-i)); // read bytes of header 
+            }
+            su.print(header, output);
+            su.print("b) ", output);
+            su.print(saveHdr & RF12_HDR_ACK ? "REQ " : " ", output);
+            su.print(saveHdr & RF12_HDR_CTL ? "ACK " : " ", output);
+            su.print(saveHdr & RF12_HDR_DST ? "DST:" : "SRC:", output);
+            su.print(saveHdr & RF12_HDR_MASK, output);
+            su.print(" #", output);
+            su.println(saveLen,DEC, output);
+            // print out all data bytes, wrapping long lines byte pos = 0;
+            int pos = 0;
+            for (byte i = 0; i < saveLen; ++i) {
+                su.print(' ', output);
+                su.print(saveData[i],HEX, output);
+                pos += 2;
+                if (saveData[i] >= 16) ++pos;
+                if (pos > 75) {
+                    su.println();
+                    pos = 0;
+                }
+            }
+            if (pos > 0) su.println();
+        }
+    }
+}
+\end{cppcode*}
+\hrule
+\bigskip 
+
+Můžeme opět vidět ověření přijetí zprávy, nicméně protože zpráva nebyla určena tomuto uzlu, tak již neodesíláme potvrzení o doručení. Kvůli požadavku na rychlost nejdříve zkopírujeme všechny informace o přijaté zprávě do vlastních proměnných a umožníme příjem další zprávy co nejdříve. Následuje ověření správnosti doručení (CRC - cyclic redundancy check) a poté samotné zpracování zprávy. 
+
+Můžeme vidět, že hlavička je zpracována bit po bitu tak, aby bylo vidět všech 8 bitů jednotlivě. Následně jsou zpracovány všechny další položky zprávy. můžeme vidět, že na výstup není použita běžná knihovní funkce, ale knihovna serialUtils, která nám umožňuje jednotlivým výpisům přiřadit prioritu a tak například v pozdějších fázích vynechat ladící výpisy. 
 	 
-	\subsection{Síť}
-		\paragraph{Všeobecné parametry}
-		\paragraph{Fixní routování}
-	
 
 
 \end{document}

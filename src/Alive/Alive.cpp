@@ -2,6 +2,7 @@
 #include "RF12.h"
 #include "RadioUtils.h"
 #include "SerialUtils.h"
+#include <../common.h>
 
 int counter = 0; //
 int msgCounter = 0; 
@@ -16,7 +17,7 @@ SerialUtils su = SerialUtils(57600);
 
 void setup () {
   Serial.begin(57600);
-  Serial.println("\n[Alive Send]");
+  Serial.println("\n[Alive], node started");
   su.setUpNodeID( &id, &group, &parent);
 #if !DEBUG
   rf12_initialize(id, RF12_868MHZ, group);

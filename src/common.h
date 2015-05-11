@@ -1,3 +1,5 @@
+// common file for definitions, e.g. parameter lengths, possible node IDs, frequency settings, EEPROM locations etc.
+
 
 #ifndef COMMON_H
 #define COMMON_H

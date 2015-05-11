@@ -20,8 +20,23 @@ public:
 
     void print(String text, Priority priority);
     
+    void print(byte b, Priority priority);
+
+    void print(String text, int format, Priority priority);
+    
+    void print(byte b, int format, Priority priority);
+    
     //just calls print and adds newline
     void println(String text, Priority priority);
+    
+    void println(String text, int format, Priority priority);
+
+    void println(byte b, Priority priority);
+
+    void println(byte b, int format, Priority priority);
+    
+    void println();
+
     
     int getNumErrors();
 private:
