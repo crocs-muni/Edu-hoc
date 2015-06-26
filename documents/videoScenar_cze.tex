@@ -17,8 +17,8 @@
 \begin{document}
 \begin{titlepage}
 \begin{center}
-\textsc{\LARGE Scénář}\\[1cm]
-\textsc{\Large WSN}\\[0.6cm]
+\textsc{\LARGE Studijní text}\\[1cm]
+\textsc{\Large Arduino WSN}\\[0.6cm]
 
 
 \Large{Lukáš Němec}\\[1cm]
@@ -26,7 +26,6 @@
 \bigskip
 \bigskip
 
-\Large{\today}
 \end{center}
 \end{titlepage}
 
@@ -35,6 +34,9 @@
 \tableofcontents
 \newpage
 
+
+\section{Úvod}
+Tento text slouží k úvodnímu seznámení s Arduinem a aplikacemi, které je možné pomocí Arduina vytvořit. V druhé a třetí části je následně zaměření na bezdrátovou komunikaci a vytváření senzorových sítí pomocí Uzlů založených na Arduinu. Veškeré zdrojové kódy lze nalézt buď v repozitáři projektu Edu-hoc \url{https://github.com/crocs-muni/Edu-hoc}, na stránkách Arduina \url{www.arduino.cc} nebo na stránkách knihovny JeeLib \url{http://jeelabs.net/projects/jeelib/wiki}.
 
 \section{Arduino všeobecně}
 Arduino je open-source platforma a zároveň fenomén několika posledních let. Poskytuje jednak samotný hardware a jednak software pro programování mikrokontrolerů ATMega. V současné době už existuje nejenom velké množství oficiálních Arduino desek, ale zároveň se objevuje velké množství jejich klonů. Tyto jsou buď motivovány snahou vytvořit vlastní a levnější variantu svého Arduina, nebo naopak některou z oficiálních desek rozšířit o funkcionalitu navíc. Mezi první kategorii typicky patří čínské klony typu Funduino a další, zatímco druhá kategorie obsahuje například specializované desky, jako jsou námi používané JeeLink a JeeNode USB.
@@ -254,7 +256,7 @@ Tyto dvě ukázky pokrývají prakticky celou základní funkcionalitu aplikace 
 		\subsubsection{Alive}
 		Aplikace se statickým nastavením topologie sítě, každý uzel má pevně přidělené své ID a ID svého rodiče, ke kterému posílá vlastní zprávy a přeposílá veškeré zprávy přijaté. Takto je pevně ustanovený routovací strom a každý uzel periodicky zasílá zprávu svému rodiči. Zároveň každý uzel přeposílá všechny přijaté zprávy svému rodiči, tedy postupně všechny zprávy doputují k jednomu centrálnímu uzlu. 
 		
-		Pro správný provoz je třeba definovat cesty (routovací strom) tak, aby každý uzel měl svého rodiče v dosahu rádia a byl schopen jej nalézt. Pokud by tomu tak nebylo, tak by došlo k úplnému odříznutí jedné z větví stromu. Zároveň je třeba strom navrhnout tak, aby byla zátěž s přeposíláním zpráv rovnoměrně rozložená mezi všechny uzly, v ideálním případě by měl být routovací strom vyvážený a bez nepravidelností\footnote{toto není vždy možné, ale skutečný strom by se měl tomu ideálnímu co nejvíce přiblížit}. 
+		Pro správný provoz je třeba definovat cesty (routovací strom) tak, aby každý uzel měl svého rodiče v dosahu rádia a byl schopen jej nalézt. Pokud by tomu tak nebylo, tak by došlo k úplnému odříznutí jedné z větví stromu. Zároveň je třeba strom navrhnout tak, aby byla zátěž s přeposíláním zpráv rovnoměrně rozložená mezi všechny uzly, v ideálním případě by měl být routovací strom vyvážený\footnote{toto není vždy možné, ale skutečný strom by se měl tomu ideálnímu co nejvíce přiblížit}. 
 		
 		Aplikace samotná funguje velmi jednoduše, podstatné části jsou popsány na následující ukázce funkce \texttt{loop}.
 

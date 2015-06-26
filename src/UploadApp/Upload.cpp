@@ -6,6 +6,8 @@
 #include "SerialUtils.h"
 #include "../common.h"
 
+//#define EEPROM_WRITE
+
 int address = 0;
 int state = 0;
 
@@ -55,14 +57,14 @@ String tagToString(int tagID){
 
 byte processNumber(String param){ 
     for (unsigned int i = 0; i < param.length(); i++ ){
-        
+
        //check if all are numbers
        if(!isDigit(param.charAt(i))){
            su.println("Parser error, parameter not numeric", error);
            return 0;
        }
     }
-    
+
     //convert to number
     return param.toInt();
 }
@@ -76,28 +78,28 @@ char readParam [INPUT_PARAM_LEN];
 
 void setup () {
   Serial.begin(57600);
-  
-  
+
+
 }
 
 void loop () {  
-    
+
     //read until first tag
     char input = 0;
     while(input != '<'){
             input = Serial.read();
     }
-    
+
     //push bottom into stack
     stack.push(-1);
     //read until end tag
     while ( stack.isFull()){
-        
+
         Serial.readBytesUntil('>', readTag, INPUT_TAG_LEN);
         readTag[strlen(readTag)-1] = '\0'; //discard end of tag '>'
         if(readTag[0] == '/'){ // if endTag
             if(stack.peek() == tagToInt(readTag)){
-                
+
                 switch(stack.pop()){ //process parameters of current tag
                     case setup_tag:
                         break;
@@ -128,7 +130,7 @@ void loop () {
             } else {
                 su.println("Parser error, wrong sequence", error);
             }
-            
+
             stack.pop();
             if(stack.peek() == -1){
                 stack.pop();
@@ -138,23 +140,24 @@ void loop () {
             stack.push(tagToInt(readTag));
             memset(readTag, 0, INPUT_TAG_LEN);
             memset(readParam, 0, INPUT_PARAM_LEN);
-            
-            
+
+
         }
         Serial.readBytesUntil('<', readParam, INPUT_PARAM_LEN);
-        
+
     }
-    
-    
+
+
     if(su.getNumErrors() > 0){
-        
+
         //permanent sleep
         //TODO change to reset
         set_sleep_mode(SLEEP_MODE_PWR_DOWN);
         sleep_enable(); 
         sleep_mode();
     }
-    
+
+#ifdef EEPROM_WRITE
     //update config in EEPROM, EEPROM has limited number of write-erase cycles, so only write when values are different
     if(EEPROM.read(NODE_ID_LOCATION) != nodeID){
         EEPROM.write(NODE_ID_LOCATION, nodeID);
@@ -165,12 +168,16 @@ void loop () {
     if(EEPROM.read(PARENT_ID_LOCATION) != parentID){
         EEPROM.write(PARENT_ID_LOCATION, parentID);
     }
-    
-    
-    //permanent sleep
-    
+#else
+    su.println(nodeID, debug);
+    su.println(groupID, debug);
+    su.println(parentID, debug);
+#endif
+
+    //permanent sleep, node is configured, now waits for another app
+
     set_sleep_mode(SLEEP_MODE_PWR_DOWN);
     sleep_enable(); 
     sleep_mode(); 
-    
+
 }
