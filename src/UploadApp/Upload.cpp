@@ -5,7 +5,7 @@
 #include "SerialUtils.h"
 #include "../common.h"
 
-//#define EEPROM_WRITE
+#define EEPROM_WRITE
 
 
 int config = 0;
@@ -56,6 +56,7 @@ void loop () {
 
     #ifdef EEPROM_WRITE
         //update config in EEPROM, EEPROM has limited number of write-erase cycles, so only write when values are different
+        su.println("EEPROM_WRITE", debug);
         if(EEPROM.read(NODE_ID_LOCATION) != nodeID){
             EEPROM.write(NODE_ID_LOCATION, nodeID);
         }

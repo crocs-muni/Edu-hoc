@@ -5,10 +5,7 @@
 #include "SerialUtils.h"
 #include "../common.h"
 
-//#define EEPROM_WRITE
 
-
-int config = 0;
 
 byte nodeID      = 0;
 byte groupID     = 0;
@@ -19,67 +16,33 @@ SerialUtils su = SerialUtils(57600);
 
 void setup () {
   Serial.begin(57600);
+  delay(10000);
   su.println("App started", debug);
 
 }
 
 void loop () {  
-    
-    while (Serial.available() > 0) {
-        nodeID = Serial.parseInt();
-        if(nodeID > MAX_NODE_ID ){
-            su.println("Parser error, node ID out of bounds", error);
-        }
-        groupID = Serial.parseInt();
-        if(groupID > MAX_GROUP_ID || groupID < MIN_GROUP_ID){
-            su.println("Parser error, group ID out of bounds", error);
-        }
-        parentID = Serial.parseInt();
-        if(parentID > MAX_NODE_ID ){
-            su.println("Parser error, parent ID out of bounds", error);
-        }
-        su.println("setup completed", debug);
-        config = 1;
-    }
-    if(config != 0){
-        if(su.getNumErrors() > 0){
 
-            //permanent sleep
-            //TODO change to reset
-            su.println("error, cannot save", error);
-            Serial.flush(); 
-            set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-            sleep_enable(); 
-            sleep_mode();
-            
-        }
+    nodeID = EEPROM.read(NODE_ID_LOCATION);
 
-    #ifdef EEPROM_WRITE
-        //update config in EEPROM, EEPROM has limited number of write-erase cycles, so only write when values are different
-        if(EEPROM.read(NODE_ID_LOCATION) != nodeID){
-            EEPROM.write(NODE_ID_LOCATION, nodeID);
-        }
-        if(EEPROM.read(GROUP_ID_LOCATION) != groupID){
-            EEPROM.write(GROUP_ID_LOCATION, groupID);
-        }
-        if(EEPROM.read(PARENT_ID_LOCATION) != parentID){
-            EEPROM.write(PARENT_ID_LOCATION, parentID);
-        }
+    groupID = EEPROM.read(GROUP_ID_LOCATION);
+
+    parentID = EEPROM.read(PARENT_ID_LOCATION);
+
+    su.println("setup results", debug);
+    su.print("node id = ", debug);
+    su.println(nodeID, debug);
+    su.print("group id = ", debug);
+    su.println(groupID, debug);
+    su.print("parent id = ", debug);
+    su.println(parentID, debug);
+
+    //permanent sleep, node is configured, now waits for another app
+    su.println("loop end", debug);
+    Serial.flush(); 
     
-    #endif
-        su.println("setup results", debug);
-        su.println(nodeID, debug);
-        su.println(groupID, debug);
-        su.println(parentID, debug);
+    set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+    sleep_enable(); 
+    sleep_mode(); 
     
-        
-        //permanent sleep, node is configured, now waits for another app
-        su.println("loop end", debug);
-        Serial.flush(); 
-        
-        set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-        sleep_enable(); 
-        sleep_mode(); 
-        
-    }
 }
