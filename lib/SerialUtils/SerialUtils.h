@@ -6,9 +6,10 @@
 
 
 enum Priority{
-    error, 
-    output,
-    debug    
+
+    debug = 0,
+    output = 1,
+    error = 2
 } ;
 
 class SerialUtils

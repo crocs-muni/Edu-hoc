@@ -10,3 +10,4 @@ bin*
 *.toc
 *.log
 *.aux
+/src/UploadTool/UploadTool/nbproject/private/

@@ -18,8 +18,10 @@ void SerialUtils::print(String text, Priority priority){
     if(priority == error){
         errors++;
     }
-    
-    Serial.print(text);
+
+    if(priority >= OUTPUT_LEVEL){
+        Serial.print(text);
+    }
 }
 
 void SerialUtils::print(byte b, Priority priority){
@@ -27,8 +29,9 @@ void SerialUtils::print(byte b, Priority priority){
     if(priority == error){
         errors++;
     }
-    
-    Serial.print(b);
+    if(priority >= OUTPUT_LEVEL){
+        Serial.print(b);
+    }
 }
 
 void SerialUtils::print(String text, int format, Priority priority){
@@ -36,8 +39,9 @@ void SerialUtils::print(String text, int format, Priority priority){
     if(priority == error){
         errors++;
     }
-    
-    Serial.print(text);
+    if(priority >= OUTPUT_LEVEL){
+        Serial.print(text);
+    }
 }
 
 void SerialUtils::print(byte b, int format, Priority priority){
@@ -45,8 +49,9 @@ void SerialUtils::print(byte b, int format, Priority priority){
     if(priority == error){
         errors++;
     }
-    
-    Serial.print(b);
+    if(priority >= OUTPUT_LEVEL){
+        Serial.print(b);
+    }
 }
     
 void SerialUtils::println(String text, Priority priority){

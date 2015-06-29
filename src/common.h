@@ -26,4 +26,11 @@
 #define GROUP_ID_LOCATION   1
 #define PARENT_ID_LOCATION  2
 
+//Serial output level 
+// 0 - debug
+// 1 - output
+// 2 - error
+#define OUTPUT_LEVEL 0
+
+
 #endif //COMMON_H
