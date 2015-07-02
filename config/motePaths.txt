@@ -11,7 +11,6 @@
 /dev/mote_jeelink10
 /dev/mote_jeelink11
 /dev/mote_jeelink12
-/dev/mote_jeelink11
 /dev/mote_jeelink13
 /dev/mote_jeelink14
 /dev/mote_jeelink15
@@ -24,4 +23,3 @@
 /dev/mote_jeelink22
 /dev/mote_jeelink23
 /dev/mote_jeelink24
-/dev/mote_jeelink25

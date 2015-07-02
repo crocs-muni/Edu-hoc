@@ -11,3 +11,6 @@ bin*
 *.log
 *.aux
 /src/UploadTool/UploadTool/nbproject/private/
+/src/UploadTool/UploadTool/build/
+
+
