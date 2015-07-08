@@ -20,11 +20,11 @@
 byte saveHdr, saveLen, saveData[RF12_MAXDATA];
 word saveCrc;
 
-SerialUtils su = SerialUtils(57600);
+SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 
 void setup () {
-    Serial.begin(57600);
+    Serial.begin(SERIAL_FREQUENCY);
     su.println("\n[sniffer] 868 MHz group 5", output);
     rf12_initialize(31, FREQUENCY, 5);
 }

@@ -14,11 +14,11 @@ byte nodeID      = 0;
 byte groupID     = 0;
 byte parentID    = 0;
 
-SerialUtils su = SerialUtils(57600);
+SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(SERIAL_FREQUENCY);
   su.println("App started", debug);
 
 }

@@ -14,6 +14,8 @@
 //factory FREQUENCY of JeeLink nodes (radio modules are marked with yellow dot)
 #define FREQUENCY RF12_868MHZ
 
+#define SERIAL_FREQUENCY 57600
+
 
 //parser tag and param maximum lengths 
 //TODO remove after upload app parser changed to string
