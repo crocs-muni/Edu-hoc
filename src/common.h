@@ -16,11 +16,8 @@
 
 #define SERIAL_FREQUENCY 57600
 
-
-//parser tag and param maximum lengths 
-//TODO remove after upload app parser changed to string
-#define INPUT_TAG_LEN 10
-#define INPUT_PARAM_LEN 10
+//maximum length for RF12 message format
+#define MAX_MESSAGE_LENGTH 65
 
 
 //EEPROM values locations
