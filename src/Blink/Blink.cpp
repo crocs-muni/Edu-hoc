@@ -1,8 +1,6 @@
 #include <Arduino.h>
-#include <EEPROM.h>
-#include <avr/sleep.h>
 
-#include "SerialUtils.h"
+
 #include "../common.h"
 
 
