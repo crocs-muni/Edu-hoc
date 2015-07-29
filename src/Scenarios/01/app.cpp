@@ -41,7 +41,7 @@ void loop () {
   while(stack.count() > 1){
       
     //while there are messages, send new one every second
-    message = stack.pop();    
+    message = stack.pop();
     byte hdr = 0;
     message.toCharArray(payload, message.length());
     

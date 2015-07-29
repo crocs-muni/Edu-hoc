@@ -4,5 +4,7 @@
 # files should be ideally sorted same way
 
 
-diff -w -U 0 $1 $2 | grep ^@ | wc -l
+MISSING=$( diff -w -U 0 $1 $2 | grep ^@ | wc -l)
+TOTAL=$(cat $1 | wc -l )
+echo $MISSING "messages missing" out of $TOTAL
 

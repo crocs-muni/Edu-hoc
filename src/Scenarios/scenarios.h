@@ -6,7 +6,9 @@
 
 
 //1 message per second, 15 minutes per scenario run
-#define MESSAGES_COUNT 900
+//#define MESSAGES_COUNT 900
+
+#define MESSAGES_COUNT 10
 
 
 #endif //SCENARIOS_H
