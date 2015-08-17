@@ -5,7 +5,7 @@
 #include "SerialUtils.h"
 #include "../common.h"
 
-//#define EEPROM_WRITE
+#define EEPROM_WRITE
   
 
 int config = 0;
@@ -19,7 +19,7 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 void setup () {
   Serial.begin(SERIAL_FREQUENCY);
-  delay(1000);
+  
   su.println("App started", debug);
 
 }
