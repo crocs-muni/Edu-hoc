@@ -52,8 +52,9 @@ void loop() {
     rf12_sendNow(hdr, payload, message.length());
 
     //increment counter
-    counter++;
+    
   }
+  counter++;
   if (rf12_recvDone()) {
     if(even){
         digitalWrite(9, HIGH);   // turn the LED on (HIGH is the voltage level)
