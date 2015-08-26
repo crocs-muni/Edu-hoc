@@ -13,10 +13,10 @@ int parent = 0;
 
 
 RadioUtils ru = RadioUtils();
-SerialUtils su = SerialUtils(57600);
+SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(SERIAL_FREQUENCY);
   Serial.println("\n[Alive], node started");
   su.setUpNodeID( &id, &group, &parent);
 #if !DEBUG
@@ -55,5 +55,4 @@ void loop () {
     rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
     counter = 0;
   }
-  
 }
