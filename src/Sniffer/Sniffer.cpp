@@ -24,6 +24,7 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 
 void setup () {
+    //saveLen = 255;
     Serial.begin(SERIAL_FREQUENCY);
     su.println("\n[sniffer] 868 MHz group 10", output);
     rf12_initialize(31, FREQUENCY, 10);
@@ -33,6 +34,7 @@ void loop () {
 
     if (rf12_recvDone()) {
         // quickly save a copy of all volatile data saveLen = rf12_len;
+        saveLen = rf12_len;
         saveCrc = rf12_crc;
         saveHdr = rf12_hdr;
         memcpy(saveData, (const void*) rf12_data, sizeof saveData);
@@ -55,12 +57,12 @@ void loop () {
             su.print(saveHdr & RF12_HDR_DST ? "DST:" : "SRC:", output);
             su.print(saveHdr & RF12_HDR_MASK, output);
             su.print(" #", output);
-            su.println(saveLen,DEC, output);
+            Serial.print(saveLen,DEC);
             // print out all data bytes, wrapping long lines byte pos = 0;
 	    int pos = 0;
             for (byte i = 0; i < saveLen; ++i) {
                 su.print(' ', output);
-                su.print(saveData[i],HEX, output);
+                Serial.print(saveData[i],HEX);
                 pos += 2;
                 if (saveData[i] >= 16) ++pos;
                 if (pos > 75) {
