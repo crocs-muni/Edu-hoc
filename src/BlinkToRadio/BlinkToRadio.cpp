@@ -49,11 +49,12 @@ void loop() {
     //send counter broadcast    
     ru.setBroadcast(&hdr);
     ru.resetAck(&hdr);
-    rf12_sendNow(hdr, payload, message.length());
+    rf12_sendNow(hdr, payload, 5);
 
-    //increment counter
+   
     
   }
+  //increment counter
   counter++;
   if (rf12_recvDone()) {
     if(even){
