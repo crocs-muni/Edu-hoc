@@ -7,7 +7,6 @@
 #include <../../common.h>
 #include <../scenarios.h>
 
-int counter = 0; //
 int msgCounter = 0; 
 
 int nodeID = 0;
@@ -19,7 +18,6 @@ char payload[MAX_MESSAGE_LENGTH] = "";
 
 RadioUtils ru = RadioUtils();
 SerialUtils su = SerialUtils(57600);
-//StackArray <String> stack = StackArray<String>();
 
 void setup () {
   Serial.begin(57600);
@@ -30,16 +28,6 @@ void setup () {
   
 
   rf12_initialize(nodeID, FREQUENCY, groupID);
-/*
-  while(stack.count() != MESSAGES_COUNT){
-      message = Serial.readStringUntil('\n');
-      if(message.length() != 0){
-        stack.push(message);
-        su.println(message, debug);
-      }
-  }
-  */
-  //su.println("\n[Scenario 01], all messages received", debug);
 }
 
 void loop () {  
