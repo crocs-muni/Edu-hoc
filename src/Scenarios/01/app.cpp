@@ -19,7 +19,7 @@ char payload[MAX_MESSAGE_LENGTH] = "";
 
 RadioUtils ru = RadioUtils();
 SerialUtils su = SerialUtils(57600);
-StackArray <String> stack = StackArray<String>();
+//StackArray <String> stack = StackArray<String>();
 
 void setup () {
   Serial.begin(57600);
@@ -30,27 +30,36 @@ void setup () {
   
 
   rf12_initialize(nodeID, FREQUENCY, groupID);
-
+/*
   while(stack.count() != MESSAGES_COUNT){
       message = Serial.readStringUntil('\n');
-      stack.push(message);
+      if(message.length() != 0){
+        stack.push(message);
+        su.println(message, debug);
+      }
   }
+  */
+  //su.println("\n[Scenario 01], all messages received", debug);
 }
 
 void loop () {  
-  while(stack.count() > 1){
-      
-    //while there are messages, send new one every second
-    message = stack.pop();
+    
+  if (Serial.available() > 0) {
+  // read the incoming byte:
+    message = Serial.readStringUntil('\n');
+    
     byte hdr = 0;
-    message.toCharArray(payload, message.length());
+    message.toCharArray(payload, message.length()+1);
     
     ru.setBroadcast(&hdr);
     ru.resetAck(&hdr);
     rf12_sendNow(hdr, payload, message.length());
+    msgCounter++;
     
-    su.println("message send: ", debug);
-    su.println(payload, debug);
-    delay(1000);
+    su.print("message send: ", debug);    
+    su.print(payload, debug);
+    su.print(" ", debug);
+    su.println(msgCounter, debug);
+   
   }
 }
