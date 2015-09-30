@@ -7,11 +7,13 @@
 
 #include "../common.h"
 
+const byte RF12_NORMAL_SENDWAIT = 0;
+
 RadioUtils ru = RadioUtils();
 SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 
-int counter = 0; //
+long counter; //
 int msgCounter = 0; 
 
 int nodeID = 0;
@@ -44,14 +46,14 @@ void loop() {
     byte hdr = 0;
 
     //counter to message
-    sprintf(payload, "%d", counter);
-
+    //sprintf(payload, "%d", counter);
     //send counter broadcast    
     ru.setBroadcast(&hdr);
     ru.resetAck(&hdr);
-    rf12_sendNow(hdr, payload, 5);
-
-   
+    rf12_sendNow(0, &counter, sizeof counter);
+    rf12_sendWait(RF12_NORMAL_SENDWAIT);
+    su.print("new message send: ", debug);
+    su.println(counter, debug); 
     
   }
   //increment counter
