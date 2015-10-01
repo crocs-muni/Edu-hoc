@@ -1,0 +1,9 @@
+/dev/mote_jeelink100
+/dev/mote_jeelink101
+/dev/mote_jeelink106
+/dev/mote_jeelink107
+/dev/mote_jeelink110
+/dev/mote_jeelink111
+/dev/mote_jeelink120
+/dev/mote_jeelink121
+/dev/mote_jeelink122
