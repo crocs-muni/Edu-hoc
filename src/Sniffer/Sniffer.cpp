@@ -17,8 +17,9 @@
 
 #define GROUP 5
 
-byte saveHdr, saveLen, saveData[RF12_MAXDATA];
+byte saveHdr, saveLen;
 word saveCrc;
+char saveData[RF12_MAXDATA];
 
 SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
@@ -26,8 +27,8 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 void setup () {
     //saveLen = 255;
     Serial.begin(SERIAL_FREQUENCY);
-    su.println("\n[sniffer] 868 MHz group 10", output);
-    rf12_initialize(31, FREQUENCY, 10);
+    su.println("\n[sniffer] 868 MHz group 50", output);
+    rf12_initialize(31, FREQUENCY, 50);
 }
 
 void loop () {
@@ -58,11 +59,25 @@ void loop () {
             su.print(saveHdr & RF12_HDR_MASK, output);
             su.print(" #", output);
             Serial.print(saveLen,DEC);
+            Serial.print(" # HEX:");
             // print out all data bytes, wrapping long lines byte pos = 0;
-	    int pos = 0;
+	          int pos = 0;
             for (byte i = 0; i < saveLen; ++i) {
-                su.print(' ', output);
-                Serial.print(saveData[i],HEX);
+
+                Serial.print(saveData[i], HEX);
+                pos += 2;
+                if (saveData[i] >= 16) ++pos;
+                if (pos > 75) {
+                    su.println();
+                    pos = 0;
+                }
+            }
+
+            Serial.print(" # ASCII:");
+            pos = 0;
+            for (byte i = 0; i < saveLen; ++i) {
+
+                Serial.print(saveData[i]);
                 pos += 2;
                 if (saveData[i] >= 16) ++pos;
                 if (pos > 75) {
