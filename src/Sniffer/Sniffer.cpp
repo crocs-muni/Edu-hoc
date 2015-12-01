@@ -44,6 +44,18 @@ void loop () {
         if (saveCrc != 0) {
             su.print("CRC error #", output);
             su.println(saveLen, DEC, output);
+            /*
+            for (byte i = 0; i < saveLen; ++i) {
+
+                Serial.print(saveData[i], HEX);
+            }
+            Serial.println();
+            for (byte i = 0; i < saveLen; ++i) {
+
+                Serial.print(saveData[i]);
+            }
+            Serial.println();
+            */
         }
         else {
             su.print("OK (", output);
@@ -62,6 +74,7 @@ void loop () {
             Serial.print(" # HEX:");
             // print out all data bytes, wrapping long lines byte pos = 0;
 	          int pos = 0;
+
             for (byte i = 0; i < saveLen; ++i) {
 
                 Serial.print(saveData[i], HEX);
