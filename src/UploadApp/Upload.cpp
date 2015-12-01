@@ -6,7 +6,7 @@
 #include "../common.h"
 
 #define EEPROM_WRITE
-  
+
 
 int config = 0;
 
@@ -14,12 +14,11 @@ byte nodeID      = 0;
 byte groupID     = 0;
 byte parentID    = 0;
 
-SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
+SerialUtils su = SerialUtils(57600);
 
 
 void setup () {
-  Serial.begin(SERIAL_FREQUENCY);
-  
+  Serial.begin(57600);
   su.println("App started", debug);
 
 }
@@ -69,7 +68,6 @@ void loop () {
         }
     
     #endif
-	delay(1000);
         su.println("setup results", debug);
         su.println(nodeID, debug);
         su.println(groupID, debug);
