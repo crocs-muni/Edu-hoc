@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 RadioUtils::RadioUtils(){
-
+    dynamicRouting = false;
 }
 
 int RadioUtils::setAck(byte* hdr){
@@ -36,4 +36,8 @@ int RadioUtils::getID(byte* hdr, byte* id){
     byte idAnd = B00011111;
     *id = *hdr & idAnd;
     return 0;
+}
+
+void RadioUtils::enableDynamicRouting(){
+    dynamicRouting = true;
 }
