@@ -1,6 +1,7 @@
 #include "RadioUtils.h"
 #include <RF12.h>
 #include <Arduino.h>
+#include "../../src/common.h"
 
 RadioUtils::RadioUtils(){
     dynamicRouting = false;
@@ -26,7 +27,37 @@ int RadioUtils::routeGetLength(){
     return distance;
 }
 
-int RadioUtils::routeBroadcastLength(){
+int RadioUtils::routePerformOneStep(){
+  for(int i = 0; i < TIMEOUT; i++) {
+    if(rf12_recvDone()){
+      if(RF12_WANTS_ACK){
+        rf12_sendStart(RF12_ACK_REPLY,0,0);
+      }
+      if(rf12_crc == 0){
+        char text[MAX_MESSAGE_LENGTH] = "";
+        for (byte i = 0; i < rf12_len; ++i) {
+          text[i] = rf12_data[i];
+        }
+        String payload = String(text);
+        int d = routeParseDistance(payload);
+        byte id = 0;
+        byte saveHdr;
+        saveHdr = rf12_hdr;
+        getID(&saveHdr, &id);
+        int result = routeUpdateDistance(d+1, id);
+        if(result == 1){
+          routeBroadcastLength();
+        }
+        return 1;
+      }
+    }
+    delay(10);
+  }
+  return -1;
+}
+
+
+void RadioUtils::routeBroadcastLength(){
     byte hdr = 0;
 
     String message = String("distance:" + distance);
@@ -47,6 +78,7 @@ int RadioUtils::routeParseDistance(String d){
       return -1;
     }
 }
+
 
 
 int RadioUtils::setAck(byte* hdr){

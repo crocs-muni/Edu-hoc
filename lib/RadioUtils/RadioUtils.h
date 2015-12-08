@@ -17,18 +17,23 @@ public:
 
     int getID(byte* hdr, byte* id);
 
+    int routePerformOneStep();
+
     int routeUpdateDistance(int d, byte p);
 
     int routeGetParent();
 
     int routeGetLength();
 
-    int routeBroadcastLength();
+    void routeBroadcastLength();
 
     int routeParseDistance(String d);
 
     void enableDynamicRouting();
 
+//how many times does sleep(10) cycle run before it ends
+//can be used for various timeouts (routing, etc.)
+    const static int TIMEOUT = 1000;
 private:
     bool dynamicRouting;
     int distance;
