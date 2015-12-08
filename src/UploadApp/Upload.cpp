@@ -47,6 +47,10 @@ void loop () {
             //permanent sleep
             //TODO change to reset
             su.println("error, cannot save", error);
+		su.println("results", debug);
+       		su.println(nodeID, debug);
+        	su.println(groupID, debug);
+        	su.println(parentID, debug);
             Serial.flush(); 
             set_sleep_mode(SLEEP_MODE_PWR_DOWN);
             sleep_enable(); 
