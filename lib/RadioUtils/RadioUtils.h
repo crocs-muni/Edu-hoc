@@ -16,15 +16,23 @@ public:
     int setID(byte* hdr, byte id);
 
     int getID(byte* hdr, byte* id);
-/*
+
+    int routeUpdateDistance(int d, byte p);
+
     int routeGetParent();
 
-    int routeBroadcastLength(int d);
-*/
+    int routeGetLength();
+
+    int routeBroadcastLength();
+
+    int routeParseDistance(String d);
+
     void enableDynamicRouting();
 
 private:
     bool dynamicRouting;
+    int distance;
+    byte parent;
 };
 
 #endif // RADIOUTILS_H
