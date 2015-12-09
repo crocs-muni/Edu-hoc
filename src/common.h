@@ -19,13 +19,15 @@
 //maximum length for RF12 message format
 #define MAX_MESSAGE_LENGTH 65
 
+//count of routing algorithm cycles
+#define ROUTING_CYCLES 10
 
 //EEPROM values locations
 #define NODE_ID_LOCATION    0
 #define GROUP_ID_LOCATION   1
 #define PARENT_ID_LOCATION  2
 
-//Serial output level 
+//Serial output level
 // 0 - debug
 // 1 - output
 // 2 - error

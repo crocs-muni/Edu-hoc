@@ -53,16 +53,17 @@ int RadioUtils::routePerformOneStep(){
     }
     delay(10);
   }
+  routeBroadcastLength();
   return -1;
 }
 
 
 void RadioUtils::routeBroadcastLength(){
     byte hdr = 0;
-
-    String message = String("distance:" + distance);
+    String d = String(distance, DEC);
+    String message = String("distance:" + d);
     char payload[15] = "";
-    message.toCharArray(payload, message.length()+1);
+    message.toCharArray(payload, message.length()+d.length()+1);
 
     setBroadcast(&hdr);
     resetAck(&hdr);

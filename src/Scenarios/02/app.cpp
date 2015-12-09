@@ -25,9 +25,23 @@ void setup () {
   nodeID = EEPROM.read(NODE_ID_LOCATION);
   groupID = EEPROM.read(GROUP_ID_LOCATION);
   parentID = EEPROM.read(PARENT_ID_LOCATION);
-
+  groupID = 10;
+  nodeID = 5;
+  parentID = 10;
   rf12_initialize(nodeID, FREQUENCY, groupID);
-
+  ru.enableDynamicRouting();
+  if(nodeID == parentID){//root node - BS - send info message n+1 times
+    ru.routeUpdateDistance(0, nodeID);
+    for(int i = 0; i < ROUTING_CYCLES; i ++){
+      delay(ru.TIMEOUT);
+      ru.routeBroadcastLength();
+    }
+  } else {//regular node - perform n+1 routing cycles
+    for(int i = 0; i < ROUTING_CYCLES + 1; i ++){ //
+      ru.routePerformOneStep();
+      delay(10);
+    }
+  }
 }
 
 void loop () {
@@ -43,7 +57,7 @@ void loop () {
       byte header = B00000000;
       //fill header using radioUtils
       ru.resetAck(&header);
-      ru.setID(&header, parentID);
+      ru.setID(&header, ru.routeGetParent());
       rf12_sendNow(header, (const void*)rf12_data, rf12_len);
     }
   }
