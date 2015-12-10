@@ -10,11 +10,6 @@
 int counter = 0; //
 int msgCounter = 0;
 
-int nodeID = 0;
-int groupID = 0;
-int parentID = 0;
-
-
 RadioUtils ru = RadioUtils();
 SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
@@ -22,16 +17,11 @@ void setup () {
   Serial.begin(SERIAL_FREQUENCY);
   Serial.println("\n[Scenario 01], node started");
 
-  nodeID = EEPROM.read(NODE_ID_LOCATION);
-  groupID = EEPROM.read(GROUP_ID_LOCATION);
-  parentID = EEPROM.read(PARENT_ID_LOCATION);
-  groupID = 10;
-  nodeID = 5;
-  parentID = 10;
-  rf12_initialize(nodeID, FREQUENCY, groupID);
+  ru.initialize();
   ru.enableDynamicRouting();
-  if(nodeID == parentID){//root node - BS - send info message n+1 times
-    ru.routeUpdateDistance(0, nodeID);
+
+  if(ru.getNodeID() == ru.getParentID()){//root node - BS - send info message n+1 times
+    ru.routeUpdateDistance(0, ru.getNodeID());
     for(int i = 0; i < ROUTING_CYCLES; i ++){
       delay(ru.TIMEOUT);
       ru.routeBroadcastLength();
@@ -57,22 +47,26 @@ void loop () {
       byte header = B00000000;
       //fill header using radioUtils
       ru.resetAck(&header);
-      ru.setID(&header, ru.routeGetParent());
+      ru.setID(&header, ru.getParentID());
       rf12_sendNow(header, (const void*)rf12_data, rf12_len);
     }
   }
 
   delay(10);
-  counter++;
 
-  if(counter%100 == 0){
-    msgCounter++;
-    //send counter msg
-    byte header;
-    //fill header using radioUtils
-    ru.resetAck(&header);
-    ru.setID(&header, parentID);
-    rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
-    counter = 0;
+  //only for regular nodes, not BS
+  if(ru.getNodeID() != ru.getParentID()){
+    counter++;
+
+    if(counter%100 == 0){
+      msgCounter++;
+      //send counter msg
+      byte header;
+      //fill header using radioUtils
+      ru.resetAck(&header);
+      ru.setID(&header, ru.getParentID());
+      rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
+      counter = 0;
+    }
   }
 }

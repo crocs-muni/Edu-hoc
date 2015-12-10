@@ -1,27 +1,50 @@
 #include "RadioUtils.h"
 #include <RF12.h>
 #include <Arduino.h>
+#include <EEPROM.h>
 #include "../../src/common.h"
 
 RadioUtils::RadioUtils(){
     dynamicRouting = false;
     distance = 100;
-    parent = 0;
+
+
+    int nodeID = 0;
+    int groupID = 0;
+    int parentID = 0;
+}
+
+void RadioUtils::initialize(){
+  nodeID = EEPROM.read(NODE_ID_LOCATION);
+  groupID = EEPROM.read(GROUP_ID_LOCATION);
+  parentID = EEPROM.read(PARENT_ID_LOCATION);
+
+  rf12_initialize(nodeID, FREQUENCY, groupID);
+}
+
+int RadioUtils::getNodeID(){
+  return nodeID;
+}
+
+int RadioUtils::getGroupID(){
+  return groupID;
+}
+
+int RadioUtils::getParentID(){
+  return parentID;
 }
 
 int RadioUtils::routeUpdateDistance(int d, byte p){
     if(d < distance){
       distance = d;
-      parent = p;
+      parentID = p;
       return 1;
     } else {
       return 0;
     }
 }
 
-int RadioUtils::routeGetParent(){
-    return parent;
-}
+
 
 int RadioUtils::routeGetLength(){
     return distance;
