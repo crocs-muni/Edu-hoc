@@ -21,8 +21,6 @@ public:
 
     int routeUpdateDistance(int d, byte p);
 
-    int routeGetParent();
-
     int routeGetLength();
 
     void routeBroadcastLength();
@@ -31,6 +29,14 @@ public:
 
     void enableDynamicRouting();
 
+    void initialize();
+
+    int getNodeID();
+
+    int getGroupID();
+
+    int getParentID();
+
 //how many times does sleep(10) cycle run before it ends
 //can be used for various timeouts (routing, etc.)
     const static int TIMEOUT = 1000;
@@ -38,6 +44,10 @@ private:
     bool dynamicRouting;
     int distance;
     byte parent;
+
+    int nodeID;
+    int groupID;
+    int parentID;
 };
 
 #endif // RADIOUTILS_H
