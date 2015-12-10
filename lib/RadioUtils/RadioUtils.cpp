@@ -46,8 +46,9 @@ int RadioUtils::routePerformOneStep(){
         getID(&saveHdr, &id);
         int result = routeUpdateDistance(d+1, id);
         if(result == 1){
-          routeBroadcastLength();
+          //TODO print
         }
+        routeBroadcastLength();
         return 1;
       }
     }

@@ -39,7 +39,7 @@ void setup () {
   } else {//regular node - perform n+1 routing cycles
     for(int i = 0; i < ROUTING_CYCLES + 1; i ++){ //
       ru.routePerformOneStep();
-      delay(10);
+
     }
   }
 }
