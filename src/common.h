@@ -20,7 +20,9 @@
 #define MAX_MESSAGE_LENGTH 65
 
 //count of routing algorithm cycles
-#define ROUTING_CYCLES 10
+#define ROUTING_CYCLES 1000
+
+#define TIMEOUT 10000
 
 //EEPROM values locations
 #define NODE_ID_LOCATION    0

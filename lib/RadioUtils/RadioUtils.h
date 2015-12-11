@@ -39,7 +39,7 @@ public:
 
 //how many times does sleep(10) cycle run before it ends
 //can be used for various timeouts (routing, etc.)
-    const static int TIMEOUT = 1000;
+    
 private:
     bool dynamicRouting;
     int distance;
