@@ -75,7 +75,7 @@ int RadioUtils::routePerformOneStep(){
         return 1;
       }
     }
-    delay(10);
+    delay(90);
   }
   routeBroadcastLength();
   return -1;

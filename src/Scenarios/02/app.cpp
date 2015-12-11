@@ -35,6 +35,20 @@ void setup () {
 }
 
 void loop () {
+
+  if(ru.getNodeID() == ru.getParentID()){//root node - BS - send info message n+1 times
+    ru.routeUpdateDistance(0, ru.getNodeID());
+    for(int i = 0; i < ROUTING_CYCLES; i ++){
+      delay(TIMEOUT*100);
+      ru.routeBroadcastLength();
+    }
+  } else {//regular node - perform n+1 routing cycles
+    for(int i = 0; i < ROUTING_CYCLES + 1; i ++){ //
+      ru.routePerformOneStep();
+
+    }
+  }
+  /*
   //if incoming message received
 
   if(rf12_recvDone()){
@@ -68,5 +82,5 @@ void loop () {
       rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
       counter = 0;
     }
-  }
+  }*/
 }
