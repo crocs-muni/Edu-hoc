@@ -37,9 +37,14 @@ public:
 
     int getParentID();
 
+    \**
+    * txPower range from 0 to 7, 0=highest, 7=lowest
+    *\
+    void setTransmitPower(byte txPower);
+
 //how many times does sleep(10) cycle run before it ends
 //can be used for various timeouts (routing, etc.)
-    
+
 private:
     bool dynamicRouting;
     int distance;
