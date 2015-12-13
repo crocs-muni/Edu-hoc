@@ -26,6 +26,10 @@ int RadioUtils::getNodeID(){
   return nodeID;
 }
 
+void RadioUtils::setTransmitPower(byte txPower){
+  rf12_control(0x9850 | (txPower > 7 ? 7 : txPower));
+}
+
 int RadioUtils::getGroupID(){
   return groupID;
 }
