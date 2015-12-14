@@ -2,10 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
 \usepackage{graphicx}
-\usepackage[czech]{babel}
+\usepackage[british]{babel}
 \usepackage{multicol}
 \usepackage{hyperref}
-\title{Video}
+\title{Study text}
 \author{Lukáš Němec}
 
 
@@ -13,8 +13,8 @@
 \begin{document}
 \begin{titlepage}
 \begin{center}
-\textsc{\LARGE Scénář}\\[1cm]
-\textsc{\Large WSN}\\[0.6cm]
+\textsc{\LARGE Study text}\\[1cm]
+\textsc{\Large Arduino WSN}\\[0.6cm]
 
 
 \Large{Lukáš Němec}\\[1cm]
@@ -30,9 +30,14 @@
 
 \tableofcontents
 \newpage
+\section{Introduction}
 
+Purpose of this text is to provide general introduction to Arduino and aplications which can be made using Arduino platform. Focus of second and third part will be at wireless communication and makind wireless sensor networks with Arduino based nodes. All used source codes can be found at Edu-Hoc project home, \url{https://github.com/crocs-muni/Edu-hoc}; at official Arduino website, \url{www.arduino.cc}; or at JeeLib library website, \url{http://jeelabs.net/projects/jeelib/wiki}.
 
-\section{Arduino všeobecně}
+\section{Arduino - general view}
+Arduino is an open-source platform and also phenomenon of last few years. It offers hardware itself and also software for programming ATMega micro controllers. Thre are not only official Arduino boards, but also large number of clones. These are motivated either by cheaper price or by added functionality compared to offcial ones. First category  typically includes Chinesse clones like Funduino or others, while second category consists usually of specialized boards like JeeLink and JeeNode USB, which we are going to use.
+
+From all containing Arduino platform we will use only developement enviroment, because our focus will be on ad-hoc networks, we will use specialized boards with build-in radio module, as was mentioned earlier in the text. Nevertheless we will start with absolute basics of working with Arduino.
 
 	\subsection{Arduino IDE}
 		\paragraph{Installation}
@@ -46,34 +51,30 @@
 		\paragraph{Serial}
 			\subparagraph{Print}
 			\subparagraph{Read}
-		
+
 \section{WSN node, JeeLib basics}
-  
+
 	\subsection{JeeNode HW }
 		\paragraph{General specs}
 		\paragraph{Radio}
 		\paragraph{Pins}
-	
+
 	\subsection{JeeLib basics}
 		\paragraph{How to add to IDE}
 		\paragraph{Header format}
 		\paragraph{Send unicast msg}
 		\paragraph{Receive msg}
 		\paragraph{2 motes network}
-	
+
 \section{WSN network}
 	\subsection{Simple apps}
 		\paragraph{Alive}
 		\paragraph{Sniffer}
-	 
+
 	\subsection{Network}
 		\paragraph{General options}
 		\paragraph{Fixed routing}
-	
+
 
 
 \end{document}
-
-
-
-
