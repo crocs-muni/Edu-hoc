@@ -1,8 +1,9 @@
 #include "RadioUtils.h"
-#include <RF12.h>
-#include <Arduino.h>
+
 #include <EEPROM.h>
 #include "../../src/common.h"
+
+#include <RF12.h>
 
 RadioUtils::RadioUtils(){
     dynamicRouting = false;
@@ -79,7 +80,7 @@ int RadioUtils::routePerformOneStep(){
         return 1;
       }
     }
-    delay(10);
+    delay(90);
   }
   routeBroadcastLength();
   return -1;
