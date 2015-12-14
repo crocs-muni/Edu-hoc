@@ -8,6 +8,10 @@
 \title{Study text}
 \author{Lukáš Němec}
 
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\newminted{cpp}{linenos=true,  bgcolor=bg, xleftmargin=2em, fontsize=\footnotesize}
+\newcommand{\codetitle}[1]{\bigskip \noindent {\scriptsize #1}\hrule}
 
 
 \begin{document}
@@ -22,7 +26,6 @@
 \bigskip
 \bigskip
 
-\Large{\today}
 \end{center}
 \end{titlepage}
 
@@ -40,6 +43,10 @@ Arduino is an open-source platform and also phenomenon of last few years. It off
 From all containing Arduino platform we will use only developement enviroment, because our focus will be on ad-hoc networks, we will use specialized boards with build-in radio module, as was mentioned earlier in the text. Nevertheless we will start with absolute basics of working with Arduino.
 
 	\subsection{Arduino IDE}
+	Arduino IDE is very simple enviroment for developement programs, from practical point of view, it is just a litle bit tweaked text editor with added support for Arduino.
+	It supports all major OS, so you can run it on linux, windows or OS X. It can run without installation, but this option does not support commmunication with boards over serial port. So this option is usefull for programing, but if you want to sent program to board itself or communicate with it, then it is highly recomended to install Arduino IDE on your computer.
+
+	You can benefit from this enviroment also if you decide to use your favourite text editor for actual coding, then Arduino IDE could be used just for compiling the code or because of other tools it offers. 
 		\paragraph{Installation}
 		\paragraph{Introduction to tools}
 		\paragraph{Compilation \& upload}
