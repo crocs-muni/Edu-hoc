@@ -73,7 +73,7 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 
 	\subsection{Základy syntaxe}
 			Arduino je možné brát jako speciální případ jazyka C. Zůstává téměř vše a mění se pouze podoba funkce main, která je rozdělená na dvě části, \texttt{setup} a \texttt{loop}.
-			Tedy je možné psát for cykly jako v jazyce C, stejně tak podmínky, funkce a téměř cokoliv dalšího, co budete potřebovat. Navíc Arduino přidává některé vlastní funkce a velké množství knihoven, které především slouží k příjemnější manipulaci s veškerým možným příslušenstvím. Nicméně můžeme nalézt i různé jiné knihovny, které především usnadňují psaní kódu.
+			Tedy je možné psát for cykly jako v jazyce C, stejně tak podmínky, funkce a téměř cokoliv dalšího, co budete potřebovat. Navíc Arduino přidává některé vlastní funkce a velké množství knihoven, které především slouží k příjemnější manipulaci s veškerým možným příslušenstvím. Nicméně můžeme nalézt i různé jiné knihovny, které především usnadňují psaní kódu v jazyce C.
 
 		\paragraph{\textbf{\texttt{setup}}}
 			Funkce sloužící k úvodnímu nastavení proměnných, počátečnímu spuštění a všem dalším úvodním nastavením. Při samotném spuštění se tato funkce zavolá jako první a právě jednou. Ideální je například ke spuštění komunikace po sériovém portu, nastavení pinů a inicializaci knihoven.
@@ -85,13 +85,13 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 			Jedna z nejdůležitějších knihoven slouží k ovládání sériového portu na straně desky. Na začátku je třeba ve funkci \texttt{setup} inicializovat společně s nastavením frekvence komunikace. Následně je možné jej začít používat, klidně již ve funkci \texttt{setup}. Všechny funkce této knihovny je třeba volat vždy jako \texttt{Serial.read()} nikoliv pouze \texttt{read()}.
 
 			\subparagraph{\texttt{print}}
-				Slouží k výpisu hodnot a ladících informací přes sériový vstup. Je možné tisknout hodnotu samotnou, případně ji i formátovat (vhodné například pro hexadecimální hodnoty). Taktéž je možné použít funkci \texttt{println}, která navíc pošle i ukončení řádku. Při používání je třeba dát pozor, jelikož funkce je
+				Slouží k výpisu hodnot a ladících informací přes sériový port. Je možné tisknout hodnotu samotnou, případně ji i formátovat (vhodné například pro hexadecimální hodnoty). Taktéž je možné použít funkci \texttt{println}, která navíc pošle i ukončení řádku. Při používání je třeba dát pozor, jelikož funkce je
 				asynchronní, tedy vrátí návratovou hodnotu dříve, než začne odesílat znaky.
 
 				Pro obsluhu výstupu na sériovém portu je možné využít i funkce \texttt{write} (zápis binárních dat) nebo \texttt{flush} (počká na dokončení zápisu).
 
 			\subparagraph{\texttt{read}}
-				Slouží ke čtení ze sériového portu, přečtenou hodnotu vrací jako návratovou hodnotu. Vhodné je její spojení s funkcí \texttt{available}, která vrací počet bytů dostupných k přečtení. Ideální použití je buď k ovládání desky pomocí příkazů z počítače, nebo k počátečnímu nastavení, které není možné astavit v kódu napevno.
+				Slouží ke čtení ze sériového portu, přečtenou hodnotu vrací jako návratovou hodnotu. Vhodné je její spojení s funkcí \texttt{available}, která vrací počet bytů dostupných k přečtení. Ideální použití je buď k ovládání desky pomocí příkazů z počítače, nebo k počátečnímu nastavení, které není možné nastavit v kódu napevno.
 
 \section{WSN uzel, JeeLib}
 
