@@ -87,8 +87,12 @@ From all containing Arduino platform, we will use only development environment b
           Reads data from serial port and returns read value. It is convenient to use together with \texttt{available} function, that returns a number of available bytes on a serial port. You can use this function for sending commands to the board or initial setup, which cannot be hard coded.
 
 \section{WSN node, JeeLib}
-Now we look away from general purpose Arduino and aim our focus on wireless communication. We can connect radio module to Arduino board and then we get one node of a wireless network. Or we can take a derivate of Arduino which has radio module already integrated.
-    \subsection{JeeNode HW }
+Now we look away from general purpose Arduino and aim our focus on wireless communication. We can connect radio module to Arduino board and then we get one node of a wireless network. Or we can take a derivate of Arduino which has radio module already integrated. The radio is the most important part, we do not care much about large amount of pins for other additional components.
+
+One node has not much of a use, it's strength is in large quantities. Nevertheless, it is recommended to get familiarized with just two node network and advanced applications with large amounts of nodes leave for later. With one node you can try communication with computer, use functions from common Arduino libraries and experiment with serial port communication for initial setup.
+
+With two nodes you can experiment with basic radio communication, send, receive messages, and experiment with other functions from
+     \subsection{JeeNode HW }
         \paragraph{General specs}
         \paragraph{Radio}
         \paragraph{Pins}
