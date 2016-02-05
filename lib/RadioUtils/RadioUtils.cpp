@@ -95,7 +95,7 @@ void RadioUtils::routeBroadcastLength(){
     message.toCharArray(payload, message.length()+d.length()+1);
 
     setBroadcast(&hdr);
-    resetAck(&hdr);
+    setAck(&hdr);
     rf12_sendNow(hdr, payload, message.length());
 }
 
