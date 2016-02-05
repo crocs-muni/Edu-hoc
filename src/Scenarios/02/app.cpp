@@ -15,7 +15,7 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 void setup () {
   Serial.begin(SERIAL_FREQUENCY);
-  Serial.println("\n[Scenario 01], node started");
+  Serial.println("\n[Scenario 02], node started");
 
   ru.initialize();
   ru.enableDynamicRouting();

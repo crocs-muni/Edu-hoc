@@ -2,19 +2,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
 \usepackage{graphicx}
-\usepackage[czech]{babel}
+\usepackage[british]{babel}
 \usepackage{multicol}
 \usepackage{hyperref}
-\title{Video}
+\title{Study text}
 \author{Lukáš Němec}
 
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\newminted{cpp}{linenos=true,  bgcolor=bg, xleftmargin=2em, fontsize=\footnotesize}
+\newcommand{\codetitle}[1]{\bigskip \noindent {\scriptsize #1}\hrule}
 
 
-\begin{document}
-\begin{titlepage}
-\begin{center}
-\textsc{\LARGE Scénář}\\[1cm]
-\textsc{\Large WSN}\\[0.6cm]
+\begin{document} \begin{titlepage} \begin{center} \textsc{\LARGE Study
+text}\\[1cm] \textsc{\Large Arduino WSN}\\[0.6cm]
 
 
 \Large{Lukáš Němec}\\[1cm]
@@ -22,7 +23,6 @@
 \bigskip
 \bigskip
 
-\Large{\today}
 \end{center}
 \end{titlepage}
 
@@ -30,50 +30,89 @@
 
 \tableofcontents
 \newpage
+\section{Introduction}
 
+The purpose of this text is to provide a general introduction to Arduino and applications which can be made using Arduino platform. Focus of a second and third part will be at wireless communication and making wireless sensor networks with Arduino based nodes. All used source codes can be found at Edu-Hoc project home, \url{https://github.com/crocs-muni/Edu-hoc}; at official Arduino website, \url{www.arduino.cc}; or at JeeLib library website, \url{http://jeelabs.net/projects/jeelib/wiki}.
 
-\section{Arduino všeobecně}
+\section{Arduino - general view}
+Arduino is an open-source platform and also the phenomenon of last few years. It offers hardware itself and also software for programming ATMega microcontrollers. Thre are not only official Arduino boards but also a large number of clones and derivatives. These are motivated either by cheaper price or by added functionality compared to official ones. The first category  typically includes Chinese clones like Funduino or others, while the second category consists usually of specialized boards like JeeLink and JeeNode USB, which we are going to use.
 
-	\subsection{Arduino IDE}
-		\paragraph{Installation}
-		\paragraph{Introduction to tools}
-		\paragraph{Compilation \& upload}
-		\paragraph{Serial monitor}
+From all containing Arduino platform, we will use only development environment because our focus will be on ad-hoc networks, we will use specialized boards with a build-in radio module as was mentioned earlier in the text. Nevertheless, we will start with absolute basics of working with Arduino.
 
-	\subsection{Arduino Code basics}
-		\paragraph{Setup}
-		\paragraph{Loop}
-		\paragraph{Serial}
-			\subparagraph{Print}
-			\subparagraph{Read}
-		
-\section{WSN node, JeeLib basics}
-  
-	\subsection{JeeNode HW }
-		\paragraph{General specs}
-		\paragraph{Radio}
-		\paragraph{Pins}
-	
-	\subsection{JeeLib basics}
-		\paragraph{How to add to IDE}
-		\paragraph{Header format}
-		\paragraph{Send unicast msg}
-		\paragraph{Receive msg}
-		\paragraph{2 motes network}
-	
+    \subsection{Arduino IDE}
+    Arduino IDE is a very simple environment for development programs, from a practical point of view, it is just a little bit tweaked text editor with added support for Arduino.
+    It supports all major OS, so you can run it on Linux, Windows or OS X. It can run without installation, but this option does not support communication with boards over a serial port. So this option is useful for programming, but if you want to send a program to board itself or communicate with it, then it is highly recommended to install Arduino IDE on your computer.
+
+    You can benefit from this environment also if you decide to use your favorite text editor for actual coding, then Arduino IDE could be used just for compiling the code or because of other tools it offers.
+        \paragraph{Installation}
+        Installation is not difficult at all. Many Linux distributions will ease the process because Arduino IDE package is usually present in the system repositories. The only thing you should care about is the version of such package, ideally, it should be 1.5 or higher.
+
+        In case of Windows OS, recommended approach is to download installation files directly from official web page \url{http://arduino.cc/en/Main/Software} where you will find executable files, which will either install Arduino IDE on your machine, or just run Arduino IDE itself (in case you do not have access to administrator account on machine you are working).
+
+        If for whatever reason you need to install Arduino IDE some other way (e.g. directly from source code), then all the information you should need is again accessible on official web page \url{http://arduino.cc/en/Main/Software}.
+        \paragraph{Tools}
+        \subparagraph{Verification}
+        One of the most important tools which environment offers is verifier, which sole purpose is to  check for syntax errors of your code. This option is unfortunately not real time, so it is more than recommended to check your syntax once a while.
+        \subparagraph{Compilation}
+        The second tool is a compiler, which also takes care of upload to the board. Fist you are required to select your version of Arduino board, in some cases board which is the most similar to the one you have (especially important if you have clones or various derivates). Next you should check the port setting and set the port which is the board connected to. In a case of only one board connected, IDE usually selects the right port autonomously, but it is recommended to check it. It is also possible to connect multiple boards at once and then you need to select the right one.
+
+        In a case of issues with detection of the board, it is recommended to restart the whole IDE and try again. Also, it is good practice to connect the board before you start the IDE.
+
+        \subparagraph{Serial monitor}
+        Serial monitor is last of the important tools which are useful to know. Although its functionality can be substituted bu any program, which allows communication over a serial port (e.g. PySerial), on the other hand, Serial Monitor is the most accessible tool you have.
+
+        After start, you are required to set up communication frequency (same value as in source code) and then you can read information send from the board or send instructions to the board.
+
+        If you can see characters, which make no sense, it is more than likely, that it is an issue with different setup of frequency on board and Serial Monitor.
+
+    \subsection{Arduino Code basics}
+    Arduino can be seen as special case of C language. Almost everything is the same, only thing changed is \texttt{main} function, which is divided into two parts \texttt{setup} and \texttt{loop}. Therefore, you are able to write cycles same as in C language, same for conditions, functions and everything else you might ever need. In addition to this, Arduino adds it's own functions and a large amount of libraries, which are usually targeted to accessory hardware. You can also find many other libraries which make writing the code in C less painful.
+
+        \paragraph{\textbf{\texttt{setup}}}
+        As the name suggests, this function is mainly for setup. It is run after the board is powered on and only once. It takes care of initialization of everything you might need. Thus, it is ideal for setup of serial port communication, pin setup and initialization of libraries.
+
+        \paragraph{\textbf{\texttt{loop}}}
+        A function which contains the main part of the program and this function can be seen as an infinite cycle. It is called after
+        \texttt{setup} function, so we can count on all being initialized. This function will loop until the board is disconnected from power or restarted. It is good practice to write code in this function with respect to infinite loop and also if you need regular check of some event (button pressed) it is recommended to either have code so fast, that checking once a cycle is short enough time frame or run check several times in one run of cycle.\footnote{some boards have dedicated pins for interrupts, which can step into \texttt{loop} function and provide immediate event handling. You can connect special function to the interrupt pin, which takes care of interrupt service}
+
+        \paragraph{Serial}
+        One of the most important libraries you will ever encounter. It manages serial port on the side of the board. First you have to initialize it in  \texttt{setup} function, together with frequency setting. Then you can start using it, even immediately after initialization in \texttt{setup} function. All functions from this library has to be called as \texttt{Serial.read()} not just \texttt{read()}.
+
+            \subparagraph{\texttt{print}}
+            Basic function for sending data, debugging values and text over a serial port. It is possible to print value itself of format as it is more convenient (e.g. hexadecimal values). Also, it is possible to use \texttt{println}, which in addition sends new line character. When using this function you have to remember, that this function is asynchronous, therefore it sends a return value before it starts to send characters over a serial port.
+
+            You can also use \texttt{write} (for writing binary data) or \texttt{flush} (waits for completion of writing).
+
+            \subparagraph{\texttt{read}}
+          Reads data from serial port and returns read value. It is convenient to use together with \texttt{available} function, that returns a number of available bytes on a serial port. You can use this function for sending commands to the board or initial setup, which cannot be hard coded.
+
+\section{WSN node, JeeLib}
+Now we look away from general purpose Arduino and aim our focus on wireless communication. We can connect radio module to Arduino board and then we get one node of a wireless network. Or we can take a derivate of Arduino which has radio module already integrated. The radio is the most important part, we do not care much about large amount of pins for other additional components.
+
+One node has not much of a use, it's strength is in large quantities. Nevertheless, it is recommended to get familiarized with just two node network and advanced applications with large amounts of nodes leave for later. With one node you can try communication with computer, use functions from common Arduino libraries and experiment with serial port communication for initial setup.
+
+With two nodes you can experiment with basic radio communication, send, receive messages, and experiment with other functions from
+     \subsection{JeeNode HW }
+        \paragraph{General specs}
+        \paragraph{Radio}
+        \paragraph{Pins}
+
+    \subsection{JeeLib basics}
+        \paragraph{How to add to IDE}
+        \paragraph{Header format}
+        \paragraph{Send unicast msg}
+        \paragraph{Receive msg}
+        \paragraph{2 motes network}
+
 \section{WSN network}
-	\subsection{Simple apps}
-		\paragraph{Alive}
-		\paragraph{Sniffer}
-	 
-	\subsection{Network}
-		\paragraph{General options}
-		\paragraph{Fixed routing}
-	
+    \subsection{Simple apps}
+        \paragraph{Alive}
+        \paragraph{Sniffer}
+
+    \subsection{Network}
+        \paragraph{General options}
+        \paragraph{Fixed routing}
+
 
 
 \end{document}
-
-
-
-

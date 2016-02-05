@@ -1,8 +1,9 @@
 #include "RadioUtils.h"
-#include <RF12.h>
-#include <Arduino.h>
+
 #include <EEPROM.h>
 #include "../../src/common.h"
+
+#include <RF12.h>
 
 RadioUtils::RadioUtils(){
     dynamicRouting = false;
@@ -94,7 +95,7 @@ void RadioUtils::routeBroadcastLength(){
     message.toCharArray(payload, message.length()+d.length()+1);
 
     setBroadcast(&hdr);
-    resetAck(&hdr);
+    setAck(&hdr);
     rf12_sendNow(hdr, payload, message.length());
 }
 

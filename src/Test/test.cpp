@@ -1,9 +1,18 @@
 
 #include <Arduino.h>
+#include <EEPROM.h>
 #include "RF12.h"
+#include "RadioUtils.h"
+#include "SerialUtils.h"
+
+#include <../common.h>
+
 
 const byte LED = 9;
 byte counter;
+
+RadioUtils ru = RadioUtils();
+
 
 // turn the on-board LED on or off
 static void led (bool on) {
@@ -12,11 +21,13 @@ static void led (bool on) {
 }
 
 void setup () {
+
   // this is node 1 in net group 10 on the 868 MHz band
   rf12_initialize(2, RF12_868MHZ, 10);
   // !mp,90kHz,last byte=power level: 0=highest, 7=lowest
 byte txPower=7; //LOWEST possible
 rf12_control(0x9850 | (txPower > 7 ? 7 : txPower));
+
 }
 
 void loop () {
@@ -25,6 +36,7 @@ void loop () {
   // actual packet send: broadcast to all, current counter, 1 byte long
   rf12_sendNow(0, &counter, 1);
   rf12_sendWait(1);
+
 
   led(false);
 
