@@ -1,663 +1,1834 @@
-line: For the record… I didn’t die on Sol 6. Certainly the rest of the crew thought I did, and I can’t blame them. Maybe there’l be a day of
-line: What do you know? I’m in command.
-line: Hermes is powered by ion engines. They throw Argon out the back of the ship realy fast to get a tiny amount of acceleration. The thing
-line: Naturaly, they didn’t send us to Mars until they’d confirmed al the supplies had made it to the surface and their containers weren’t
-line: It was a ridiculous sequence of events that led to me almost dying. Then an even more ridiculous sequence that led to me surviving.
-line: and carried with the torrent. Along the way, it crashed through the reception antenna array. Then one of those long thin antennae slammed in to me end first. It tore through my suit like a bulet through butter and I felt the worst pain of my life as it riline: I had been knocked back quite a ways and roled down a steep hil. Somehow I landed face down, which forced the antenna to a
-line: absorption process with expendable filters. I’d been asleep long enough that my filters were useless.
-line: unbelievably sticky resin on the wide end. The idea is you have the valve open and stick the wide end over a hole. The air can escape
-line: Entering the Hab, I doffed the suit and got my first good look at the injury. It would need stitches. Fortunately, al of us had been
-line: Checking out my suit, I saw the antenna had plowed through my bio-monitor computer. When on an EVA, al the crew’s suits are
-line: If the Oxygenator breaks down, I’l suffocate. If the Water Reclaimer breaks down, I’l die of thirst. If the Hab breaches, I’l just kind
-line: We were six days in when al hel broke loose, so that leaves enough food to feed six people for 50 days. I’m just one guy, so it’l last
-line: procedure if a storm hits is to stop motion and wait for the storm to pass. They’re made to stand up to punishment. I’l be able to dig them out with a day or so of work.
-line: The Water Reclaimer is working fine, too. The bad news is there’s no backup. If it stops working, I’l be drinking reserve water while I
-line: played with plants. The mechanical engineering might save my life if something breaks.
-line: purpose: “Fix the damn radio”.
-line: up with tinfoil and gum.
-line: things grow in Martian gravity, and see what, if anything, we can do with Martian soil. The short answer is: quite a lot… almost. Martian soil has the basic building blocks needed for plant growth, but there’s a lot of stuff going on in Earth soil thaline: LOG ENTRY: SOL 11
-line: Not any more!
-line: This isn’t a new concept I just came up with. People have speculated on how to make crop soil out of Martian dirt for decades. I’l just
-line: Ugh! This is backbreaking work!
-line: LOG ENTRY: SOL 16
-line: Looks like I won’t be able to cover the whole surface of the Hab with fertile soil. I’m wiling to dedicate al but an emergency 50 liters to the cause. That means I can feed 62.5 square meters at a depth of 10cm. About 2/3 of the Hab’s floor. It’l line: That smel’s going to stick around for a while, too. It’s not like I can open a window. Stil, you get used to it. I mixed this soil and shit together with a shovel, and spread it out evenly again. Then I sprinkled the Earth soil on top. Get to work, baline: to Johanssen’s Beatles music colection, I got depressed again.
-line: days. After that, it’s kind of pointless to continue the trend. Al told it buys me about 90 days.
-line: I have plenty of multivitamins; over double what I need. And there’s five times the minimum protein in each food pack, so careful
-line: How much farmland can I realy make?
-line: overcome the problems, they net me another 20 square meters, bringing my farmland up to 126.
-line: I estimate I can get 50% higher yield by using these tactics. And with the 126 square meter farmland (just over double the 62 square
-line: LOG ENTRY: SOL 26
-line: usable soil wil al be good to go.
-line: seed the rest of the field.
-line: Crappy TV shows. That’s what she had. Countless entire runs of TV shows from forever ago.
-line: r from it.
-line: has an air feed valve on the outside. Remember, these are emergency shelters. The occupants might need air, and you can provide it from a rover by hooking up an air line. It’s nothing more than a tube that equalizes the rover’s air with the pop-tent�line: I repeated the process for the other tent. Everything went realy easily.
-line: I have an idioticaly dangerous plan for getting the water I need. And boy do I mean *dangerous*. But I don’t have much choice. I’m
-line: O each). That would mean no EVAs for me, and no emergency reserves. And it would make less than half the water I need. Out of the
-line: unnecessary shit in to orbit. It left the landing gear, ingress ramp, and fuel plant behind. Remember how the MAV made its own fuel with help from the Martian atmosphere? Step one of that is to colect CO2 and store it in a high pressure vessel. Once I getline: During the most terrifying 23 minutes of my life, four of my crewmates and I tried not to shit ourselves while Martinez piloted the MDV
-line: Hydrazine has four hydrogen atoms in it. So each liter of Hydrazine has enough hydrogen for *two* liters of water.
-line: spare you the chemistry, but the end result is that 5 molecules of Hydrazine becomes 5 molecules of harmless N2 and 10 molecules of
-line: Chapter 4
-line: of storage. To hold al the materials for water, I would need a whopping 900L of storage.
-line: area and burn it.
-line: I don’t even have to perfectly match the Hydrazine end of it with the fuel plant CO2 part. There’s plenty of oxygen in the Hab, and
-line: be this early.
-line: The tanks have manual vent valves. I’m not 100% sure what they’re for. Certainly we were never expected to use them. I think they’re
-line: Wel, I didn’t die.
-line: because NASA.
-line: I cut a hole in the top of the plastic and duct taped the hose in place. Nice seal, I think.
-line: After a search of everyone’s personal items (hey, if they wanted privacy, they shouldn’t have abandoned me on Mars with their stuff) I
-line: With my mini-torch in hand, I started a slow Hydrazine flow. It sizzled on the iridium and disappeared. Soon I had short bursts of flame sputtering from the chimney.
-line: I could have finished faster, but I figured caution’s best when setting fire to rocket fuel in an enclosed space.
-line: an atmosphere of air in. It should be able to handle a few buckets of water.
-line: Over the past few days, I've been happily making water. It’s been going swimmingly. (See what I did there? “swimmingly”)
-line: my initial 50L burst, I should have 130L of water added to the system.
-line: Folow my logic: I’m gaining O2. But the amount I’m bringing in from outside is constant. So the only way to “gain” it is to be using less than I thought. But I’ve been doing the Hydrazine reaction with the assumption that I was using al of it.
-line: It’s Hydrogenvile in the Hab.
-line: importing ends up in the tanks. Problem is, it’s just not built to pul hydrogen out of the air.
-line: designed to work against technical faults, not deliberate sabotage (bwa ha ha!).
-line: Time to take a break from thinking.
-line: they’l nearly hibernate. This sort of thing happens on Earth al the time. They can survive a couple of days this way. If you’re wondering how bacteria survive long periods of cold on Earth, the answer is they don’t. Bacteria further underground wherline: So that’s the plan. First, bag the potato plants and bring them to the rover (make sure it keeps the damn heater on). Then drop the Hab
-line: It would take a while to let the Hab cool, so I started that right away by turning the temperature down to 1C.
-line: Once the temperature got to 1C, I waited another hour, just to make sure the bacteria in the dirt got the memo that it was time to take it slow.
-line: Then I inflated the bag with pure O2 from the suit’s tanks. “Holy shit!” the regulator thought, “I better pul O2 out right away!”
-line: breather mask on. I watched it fal further and further. When it reached 1% I cut power to the regulator.
-line: Everything went great right up to the explosion.
-line: Then I saw Lewis’s suit hanging right where it belonged. It hadn’t moved in the blast. It was heavy to start with and had 70L of water in it.
-line: could. Separating oxygen from the atmosphere is difficult and time consuming, but adding it is as simple as opening a valve.
-line: After al that work and getting blown up, I’m exhausted. Tomorrow I’l have to do a milion equipment checks and try to figure out
-line: reported no change
-line: I took them over to the microscope and checked up on my beloved bacteria. I breathed a sigh of relief when I saw healthy, active
-line: permanently raise the pressure. But it didn’t.
-line: little rubber band that goes around the back of your neck. Not an air-tight seal.
-line: It’s a good thing I burned off most of the hydrogen before the explosion. Otherwise that would have been the end. As it is, the
-line: Anyway, I dragged my ass out of bed and finished some post-explosion cleanup.
-line: Chapter 6
-line: During preparation for the service, they’d asked Venkat if he was wiling to make a speech. He’d declined. What was the point?
-line: “Sure,” Venkat shrugged. “Let’s start with you authorizing my satelite time.”
-line: missing in three. Maybe two.”
-line: “And it’l be realy obvious. If it popped, it’d completely blow out and colapse. If it’s stil standing, then everything inside wil be fine.
-line: “So?”
-line: st thing we want to do is
-line: Teddy rubbed his chin. “Hmm…”
-line: “31.2°N, 28.5°W… Acidalia Planitia… Ares 3?”
-line: “Hey, this is Mindy Park at SatCon. I need the mission logs for Ares 3, where can I get ‘em?... Uh huh… uh-huh…. Ok… Thanks.”
-line: He puled another chair to her station and seated himself. “Is this about Watney’s body? Is that why you’re shook up?”
-line: “How’d they get set up?” Mindy asked.
-line: “Hmm. That doesn’t make a lot of sense, no. Maybe the storm messed with the rovers and the tents autodeployed.”
-line: “Fuck!” Director of Media Relations Annie Montrose said. “You have got to be fucking kidding me!”
-line: “But,” Venkat continued, “his body could have been buried in the Sol 6 storm. The pop tents might have autodeployed and wind could
-line: “Yeah,” Venkat said, sliding another picture to Teddy. “But here’s the real evidence. In the lower right of the image you can see the
-line: undistracted. They’re sad that they lost a crewmate, but they’d be devastated if they found out they’d abandoned him alive.”
-line: “Ok,” Teddy agreed, “put together a statement.”
-line: “Right,” Annie said. “Who else knows?”
-line: “Fuck,” Annie said, thoughtfuly.
-line: “We considered Martian satelites,” Morris said. “They’re way closer. But the math doesn’t work out. Even SuperSurveyor 3, which
-line: “No problem,” Morris said.
-line: “He said back-up systems,” Morris insisted. “That means not including the primary system.”
-line: “I mean, come on!” Morris said. “What are the odds?”
-line: Mark Watney is, currently, stil alive.”
-line: A smal chuckle cascaded through the room.
-line: “I can’t promise we’l succeed in rescuing him, but I can promise this: The entire focus of NASA wil be to bring Mark Watney home.
-line: “We can rescue him with Ares 4. It’s very risky. We ran the idea by the Ares 4 crew. Not only are they wiling to do it, but now
-line: make it happen.”
-line: “We’l work on it some more,” Venkat said. “Try to make it safer.”
-line: LOG ENTRY: SOL 61
-line: Ares 4 wil be landing at the Schiapareli Crater, 3,200km away. In fact, their MAV is already there. I know because I watched
-line: Obviously, I’l have to use a rover. And guess what? They weren’t designed for massive overland journeys.
-line: Our mission had a 10km operational radius. Knowing we wouldn’t take straight-line paths, NASA designed the rovers to go 35km on
-line: And because I need to bundle up anyway, I can deactivate the heater outright and use all the power for motion (minus a negligible amount for computer, life support, etc.)
-line: astounding 10.2% efficiency, which is good because Mars doesn’t get as much sunlight as Earth. Only 500 to 700 watts per square meter
-line: Attaching it to Rover 2, however, is another story. There’s nowhere to put it!
-line: we’re good as new.
-line: Unplugging Rover 2’s battery, I plugged in Rover 1’s. Then I went through the airlock to the rover and checked al systems. Everything
-line: The solar cels were a lot easier to manage than the battery.
-line: I considered removing the rock sample container. It’s nothing more than a large canvas bag attached to the roof. Way too smal to hold
-line: They grew even better than I had expected. Mars has no insects, parasites, or blights to deal with, and the Hab maintains perfect
-line: NASA gets to name their missions after gods and stuff, so why can’t I? Henceforth, rover experimental missions wil be “Sirius”
-line: Things started out fine. I drove to a nice flat spot a kilometer from the Hab, then started going back and forth over a 500m stretch.
-line: Turning the heater on, I drove straight back to the Hab.
-line: The RTG (Radioisotope Thermoelectric Generator) is a big box of Plutonium. But not the kind used in nuclear bombs. No, no. This
-line: I'm exaggerating a little. The Plutonium is inside a bunch of pelets, each one sealed and insulated to prevent radiation leakage even if the outer container is breached. So for the Ares Program, they took the risk.
-line: As soon as the rovers were un-stowed and activated, Commander Lewis had the joy of disposing of the RTG. She detached it from
-line: I’l cal it Sirius 2.
-line: drove back to the Hab.
-line: After tearing out some insulation, I suited up and took the RTG outside. Soon, the rover cooled down again, and I brought it back in. I
-line: I set out at first light and drove laps around the Hab, trying to stay on untouched ground. The first battery lasted just under two hours.
-line: The RTG is a generator. It’s a paltry amount of power, compared to what the rover consumes, but it’s not nothing. It’s 100 Watts.
-line: In the long term, I’l need to bring the Oxygenator. But it’s big and I don’t want to screw with it right now. So I’l rely on O2 and CO2
-line: So today, I detached one of the Hab’s two 25L oxygen tanks and brought it in to the rover. According to NASA, a human needs
-line: A bigger problem is CO2. The potatoes need to breathe. I know what you’re thinking. “Mark, old chap! YOU produce carbon
-line: Sirius 4. A huge step forward in my rover research. And I can start tomorrow.
-line: “Al told, how often do you get these images?”
-line: conclusion?”
-line: “He can’t stay put forever, right?” she asked. “Eventualy he’l need to get to the MAV.”
-line: “How’d I do today?” Venkat asked.
-line: “Um,” Mindy said, “I’m Mindy Park. I work in SatCon.”
-line: “No,” Venkat frowned, “She gets a promotion cause she figured out he was alive. Stop being a dick, Mitch. You’re making her feel
-line: “Why did he dig it up?”
-line: don’t have time to invent one. So we need to lighten the MDV.
-line: “I want that gap down to four minutes,” Teddy said. “I’m giving you total authority over satelite trajectories and orbital adjustments.
-line: “And when they find out they abandoned a crewmate?” Venkat asked, “Wil they feel better then?”
-line: Teddy let a few seconds of calm pass before moving on.
-line: “It takes 8 months to get a probe to Mars in the best of times. The positions of Earth and Mars right now… it’s not the best of times.
-line: butt-load of fuel. We only have one booster capable of doing that. The Delta IX that’s on the pad right now for the EagleEye 3 Saturn
-line: is the desperate circumstances. Everyone’s pulling together to save Mark Watney, with no interdepartmental squabbling. I can’t
-line: Venkat slouched in his chair. “Any chance it’s a test drive?”
-line: “Oh?” said Venkat.
-line: “Uh yeah,” said Marcus. “Everyone thought he was dead for over two months. In that time, the Postal Service issued a run of
-line: Cathy chuckled then addressed the camera. “We’ve been speaking with Marcus Washington of the United States Postal Service. If
-line: “That may save his life,” Cathy interjected.
-line: easy decision.”
-line: Irene carefuly formed her answer before speaking. “When facing death, people want to be heard. They don’t want to die alone. He
-line: “I’m al ears,” Venkat said.
-line: now. During the landing sequence, of course. Idealy, about 1000 meters above the surface.”
-line: After terminating the cal, he saw an email from Mindy Park arrive. “Watney’s on the move again. ”
-line: Venkat grabbed a pad of Post-Its and a pen. “Give me his location, and the location of the Hab.”
-line: The break room was empty save a computer technician sipping a cup of coffee. The urgency of Venkat and Mindy’s entrance caught
-line: “Yup! That’s where he’s going!” Venkat said excitedly.
-line: Watney’s headed for Pathfinder. Yeah! I know, right!? Dig up everyone who was on that project and get them to JPL now. I’l catch the
-line: worth of output.
-line: I can go almost 2 hours before the battery runs out. I do a quick EVA to swap cables, then I’m back at the wheel for the second half
-line: do it someday. How the hel am I going to survive a 3,200km trip in this thing? It’l probably take 50 days. I’l need the Water Reclaimer
-line: business.
-line: That’s great for science, but it means the Hab’s in a featureless wasteland.
-line: But today, my luck finaly changed. After two sols wandering the desert, I found something to navigate by. It was a 5km crater, so
-line: An unremarkable drive. Navigation wasn’t a problem. As Lighthouse receded into the distance, the rim of Hamelin Crater came in to
-line: I’m the first guy to drive long-distance on Mars. The first guy to spend more than 31 sols on Mars. The first guy to grow crops on
-line: Ok, enough moping. Tomorrow, I’l be the first person to recover a Mars probe.
-line: wandered around and got a good look at the local rocks. I’m taking both back with me, but the important part is the Lander. That’s the
-line: I had no hope of getting the whole thing back to the Hab. It was just too big. It was time for me to put on my mechanical engineer hat.
-line: I quickly realized I didn’t give a crap about the condition of the other panels. I went back to my rover, cut some strips of Hab material, then braided them in to a primitive but strong rope. I can’t take credit for it being strong. Thank NASA for thaline: Now for my next feat: Getting it on the roof.
-line: Because it has a lot of moving parts.
-line: Oh god I’m sore.
-line: So I cheated. I upped my O2 mixture. It realy helped a lot. Probably shouldn’t make that a habit. Also, I didn’t get hot. The suit leaks heat faster than my body could ever generate it. The heating system is what keeps the temperature bearable. My phyline: wherever. It only took me an hour.
-line: last here. Even timid weather would clear them out in that time.
-line: I got 2 seconds of signal from the Hab beacon today, then lost it. But it’s a good sign. I’ve been traveling vaguely north-northwest for two days. I must be a good 100km from the Hab; it’s a miracle I got any signal at al. Must have been a moment ofline: LOG ENTRY: SOL 93
-line: During training, we had to practice the dreaded “Missed Orbit” scenario. In the event of a second-stage failure during MAV ascent,
-line: Man, I hope I get Pathfinder working again.
-line: Naturaly I did an exhaustive check on my crops, and they’re al healthy.
-line: I should have brought that strut with me to the Pathfinder site. Live and learn.
-line: I’l start work on the Lander tomorrow.
-line: that out from some subtle clues: the shape of the connection points, the thickness of the insulation, and the fact that it had “LiSOCl2 NON-RCHRG” written on it.
-line: it through the dust.
-line: back then.
-line: So instead, I went to good old “Spare Parts” Rover 1, and stole it’s environment heater. I’ve gutted that poor rover so much, it looks
-line: The Deep Space Network and SETI are my best bets for picking up the signal. If either of them caught a blip from Pathfinder, they’d
-line: sparkling clean solar cels. Maybe it’s running an extended self-check, or staying stil until it hears from the Lander or something.
-line: INT. TEMPERATURE: -34C
-line: ROVER RAMP: NONFUNCTIONAL
-line: SIGNAL ACQUIRED
-line: equipment, little space was left over for the many spectators squeezing in.
-line: “We sent the return telemetry automaticaly. It’l get there in just over 11 minutes. Once it does, Pathfinder wil start high-gain
-line: LOG ENTRY: SOL 97
-line: The sea of reporters raised their hands.
-line: “Marty West, NBC News,” Marty said. “How wil you communicate with Watney once everything’s up and running?”
-line: “Yes it wil,” Venkat confirmed. “It’s early morning in Acidalia Planitia right now, and just past 3am here in Pasadena. We’l be here al
-line: The time passed in silence.
-line: Venkat leaned closer to the screen. “It says …‘I’l write questions here – Are you receiving?’”
-line: 10 minute intervals until he puts another question up.”
-line: I’m using old parts of the antenna array to hold the cards up. There’s a certain irony in that.
-line: So I’l make cards for 0 through 9, and A through F. That makes 16 cards to place around the camera, plus the Question Card. 17
-line: H…O…W…A…L…I…V…E
-line: B…R…I…N…G…S…J…R…N…R…O…U…T
-line: “Jack Trevor,” said the thin, pale man before Venkat. “I work in software engineering.”
-line: “Pathfinder has two communication systems. One to talk to us, the other to talk to Sojourner. We can change the second system to
-line: “How much data are we talking about?”
-line: “It means there’s a spot in the codebase where it’s got the parsed bytes. We can insert a tiny bit of code, just 20 instructions, to write the parsed bytes to a log file before checking their validity.”
-line: “Just like that!”
-line: “We spel out our message, wait 20 minutes and then take a picture. Watney’s back in the Hab by then.”
-line: “It’l have to wait a few days. We’re going to try and link Pathfinder to the rover computer-“
-line: s it from context, but other times I just miss out.
-line: Then I stood by. Waiting.
-line: I went back in and copied down the message for future reference. Then I wrote a short note and came back out. Usualy I’d pin up the
-line: “Can’t do that.”
-line: “We could get things done faster with a shorter transmission time,” Jack said.
-line: return trip. Nobody thinks about it, but statisticaly they’re in more danger than Watney right now. He’s on a planet. They’re in space.”
-line: ped working. 0/10.”
-line: Pathfinder’s OS without any problems. We sent the rover patch, which Pathfinder rebroadcast. Once Watney executes the patch and
-line: “What?”
-line: [11:29]WATNEY: Glad to hear it. Really looking forward to not dying. I want to
-line: enough for sustainability. I’ll run out food around Sol 900. Also: Tell the crew
-line: organization.”
-line: “And you’re bringing this up with me while Venkat is in Pasadena, so he can’t argue the other side.”
-line: there Watney,” he said to no one. “We’re coming.”
-line: Johanssen sat up, but made no further move toward the harsh world outside her blankets. A career software-engineer, mornings were
-line: “Bad woman take pilow,” Watney groaned, unwiling to open his eyes.
-line: “Don’t care,” Beck said. “Give me whatever.”
-line: The crew ate in silence. Johanssen eventualy trudged to the ration cupboard and got a coffee packet. Clumsily adding hot water, she
-line: Beck shrugged. “Just be careful.”
-line: “Mm,” Vogel said.
-line: “Just cal ‘em as I see ‘em Commander.”
-line: “Any predictions on the storm track?” Lewis asked.
-line: Pressing through the gale, they stumbled toward the MAV.
-line: “Watney, report,” Lewis said.
-line: “Doctor Beck,” Vogel said as he stumbled through the storm, “How long can a person survive decompression?”
-line: “Commander,” he radioed, “The MAV’s got a 7 degree tilt. It’l tip at 12.3.”
-line: “Copy,” Martinez said.
-line: “If it tips, can you launch before it fals completely over?”
-line: Unable to see the ground, Lewis shuffled forward. Remembering something, she reached to her back and got a pair of rock-dril bits.
-line: “What’s she thinking?” Beck asked after removing his helmet. “She’s a geologist. She knows IR can’t get through a sandstorm.”
-line: … Mark’s dead.”
-line: The MAV began to creaking as it tilted faster and faster.
-line: “You are firing the OMS?” Vogel asked.
-line: “For now,” Martinez said. “I don’t know if maneuvering fuel wil last.”
-line: “OMS cutoff,” Martinez announced, terminating the burn.
-line: same. Martinez ran a self-check on the nosecone OMS thrusters. They were no longer safe for use. He noted the malfunction in his log.
-line: The ship slowly gained speed. As it did, wind-sheer blew it lateraly off course. Sensing the problem, the ascent software angled the
-line: The second stage pushed the ship ever higher, and in to low orbit. Lasting less time than the massive first stage, and running much
-line: leaves, took photos, and made notes.
-line: “Is it here yet?” Back asked as he entered the bridge.
-line: Johanssen opened the message, then sat back.
-line: “I know that’s a surprise,” Mitch continued. “And I know you’l have a lot of questions. We’re going to answer those questions. But
-line: Vogel nodded excitedly. “He lives.”
-line: Chapter 13
-line: I mostly ignore them. I don’t want to come off as arrogant here, but I’m the best botanist on the planet.
-line: Last I heard, they solved the weight problem on Ares 4’s MDV. Once it lands here, they’l ditch the heat shield, al the life support
-line: Dividing the strip in to squares, he put each through a series of rigorous tests.
-line: 856. It’l have plenty of food, a spare Oxygenator, Water Reclaimer, and comm system. Three comm systems, actualy. I guess they aren’t
-line: My reply:
-line: great cost of fuel, to ensure a smoother flight.
-line: worth of life support equipment around me. I now have 400 healthy potato plants, each one making lots of calorie-filed taters for my dining enjoyment. In just ten days they’l be ripe!
-line: No, we will not tell our Botany Team to “Go fuck themselves.” I understand you’ve
-line: Just a heads-up. They may have questions for you later on.
-line: PS: Their sisters, too.
-line: LOG ENTRY: SOL 117
-line: So instead of preparing for my harvest, I have to make extra trips to and from the rover to answer their questions. Each new message
-line: Once all airlocks were in place, Lewis flooded the Hab with air and AL102 felt pressure for the first time. They waited an
-line: I just get sick of being told how to wipe my ass. Independence was one of the things they looked for when choosing Ares astronauts.
-line: I cleaned out the tubing and put it al back together. It completely solved the problem. I’l have to do it again some day, but not for 100
-line: AL102 stretched.
-line: strain on AL102 relaxed, then tightened anew.
-line: Yes, with each sandstorm comes the inevitable Cleaning of the Solar Cels. A time honored tradition by hearty Martians such as myself.
-line: I better get started.
-line: to the seal-strip. It propagated al the way around until it met its starting point. The airlock was no longer attached to the Hab.
-line: Watney, on his back, stared blankly upward through the hole in his shattered faceplate. A gash in his forehead trickled blood down his
-line: AUDIO LOG: SOL 119
-line: uncooperative when it comes to giant, gaping holes in your EVA suit.
-line: I’m wearing Beck’s EVA suit. I haven’t worn my own since Sol 6 when I got shish-kabobed. Beck’s suit was about the right size and
-line: I can only think of one way to find it: Start a fire!
-line: Next step: oxygen. Back when I turned the hydrazine into water, I had tubing, garbage bags, and al sorts of other luxuries. I won’t
-line: RECORDING:
-line: I have you now, little leak!
-line: First idea: Little Dutch Boy. I’m licking my palm and placing it over the crack.
-line: It’s been 15 minutes, and the tape is stil holding. Looks like that problem is solved.
-line: Cutting a chunk out of my EVA suit leaves it with another hole. But a hole I can control the shape and location of.
-line: Anyway, one problem at a time. Right now I’m fixing the EVA suit.
-line: I held on until I’d counted 120 seconds. Just to be sure.
-line: But that’s only half the story.
-line: 285ml lost per minute…
-line: lace.
-line: meters per second. That’s a precious 25 seconds; almost an eighth of my 4 minutes. I’ve got to bring that down.
-line: The third time, I got it right. The trick is to plant both my feet on the ground, near the wal. Then I launch myself to the top of the
-line: It took al damn night, but I made it.
-line: LOG ENTRY: SOL 120
-line: I bee-lined for where the airlock used to be. I knew there had to be a pretty big hole there, so I’d be able to get in. I found it easily.
-line: Unfortunately, the suit was pinned under a table, which was held down by the colapsed canvas. If I’d had both arms, I could have
-line: but they’l want status. And as it happens, it’s the rover that communicates with Pathfinder.
-line: I stil only had a one-armed suit, but at least it didn’t leak.
-line: I ventured back in to the Hab. This time, not being rushed, I was able to use a pole to leverage the table off Martinez’s suit. Puling it loose, I dragged it back to the rover.
-line:  me how to fix
-line: We had it al planned out. My farm would give me food til Sol 900. A supply probe would get here on Sol 856; way before I ran out.
-line: [08:12]WATNEY: Test.
-line: array, and Pathfinder were out of blast range. I’ll run diagnostics on the Hab’s
-line: [09:18]JPL: Best guess is fatigue on the canvas near Airlock 1. The
-line: “It’s Sol 122,” Bruce said. “We have until Sol 584 to get a probe to Mars. That’s 462 sols, which is 475 days.”
-line: “The EagleEye 3 Saturn probe,” Bruce said. “It was scheduled to launch next month. NASA put it on hold so we can have the
-line: him to reach it. This ends up being a standard tumble-land presupply. Al we have to do is make it quickly. So let's get to it.”
-line: almost 300L to sublimation. Still, with the Water Reclaimer operational again, it's
-line: Being an astrodynamicist, Rich rarely had to work late. His job was to find the exact orbits and course corrections needed for any
-line: I'll summarize: The small, constant thrust of Hermes's ion drives is much harder to deal with than the large point-thrusts of
-line: “I know you're al busy,” Teddy said, “so let's make this fast. I need status on Project Iris from al departments. Venkat, let's start with you.”
-line: “I'm giving daily updates to the press,” she said. “Everyone knows Watney's fucked if this doesn't work. The public hasn't been this
-line: “We're already working around the clock.”
-line: Turning his attention to the Ares-3 Flight Surgeon, Teddy asked “Dr. Keler, can we reduce Watney's food intake to make the rations
-line: “So the landing date's firm,” Teddy said. “Maurice, can you get it on the booster in less than 13 days?”
-line: “No,” said Teddy. “Right now I'm asking how often they reveal a problem.”
-line: get done sooner, Maurice can do some inspections.”
-line: Rich Purnel concentrated on his computer screen. His cubicle was a landfil of printouts, charts, and reference books. Empty coffee
-line: “No, it's for this other thing I'm working on,” Rich said.
-line: Mike shrugged and walked away.
-line: science team puts it together. It'll be mostly of EVAs, geological samples, soil
-line: After 62 days of grueling work, Iris was complete.
-line: “No disco,” Annie said, as chuckles cascaded through the room.
-line: “Sure, lots of 'em,” Venkat said. “I'm Hindu.”
-line: “Timer.”
-line: “Go.”
-line: “Prop 2.”
-line: “LWO.”
-line: didn't matter. They had no way to help; there was no need to interact. Johanssen stared intently at her screen, which displayed only the audio signal strength. Beck wrung his hands. Vogel stood motionless, his eyes fixed on the floor. Martinez prayed sileline: Once the clock reached -00:00:15, the television networks got what they were waiting for. The Timer Controler began the verbal
-line: “Ignition sequence start.”
-line: “Altitude 1000 meters,” someone said.
-line: “Altitude 2500 meters.”
-line: The thrust compressed the food while the shimmy rattled it. An effect similar to liquefaction during an earthquake transformed the
-line: “Keep me posted,” Mitch said.
-line: Though Iris was held in place by five large bolts, the force was directed entirely to a single one. The bolt was designed to withstand
-line: “Woah!” exclaimed the Ascent Flight Director. “Flight, we're getting a large precession!”
-line: “I can't talk to it at al; signal failures left and right.”
-line: “It's dradeling, Flight.”
-line: “GC,” same the reply, “Vehicle had already left visual range.”
-line: From the VIP observation room, Teddy watched the despondent Mission Control Center. He took a deep breath, then let it out. He
-line: it'll keep me tethered to humanity. I think it's bullshit. But hey, it's an order.
-line: China wanted to launch a rocket, they just launched it. Now, they were compeled by international agreements to warn other nations first.
-line: “Come,” Guo Ming said, happy for the interruption.
-line: “Excelent,” Guo Ming smiled.
-line: “Are you kidding?”
-line: “Hmm,” Guo Ming said, “I bet NASA could work with that limitation. Why haven't they approached us?”
-line: “Yes, Sir. But it took them two months to build Iris, and it was so rushed it failed.”
-line: “So it's hopeless?” asked Zhu Tao.
-line: and train. NASA and the US State Department would surely accept that. But wil our State Council?”
-line: Looking like that, why are you such a nerd? And you are, you know. A serious
-line: “Ok, here we are again,” said Bruce to the assembled heads of JPL. “You've al heard about the Taiyang Shen, so you know our
-line: going to crash.”
-line: they'l make protein-scented sand. We need them edible after impact.
-line: “Here we go!” Rich said triumphantly, grabbing a paper. Then, his expression saddened. “No, this isn't it.”
-line: Anyway, the Taiyang Shen is critical. In fact, my idea won't work without it. But a Mars probe? Pfft. C'mon.”
-line: “Ok, keep it under your hat.” Venkat said.
-line: “Y”. One way or another, I ended up being your back-up chemist.
-line: accent, you had a base on Mars... what more can there be?
-line: “How did you know that?” Annie asked, getting annoyed.
-line: “You shittin' us?” Annie demanded.
-line: they'd pick up a re-supply probe with provisions for the extended trip.
-line: “That was over flat, desert terrain,” Bruce chimed in. “But the trip to Schiapareli-”
-line: “I see,” Teddy said. “So we have two options on the table: Send Watney enough food to last until Ares 4, or send Hermes back to get
-line: “It should be Commander Lewis' cal,” Mitch said sternly.
-line: Hermes function for 533 days beyond the scheduled mission end?”
-line: “Consider degree of risk, Teddy,” Venkat said. “Mitch is right. The crash-lander is high-risk. It could miss Mars, it could re-enter wrong and burn up, it could crash too hard and destroy the food... we estimate 30% chance of success.”
-line: “We could let Lewis-” Mitch began.
-line: Beck:
-line: months. Also, if you guys got up to anything while the mission was in progress,
-line: “If it's not too much to ask,” Venkat began. “What made up your mind?”
-line: by the way, it's not even your life you're risking. The crew can make up their own minds about it.”
-line: “I was hoping he'd kick your ass,” she interrupted.
-line: Commanders do. And your decision was right. If you’d waited any longer, the MAV
-line: Disco!?
-line: Having completed his work for the day, he finaly had time to read email.
-line: “Oh, helo,” Johanssen said, looking up from her computer.
-line: Her fingers flew over her keyboard as windows opened and closed on her screen. “Definitely a bad jpg header,” she said. “Probably
-line: Stil, it was enough to keep everyone in their seats as they pondered what Vogel told them.
-line: “Why al the cloak and dagger?” Beck asked.
-line: talking about mutiny. And that's not a word I throw around lightly.”
-line: “If we do this,” Vogel said. “It would be over 1000 days of space. This is enough space for a life. I do not need to return.”
-line: “Not realy,” Johanssen said. “Remote Override takes priority over any on-board controls. Its assumes there's been a disaster and the
-line: “Malicious code?” Beck smiled. “So... you'l be a hacker?”
-line: leadership qualities were plain to al his subordinates.
-line: “Roger,” Brendan said. “Read it out.”
-line: “Negative, Flight,” Telemetry interrupted. “It's not drift. They adjusted course. Instrumentation uplink shows a deliberate 27.812
-line: “Guidance, Flight.” Brendan said.
-line: “Oh, you mean the Hermes mutiny?” Mitch said innocently. “You know, that'd make a good movie title. 'The Hermes Mutiny.' Got a
-line: “Guess that's me off the hook then!” Mitch smiled. “Can't fire me for enacting NASA policy. Allegedly enacting it, that is. I guess Lewis is off the hook, too. And maybe Watney gets to live. Happy endings al around!”
-line: They're coming back for me!
-line: only had to survive 18 sols. This time, things are different.
-line: on Sol 1.
-line: I'l have to make structural changes to that trailer. And by “structural changes” I mean “cut a big hole in the hul.” Then I can move the Big Three in and use Hab canvas to loosely cover the hole. It'l baloon out when I pressurize the rover, but itline: takes 160 seconds to drill.
-line: The drill expects 28.8V and pulls 9 Amps. The only lines that can handle that are
-line: which my electronics kit has in abundance.
-line: used to be. Then, taking the dril and it's new cord outside, I connected it to the modified rover charger and fired it up.
-line: (the one with your modifications for the trip to Pathfinder) should remain as-is
-line: same reason, rovers can share air via hoses you connect between them. That little feature wil let me share atmosphere with the trailer on my long drive.
-line: and wil leave plenty of space for The Big Three to stand.
-line: The roof would have been better. The side was a hassle because I had to hold the dril paralel to the ground. This isn't your dad's
-line: I'l have to clean it thoroughly every few hours as dust accumulates.
-line: I average a hole every 3.5 minutes. That includes the occasional breather to let the dril cool off.
-line: I've actualy exhausted Lewis's supply of shitty '70's TV. And I've read al of Johanssen's mystery books.
-line: Another day, another bunch of holes. 145 this time (I'm getting better.) I'm half-way done. This is getting realy old.
-line: posed to near-vacuum and sub-arctic temperatures for over 24 hours.
-line: After chipping out 150 divots (hey, I'm an optimist), I got to work.
-line: But when I tried to get back to work, it didn't work. The power light wouldn't even come on.
-line: breakers. There may be an intermittent short in the drill, probably in the
-line: troubleshooting. I executed the first instruction:
-line: 2. Reboot rover.
-line: the bare portion of the wire wasn't black or even singed, and the positive lead's insulation wasn't melted at al.
-line: transport it. Stil, a lot of material remained; enough to reach around Panel A and be in contact with the hul. I should mention that Mylar is conductive.
-line: Chapter 18
-line: I speled out a Morse Code message using rocks. “PATHFINDER FRIED WITH 9AMPS. DEAD FOREVER. PLAN
-line: You know what? “Kilowatt-hours per sol” is a pain in the ass to say. I'm gonna invent a new scientific unit name. One kilowatt-hour
-line: There. I saved myself 3.6 pirate-ninjas.
-line: separated in order to be processed.
-line: have juice to drive.
-line: The regulator can separate the CO2 and store it in a tank, adding oxygen to my air as needed. When I run low on oxygen, I can camp
-line: On the trip to Pathfinder, I had to actualy remove insulation from the rover to vent excess heat from the damn thing.
-line: I hauled rocks today.
-line: Then, with both batteries fuly charged, I drove circles around the Hab until I drained them both.
-line: LOG ENTRY: SOL 201
-line: tting it drain in to a sample container.
-line: It only took 100L to fil the shalow tub.
-line: taking chances.
-line: Plus, if I can arrange battery storage for the extra power, I could drive 100km per sol! Easier said than done, though. That extra
-line: Think I'l have a bath.
-line: ip to Pathfinder.
-line: them aside. They may be handy down the line. If I've learned one thing from my stay at Club Mars, it's that everything can be useful.
-line: surprisingly
-line: I needed holes where the bolts would pass through. Fortunately, my Pathfinder-murdering dril made short work of that task.
-line: LOG ENTRY: SOL 211
-line: The trailer had tons more space now. It was time for experimentation.
-line: A system check from the rover showed I had done the wiring correctly.
-line: Chapter 19
-line: “Huh?” Lewis said. “Oh, yeah. The ship isn't spinning right now. No centripetal gravity.”
-line: “1973 al the way.”
-line: “Craaaap.”
-line: “Nice to meet you, Mr. Su,” Teddy said. “I'm Teddy Sanders, and this is Dr. Venkat Kapoor.”
-line: “Sorry. ”
-line: “No, she's about the same as when you left. The doctors are sure she'll still be here when you return. ”
-line: nice touch.”
-line: “So explain it again,” Beck's sister Amy said. “Why do you have to do an EVA?”
-line: “I am,” Beck said. “Everyone has multiple roles. I'm the doctor, the biologist, and the EVA specialist. Commander Lewis is our
-line: “Yeah, no shit.”
-line: “Why?”
-line: “So,” Martinez said. “You're pissed.”
-line: “I have to worry about you that whole time,” she added.
-line: nough power to do that.”
-line: “And what if there's a problem?”
-line: “We have to,” Venkat said. “If they don't get those supplies... wel, they need those supplies.”
-line: “She can't eat, she can't sleep, she feels sick al the time. I'm not much better. How can they make you do this?”
-line: anything. No wild side at al. You're every father's dream daughter.”
-line: “I won't die. I realy won't. Even if everything goes wrong.”
-line: She fel silent for several seconds. Finaly, she said “They have a plan.”
-line: “No,” she said. “We have enough food left to feed six people for a month. If I was the only one, it would last 6 months. With a reduced
-line: “You guys realy came through for us,” Venkat said. “And we're grateful!”
-line: knowledge.”
-line: the wal.
-line: “Anything under 0.3 is fine,” Martinez said. “The capture system can deal with it.”
-line: “Angle is good.”
-line: “Copy, Commander,” he said.
-line: “So,” he said, “who would you have eaten first?”
-line: LOG ENTRY: SOL 376
-line: The regulator has an external component imaginatively named the “Atmospheric Regulator External Component.” The regulator pumps
-line: I'm not in any hurry; I've been taking it slow. One 4-hour EVA per day spent on work, the rest of the time to relax In the Hab. Plus, I'l take a day off every now and then, especialy if my back hurts. I can't afford to injure myself now.
-line: The increased surface area wil get the heat in to the air better.
-line: I let it run for an hour, and the Hab started to get cold. The RTG's heat can't keep up with the total loss from the Hab's impressive
-line: step outside, I'm in international waters. Then when I get in the Rover, I'm back to American law.
-line: Also, I plan my trip.
-line: that's perfectly placed.
-line: Seriously though, it sucked. It was 22 sols of abject misery.
-line: The pop tent is the basis of my “bedroom,” but not the whole thing. It's not very big; not much more space than the rover. But it has the airlock attachment so it's a great place to start. My plan is to double the floor area and double the height. Thaline: meters. I want to be able to stand! I don't think that's too much to ask.
-line: shapes of canvas I'l need. I needed to not fuck this up, so I triple-checked everything. I even made a model out of paper.
-line: I'l eat “Half-way” when I reach the 1600km mark, and “Arrival” when I get there.
-line: atmospheric pressure. Of course, everything in the Hab had a crash course in depressurization a few months back. But this time would be
-line: The dome of the Hab is mostly supported by air pressure, but there are flexible reenforcing poles across the inside to hold the canvas up.
-line: inside? While wearing a suit of armor? It was a pain in the ass.
-line: popping? No? Ok... What was that!? Oh, nothing? Ok...
-line: whole thing inside the Hab. Why not? It's just canvas. I can rol it up and take it out an airlock when I'm done.
-line: It took a little while to bring it up to par, and I had to disable some alarms on the suit. (“Hey, I'm pretty sure the helmet's not on!”). It depleted most of the N2 tank, but was finaly able to bring the pressure up.
-line: room, and no way to
-line: Life Support: Oxygenator and Atmospheric Regulator. 418 hours of use-and-discard CO2 filters for emergencies.
-line: He'd drink 3 whiskey sours, bang his mistress, then fly to the moon. And if he ever met a botanist like me he'd dispense a wedgie on
-line: ff with me.
-line: Also, I'l have the two functional EVA suits in there with me and anything that might be needed for emergency repairs: Tool kits, spare
-line: “Good thinking. Can I see the pic?”
-line: “When was the last time he worked on the trailer?” Venkat asked.
-line: “It's short-term,” Venkat said. “And we'l make it up to you. Thing is, you've been doing it for months and you're an expert at
-line: The time has come to test this shit out.
-line: Over several trips, I took al their chunks to the trailer. I brought each chunk in through the airlock, one at a time. It was a pain in the ass reassembling them inside, let me tel you. There's barely enough room for al the shit it's got to hold. There waline: confirm they were working correctly. Then I shut down the Oxygenator. Remember, I'l only use it one sol out of every 5.
-line: rong, I might
-line: bedroom like a baloon. It quickly deflated, leaving both itself and the rover devoid of air. I was wearing my EVA suit at the time; I'm not a fucking idiot. So I get to...
-line: So it took a little longer for me to wake up this morning, and I spent most of the day with a headache. One nice thing about living in a multi-bilion dolar mansion on Mars: Access to pure oxygen. For some reason, a high concentration of O2 wil kil most heline: I wanted a good long test (I arbitrarily picked 8 hours) so I was trapped in the rover until then.
-line: “Any idea how stable it is?” Teddy asked.
-line: “I think he's done it,” Mindy said. “He moved the AREC.”
-line: “So what's the problem?” Annie asked.
-line: to get the same energy. It'l turn his 45 sol trip in to 225 sols. He'l miss the Hermes flyby.”
-line: “Wel...” Teddy said. “Shit.”
-line: Back on Earth, universities and governments are wiling to pay milions to get their hands on Mars rocks. I'm using them as balast.
-line: “Johanssen,” Lewis said. “What the deal with the reactor?”
-line: “Al right, keep an eye on it. Beck, how's life support?”
-line: “In Airlock 2. It's the only place I can be without people tripping over me.”
-line: “Milion-mile-high club,” Martinez said. “Nice!”
-line: The rover has an electric heater that pushes air with a smal fan. I don't use it for anything because the RTG provides al the heat I need.
-line: Once the pressure is gone, I pul the canvas in and fold it. Then I detach it from the outer hatch and close the outer door. This is the
-line: Then I set up the bedroom. Pretty much the reverse of the sequence I use to stow it. Ultimately it's the airlock that inflates it. In a way, the bedroom is just an extension of the airlock.
-line: The test was a success. I'l be ready on time.
-line: The Hab is a shel of its former self. I've robbed it of al critical components and a big chunk of its canvas. I've looted that poor Hab for everything it could give me, and in return it's kept me alive for a year and a half. It's like The Giving Tree.
-line: sound. I could hear my own heartbeat.
-line: times longer than intended.
-line: Technicaly, I entered Mawrth Valis yesterday. But I only knew that by looking at a map. The entrance to the valey is wide enough
-line: “According to your latest satelite data, the dust storm in Arabia Terra isn't abating at al, and wil block 80% of the sunlight?”
-line: “Surely he'l see something is wrong,” Cathy said. “With such low visibility, it won't take long for him to realize his solar cels wil have a problem. Couldn't he just turn around at that point?”
-line: LOG ENTRY: SOL 462
-line: Latitude and Longitude. That's the key. The first is easy. Ancient sailors on Earth figured that one out right away. Earth's 23.5 degree axis points at Polaris. Mars has a tilt of just over 25 degrees, so it's pointed at Deneb.
-line: during that time. I note the time when it does. Then I plug it in to a nasty formula I worked out and I know my longitude.
-line: “ON TRACK FOR SOL 495 ARRIVAL.”
-line: Now things get tricky. In Acidalia Planitia, if I got off-course, I could just point in the right direction based on new data. Later, in Mawrth Valis, it was impossible to fuck it up. I just had to folow the canyon.
-line: fuck that up, right?
-line: It might be a wasted effort. The MAV isn't going to have much weight alowance when I launch. To intercept Hermes, it'l have to reach
-line: “Yeah,” Martinez said, sipping his drink.
-line: Martinez shook his head. “He'l pul through, Commander. Have faith.”
-line: “Blah blah blah,” Martinez interrupted. “Deep down, you think he'l make it.”
-line: I have 1435km left to go. Ares 4's MAV is in the southwest part of Schiapareli. The primary goal of Ares 4 is to get a look at the
-line: LOG ENTRY: SOL 474
-line: I'm ending today's drive early and setting up for recharge. Probably a good idea anyway with the solar cels acting up; it'l give them
-line: That's frustrating, but it's not why I'm in trouble.
-line: I looked east across Marth again. Then west to the horizon. Then east, then west. Each turn required me to rotate my whole body,
-line: 3) My solar cels have been slowly losing effectiveness for several sols.
-line: I'm on the clock. I have to figure out how to figure out what I need to know about the storm. And I have to do it now.
-line: code, her eyes widened.
-line: oxygen (when I stop for Air Days). If I end up in an 81% part of the storm, I'l be in real trouble. I'l run out of oxygen even if I dedicate al available power to it. That's the fatal scenario. But realy, it's fatal much earlier than that. I need power toline: Dust storms are big. They can be thousands of kilometers across. So when I work my way around it, I'l need to know which way to
-line: ings as I drive along. I need readings at the same time in different places.
-line: The cool thing about EVA suits is they have cameras recording everything they see. There's a camera on the right arm (or the left if the astronaut is left handed), and one above the faceplate. A time-stamp is burned in to the lower left corner of the imagline: ing nighttime (again, harvested from the spare EVA suit).
-line: While I was working, I left the Oxygenator going (why not?). So I'm al stocked up on O2 and good to go.
-line: storm area. But the risk is worth the gain.
-line: because you're going away from your goal.
-line: Sigh... I have to drive the same god damned path a third time tomorrow.
-line: I'l know soon enough. If the storm is circular, I should get better and better efficiency every day until I'm back to 100%. One I reach
-line: Air day. A time for relaxation and speculation.
-line: LOG ENTRY: SOL 484
-line: storm only ended up delaying me by 7 sols.
-line: Besides, I've defiled enough future historical sites for now.
-line: But I can seal the bedroom entirely. I don't even have to do any bulshit hatchet jobs on it. The airlock attachment point has a flap I can unrol seal the opening with. Remember, I stole the airlock attachment from a pop-tent. It's an emergency feature forline: The trailer has tons of space. I put a fuckton of work in to making that happen. The baloon gives plenty of headroom. Not a lot of floor space, but stil lots of vertical area.
-line: I'l be at the entrance to Schiapareli crater tomorrow!
-line: Tomorrow night, I'l sink to an al new low!
-line: Eventualy, a balance point was reached. The sand had piled up high enough to be flush with the land outside the crater. It no longer
-line: He went around the smaler dunes, and carefuly crested the larger ones. He took care with every turn, every rise or fal in elevation,
-line: The rover was not so lucky. It continued tumbling down the hil, bouncing the traveler around like clothes in a dryer. After 20 meters,
-line: Venkat put a hand on his chin. "Do we have any information on the state of the rover pressure vessel?"
-line: "Go on," Venkat said.
-line: Yeah.
-line: .
-line: more sols. That's it.
-line: The trailer's in a precarious situation. It's upside-down and sitting on the inflated roof. I'm not sure which god smiled down on me and kept that baloon from popping, but I'm grateful. My first priority wil be righting it. The longer it puts weight on thline: “You got me,” she said. “He left a detailed status report. I just decided to lie for no reason.”
-line: I started out pretty sore. I had to sleep on the wal of the rover. The bedroom won't work when the airlock is facing up. I did get to use the bedroom, somewhat. I folded it up and used it as a bed.
-line: I plugged one end in to the battery and the other in to the infamous sample dril. Then walked off with the dril to find solid ground.
-line: I untied the power line, liberated the dril bit, and returned to the rover. I gave it a ful system's check. That's a boring-as-hel task but I had to do it. Every system and subsystem was working correctly.
-line: Long story short: I ran out of daylight. I hate to leave the trailer sitting on its baloon for another night, but there's not much else I can do. I figure it's survived a whole day like that. It's probably stable for now.
-line: I can make this happen by tying off the cable to the rear of the trailer and towing with the rover. But if I tried that without digging a hole first, the trailer would just slide along the ground. I needed it to tip up. I needed a hole for the nose to falline: I'l spend the rest of the evening enjoying a potato. And by “enjoying” I mean “hating so much I want to kil people.”
-line: as a liquid in need of heating.
-line: The hoses that connected the rover and trailer were designed wel, and released without breaking. I simply snapped them back in to
-line: ng”.
-line: the MAV, which wil take me away from the crater wal. I'l be back to enjoying the entire day's sunlight instead of just half of it.
-line: procedure soon?”
-line: early morning, finishing around noon.” She checked an application on her laptop. “Noon on Sol 504 wil be 11:41am this Wednesday here
-line: always drive, and he was the slowest, most cautious driver who ever took the wheel.
-line: day. I could go further, I stil have 15% battery power or so, but I want to get as much daylight on my solar cels as I can.
-line: the sol after tomorrow.
-line: That is an exceptionally good idea! I won't have to wander around looking for the thing. I'm going straight to it.
-line: came to a stop 20 meters away.
-line: Chapter 25
-line: And then I'l have a boring conversation with NASA. The content may be interesting, but the 14-minute transmission time between here
-line: you know, the MAV will need to lose some weight to make the intercept. We're going
-line: “Yes, it's ready.” Bruce said. “But you're not going to like it.”
-line: has. It brought enough to make 19,397kg of fuel, as it was designed to do. If we can give it more hydrogen, it can make more.”
-line: to 7,300kg. That's accounting for the bonus fuel. So the rest of this booklet is how to remove over five thousand kilograms from the ship.”
-line: piloting. It was remotely landed, after al.”
-line: Also, the secondary and tertiary comm systems can go.”
-line: “Sure,” Bruce said. “The nose airlock alone is 400kg. The windows are pretty damn heavy, too. And they're connected by Hul Panel
-line: “Pretty much, yeah.”
-line: Bruce fel silent.
-line: [08:41]MAV: You fucking kidding me?
-line: LOG ENTRY: SOL 506
-line: So yeah, it'l be annoying, but al it costs me is time. And I'm actualy doing wel on that front. I have 43 more sols before Hermes flies
-line: Then, they had me run a ful diagnostic on the MAV. That's in much better shape. Everything's sleek and pristine and perfectly
-line: “We only got a week of remote launch training,” Johanssen said. “It was only supposed to happen if we scrubbed before landing. We'd
-line: “Al working within tolerance,” Vogel said. “I am now doing a diagnostic on the reactor. I am thinking that Johanssen is busy with the
-line: “I'd like to know your plan for recovering Mark.”
-line: “We've got a lot of leeway,” Lewis said. “The launch wil be 52 minutes before the intercept and it takes 12 minutes. As soon as
-line: “Aye, Commander.”
-line: Periodicaly, I suit up, crawl into the airlock with as much junk as I can fit, and dump it outside. The area around the MAV looks like
-line: wearing my EVA suit, I depressurized the trailer and back-filed it with pure oxygen at one fourth of an atmosphere. Then I opened a
-line: many times before but: Hurray for standardized valve systems!
-line: the system and I'm testing it out.
-line: work. That's not to say they're easy. I spent the last 3 days removing Hull Panel
-line: I think I'm done.
-line: “Everything other than catastrophic failures,” Johanssen corrected.
-line: “He might be in bad shape when I get him,” Beck said. “The stripped-down MAV wil get up to 12 g's during the launch. He could be
-line: “Final checks for this shift are complete,” Mitch said in to his headset. “Timekeeper.”
-line: screen.”
-line: “Nothing?”
-line: Last night, I ate my final meal pack. It's the first good meal I've had in weeks. I'm leaving 41 potatoes behind. That's how close I came to starvation.
-line: About fucking time.
-line: ready for preflight checklist, Commander.”
-line: A mild cheer coruscated through the crowds worldwide.
-line: “Mission control, this is Hermes Actual,” Lewis reported. “We are go for launch and wil proceed on schedule. We are T minus four
-line: “Tel that asshole no barrel-rols.”
-line: “First what?”
-line: “I know what the Commander said, but if I need a few more meters, I want you to cut me loose. I have an MMU, I can get back
-line: “Main engines start,” said Martinez.
-line: Having anticipated this, he had placed a folded up shirt behind his head in the helmet. As his head pressed firmly in to the makeshift
-line: “I'm not getting the power I need!” Martinez said.
-line: ahead. “That's nice,” he thought.
-line: “He'l get to orbit,” Johanssen said, “but the intercept course may be compromised.”
-line: “Main shutdown in 4,” Johanssen said “3... 2... 1... Shutdown.”
-line: “I can make that work,” Beck said over the radio.
-line: “Vogel,” Lewis continued, “how far can we deflect in 39 minutes with the ion engines?”
-line: “In 39 minutes we'd deflect...” Johanssen quickly typed, “72 kilometers!”
-line: Venkat strained to hear to speaker over the murmur of the VIPs in the observation booth. Through the glass he saw Mitch throw his
-line: “About 90 miles per hour,” Venkat said. “There's no hope of Beck grabbing Watney at that speed.”
-line: “Commander,” Beck radioed. “He's wearing a surface EVA suit, right?”
-line: “There's got to be something,” Lewis said. “Something we can do. Anything.”
-line: people in history had personaly seen this view.
-line: “We're working on getting you,” Lewis said. “There was a complication in the launch.”
-line: “Beck,” Lewis said. “I'm coming around to your way of thinking. How fast can you get going if you're untethered?”
-line: “No idea,” Watney said.
-line: “Not the whole idea, but part of it,” she said. “Using atmosphere as thrust. Martinez, get Vogel's station up and running.”
-line: “Plenty of air in the ship,” Lewis said. “It'd give us a good kick.”
-line: “Ok I have the numbers,” Martinez said. “A breach at the VAL, with the bridge and reactor room sealed off, would accelerate us 29
-line: “What kind of jolt wil we feel with that breach?” Lewis asked to Martinez.
-line: “Got it,” Annie said, jogging to the door.
-line: “It is of course dangerous to set off an explosive device on a spacecraft,” Vogel said pragmaticaly.
-line: close and seal the doors to the reactor room.”
-line: “We're going to have to literaly blow up one of the doors,” Lewis explained. “I'd rather we kil the inner one. I want the outer door
-line: “Get to it,” Lewis said. “And Vogel, you're in a hurry. You have to make the bomb, set it up, get back to Airlock 2, suit up,
-line: “Vogel's making a bomb.”
-line: Lacking time to sit down and do the math, he estimated.
-line: “Sehr, sehr, gefährlich,”
-line: Johanssen watched until he was no longer in view, then returned to the lighting panel. She had deactivated it earlier from her
-line: “Mm,” Johanssen said.
-line: “Standby.” Lewis said.
-line: “Copy,” said Martinez, executing the attitude adjustment.
-line: “You ready, Johanssen?” Lewis asked.
-line: “On the phone with the President,” Teddy said. “Do you think this wil work?”
-line: ignition temperature of the sugar. What would have been a minor fizzle in Earth's atmosphere became an uncontroled conflagration in the
-line: “Damage?” Martinez said.
-line: “I'm going to jump out,” Beck said. “Should get me another two or three meters per second.”
-line: “Affirmative,” she replied.
-line: “Copy.”
-line: “Dr. Beck,” Vogel said. “We have past closest approach point and you are now getting further away. You have 169 meters of tether
-line: Beck's course took him to the chair where he clumsily colided with Watney. The two gripped each others' arms to keep Beck from
-line: “Relative velocity to Hermes: 12 meters per second,” Johanssen said.
-line: Vogel managed to find the balance. After a few seconds of tense, gut-feel physics, Vogel felt the force on the tether abate.
-line: “Yes!” Martinez yeled.
-line: “Guess you don't need the red folder today,” Venkat said.
-line: It's true, you know. In space, no one can hear you scream like a little girl.
-line: It's been a while since I washed... anything.
-line: Next week would be busy. He would be meeting the Ares-6 Engineer. He had read her file, but had never met her in person. He
-line: “Sure did,” Watney said. “Almost didn't make it back.”
-line: “The Martian” is copyright © Andy Weir, 2011. Al rights reserved.
+I don’t even know who’l read this. 
+only human being to have died on Mars.�
+humanity blah, blah, blah. The Ares 1 c
+not mine per se. Commander Lewis was in
+ge? I presume they got back to Earth al
+rmal way,
+everything was a go, we set out for Mar
+ so a little Argon (and a nuclear react
+Suffice it to say we got to Mars 124 da
+And now we come to the real trick of Ma
+’t nearly so fragile as humans and ca
+ut 3 years. In fact, there were Ares 3 
+ (as opposed to the baloon bounce-fest 
+th the Martian atmosphere, for every ki
+It was a ridiculous sequence of events 
+Hab, just in case it lost pressure. But
+ mission after
+ayed signals from the Hab to Hermes, ac
+n of my life as it ripped open my side.
+ualy roused me from a deep and profound
+t got stopped by my pelvis. So there wa
+Then, the copious blood from my wound t
+ealed the gaps around the hole and redu
+After a while, the CO2 (carbon dioxide)
+d give the oxygen back. But the spacesu
+parate out the
+oxygen toxicity, as the excessively hig
+e mission is astounding. I spent a week
+nd. The idea is you have the valve open
+ as I could, wincing as the sudden pres
+phere is about 21%. I’d be ok, so lon
+ But I didn’t want to just die out on
+trained in basic medical procedures, an
+al, of course. The primary satelite dis
+if the MAV is stil
+ no reason just to make the trip take l
+ Add to that I was sent tumbling down a
+Mars, he stayed on Mars. Leaving his bo
+e with Hermes or Earth. Everyone thinks
+d starve to death.
+l equipment. Here’s my situation:
+oose, so that leaves enough food to fee
+The MAV is gone, of course. My crewmate
+The MDV is on its side and there’s a 
+e. Its thrusters can’t even lift its 
+ey’re made to stand up to punishment.
+it probably can’t even reach a kilome
+els to store plenty of reserve. Al I ne
+n one. The spare doesn’t actualy pul 
+o. The bad news is there’s no backup.
+. Anyway, for now, no problems with the
+rea, I found the main bottle of vitamin
+y starve to death, I’l
+I’ve been thinking about how to survi
+rom my location here in the Acidalia Pl
+to communicate with Earth. If I can’t
+purpose: “Fix the damn radio”.
+any drag-marks or scuffs that might hav
+ but this isn’t some walkie-talkie I�
+ce they’re saturated, they’re done.
+managed with
+In other news, I’m starting to come u
+ian soil. The short answer is: quite a 
+ of that is happening on Mars. One of m
+ seeds I have are a few
+pen. If I don’t, I’l be a realy hun
+return to some natural world system. So
+g matter, I laughed at them. “Look at
+. As for other biological material…
+d, this particular
+ shit. Since then, I’ve added my own 
+but it is. There are dozens of species 
+“infect” the new Martian soil. Afte
+or decades. I’l just
+, al I need are calories of any kind to
+ to transport 9.2 cubic meters of Marti
+LOG ENTRY: SOL 15
+ent; me filing smal containers and brin
+digging. My back is kiling me. I forage
+earned a ful meal.
+at has to live in it first.
+o NASA figured “why send a lot of wat
+e soil. I’m wiling to dedicate al but
+an sand. I didn’t have to do it with 
+liters of precious water to the dirt go
+I mixed this soil and shit together wit
+won't be much fun, what with me having 
+ executed my first dirt-doubling. It's 
+n, I got depressed again.
+ them. In 62 square meters, I could gro
+Not even close.
+ess to continue the trend. Al told it b
+lan for how to get it.
+ept is critical to the “Mark Watney d
+ck, so careful
+the entire time period to stay alive fo
+ and I haven’t actualy planted anythi
+ let’s take the problems one at a tim
+The Hab has three lab tables, each abou
+hey spent long
+suming I can
+The next thing to consider is how effic
+g with each other.
+the soil. Any farmer doing it would tur
+meters I have) it works out to be over 
+r than normal, meaning my body expends 
+square meters of
+LOG ENTRY: SOL 26
+xhausted.
+y Little Hab on the Prairie.
+tle corner of it alone. I had 12 potato
+? Because
+g sure each piece had at least 2 eyes. 
+ long. I’l need to cut up al the pota
+er). There wil be no foul weather, or a
+nd I wanted them back.
+ Countless entire runs of TV shows from
+ There’s stil no water to make it via
+rlock is nothing more than valves and t
+I spent *hours* trying to figure out ho
+suits. You need to be able to get peopl
+ there’s realy no reason to attach a 
+ hit. I’l be losing some air every ti
+r with the pop-tent’s.
+emergency tents. The moment I pushed th
+ent the way it was designed to be used)
+sed this Botanist / Mechanical Engineer
+fe right now.
+ getting the water I need. And boy do I
+rs. There’s ice at the poles, but the
+Two high-pressure tanks at one end of t
+Anyway, the reserve oxygen would only b
+han you might think. The atmosphere is 
+inside is nearly impossible. The whole 
+ind. NASA is not in the habit of puttin
+ a liter of liquid CO2 per hour, indefi
+ntain power at night. If I don’t have
+So I’l have to go a different route.
+First, we descended from Hermes, and de
+automaticaly to slow our descent, then 
+om the target. The guy just plain owned
+ hydrogen for *two* liters of water.
+hot. And dangerous. If
+fuel (and
+0 molecules of
+prevalent in my increasingly helish exi
+ay never be the
+f liquid O2.
+They’d fil up, so I’d have to trans
+ the rovers, and al the space suits add
+pressure. It’s made to hold (you gues
+Every 20 hours, I’l have 10L of CO2 t
+Then, I’l release Hydrazine, VERY SLO
+h. If I make any mistakes, there’l be
+t the worst scenario for the Hab was, t
+as humidity, but the Water Reclaimer wi
+I hooked up the MAV fuel plant to the H
+��Three’s Company” tonight. Frankly
+I’m about the fire up the Hydrazine.
+too much. There’s more shade and a co
+ realy, super-duper don’t want a prop
+The tanks have manual vent valves. I’
+I liberated a spare water hose from the
+orking. I’ve already brought in one t
+Here goes nothin’
+es from Vogel's chem kit. Almost al of 
+ydrazine came out. I let one drop fal i
+because NASA.
+teresting 50kg to take home. The bags a
+ed them together to make a sort of tent
+Next, I sacrificed a spacesuit to the c
+With some more string from Johannsen’
+The hydrogen wil be hot after the react
+uniforms are synthetic. I needed someth
+s with their stuff) I
+o long splinters using a pair of pliers
+�t just ignite wood with a smal electri
+With my mini-torch in hand, I started a
+constantly watching the readout of a th
+use half my reserves. Long story short,
+ured caution’s best when setting fire
+��s been replacing the oxygen I’ve us
+ms that are blaring at al times. The fi
+ul. Booyah! That’s the kind of proble
+t’s time to sleep. But I’l drift of
+und this.
+east know why.
+even faster now.
+f water, that was an assumption. I didn
+I get 10L of CO2 every 15 hours now tha
+e’s plenty of condensation on the wal
+whenever it wants. Turns out it’s bee
+�m not consuming it as fast as I though
+ne reaction with the assumption that I 
+�m a botanist, not a chemist!
+Then, a quick EVA to a rover, where we 
+So, I’m here in Rover 2. I can stay f
+’ve had time to think. And I know how
+The regulator uses freeze-separation to
+rogen, because hydrogen needs to be bel
+ puling oxygen out of the air.
+the Hab. Then I can wear a spacesuit (s
+I’l just do that over and over, in co
+bilion little spacesuits handy.
+n bar and a personal USB, probably ful 
+ get less active, and require less oxyg
+ther underground where it was warmer br
+The potato plants won’t like the plan
+over’s unoccupied. But I figured it o
+ with a battery, some wires, and a tank
+ee. Here’s what happened:
+I bagged the potato plants, and got a c
+��d set up as a
+��m not a very big man. Martinez’s cl
+d another hour, just to make sure the b
+used to go lower, and nothing I did mat
+So I had to use more a more primitive p
+d prevents one localized imbalance from
+Then I inflated the bag with pure O2 fr
+O2 canister from the medical bay. That 
+own internal air, of course.
+the internal air sensors while leaving 
+The Hab has emergency flashlights in ma
+tached an air line to the tank and crim
+on the flashlight and a wonderful jet o
+er! Not only was I clearing out the hyd
+My first thought was “My ears hurt li
+vealed the true problem. My oxygen mask
+Then I saw Lewis’s suit hanging right
+dizziness faded, then took a deep breat
+ed, but this one
+ure oxygen in to the atmosphere as fast
+brought the Hab oxygen back up to par.
+uniform, was in reasonably good shape. 
+After al that work and getting blown up
+reason. Plus, I can’t be sure there i
+machines, so it had to be done. I can�
+l good. The computer reported no change
+ and N2 storage tanks, Water Reclaimer,
+ the dirt. Taking a few samples from al
+Then I set about cleaning up the mess. 
+y subsided back to 1atm. This would mak
+re and keeping the same number of atoms
+se as a gas. So the heat added to the p
+quite a while before blowing up.
+ur face with a
+The problem was the exhale. Do you know
+en to the system.
+f the hydrogen before the explosion. Ot
+came the focus
+rst night back in the Hab, I’l kick b
+rover, my bunk felt like the softest, m
+sis, explosion dynamics, or any other s
+ reducing hydrazine and burning hydroge
+And seriously… It’s clear the Gener
+ent to look out the windows at his scen
+ing Watney’s bravery and sacrifice, a
+The Director had given a speech as wel,
+Watney was dead. Nice words form the Di
+“Yeah, I know. I didn’t want to, ei
+ time.”
+rom it. We’re funded for five Ares mi
+mission. It normaly takes 14 presupply 
+“Like what? You think we’d send peo
+“How wil we know from imagery what’
+olapse. If it’s stil standing, then e
+ing up. We
+one when they’l be at the right angle
+“Any imagery we take goes directly to
+Venkat stared. Then glared. “This is 
+n bad press after bad press for two mon
+m normal weather activity.”
+mpathy for Watney’s family is realy h
+Teddy rubbed his chin. “Hmm…”
+mselves. Her job turned out to be sendi
+h. She checked the name on the work ord
+Out of curiosity, she brought up the fi
+ disappointed.
+she navigated through the site to the s
+he leaned back in her seat. She no long
+udged in.
+He puled another chair to her station a
+Main dish isn’t around. No surprise t
+fter al? I guess pieces got torn off an
+ready in case the MAV didn’t work and
+ey never threw out the pop tents.” He
+e rovers and the tents autodeployed.”
+huge sandstorm. Why isn’t there sand 
+Mindy put her hands over her face and s
+“Not helping, Annie,” Teddy said.
+an thank Mindy Park in
+ong enough to
+rging. It wasn’t used again, and 13 h
+it facing the Hab or she wouldn’t hav
+tty sure they wouldn’t have done that
+ened before liftoff. It would endanger 
+3 crew to know.”
+ted if they found out they’d abandone
+ent since Apolo 11,” Annie said. “H
+uired to make them public. We’l need 
+sked Venkat.
+Find a way to talk
+Teddy stood and opened his cel phone. �
+��s alive,” Annie said.
+0 experts working for 12 hours on this.
+“Thing is,” Chuck continued, “wit
+perSurveyor 3, which
+“Sorry.”
+“Failure of imagination,” Chuck sai
+nsisted. “That means not including th
+“Yup,” Morris agreed. “The MAV is
+ MAV when they left.”
+“I mean, come on!” Morris said. “
+seats,”
+�t be taking any questions at this time
+“I’m getting sick of daily press co
+Teddy puled some flash cards from his p
+e SETI network focused on Mars. Just in
+segment every weekday to reporting on j
+soon. If we can see him outside, we wil
+“I can’t promise we’l succeed in 
+“Meant every word of it,” Teddy sai
+s very risky. We ran the idea by the Ar
+ can be misused to save him.”
+“JPL strips it down, loses some weigh
+quire a massive design and construction
+�d be risking the lives of six more peo
+“They’re astronauts,” Teddy said.
+“Work on that, too.”
+ have on a man’s
+I finished making water some time ago. 
+Even if I find a way to tel NASA I’m 
+It takes 18 months for the MAV to make 
+option; they’re anywhere from 4 to 20
+ to the surface. Ahh, the good old days
+Obviously, I’l have to use a rover. A
+t. Almost 4 years.
+Lucky for me, the tech specs for everyt
+al at once. So for now, I’l just thin
+ and instal it in Rover 2. Ta-daa! I ju
+g equipment soaks up 400W. Keeping it o
+��l have to be enough; I need every bit
+o using the ful 18,000Wh gets me 90km o
+e like 50. But that’s plausible, at l
+How many solar cels wil I have to pilfe
+s per square meter
+driving, I’l spread them out then… 
+undercarriage and it dropped right out.
+There’s no room on the roof, either. 
+ive resin.
+reach, we’d seal it with the spare Ha
+big patch of canvas on each end. I now 
+I dragged the battery to the side of th
+the airlock to the rover and checked al
+ice the second battery’s leads into t
+ain when charging, but again: so what?
+itional bonus: I was the one who set th
+ and broke the cels or rendered them us
+Each solar cel is on a lightweight latt
+rge canvas bag attached to the roof. Wa
+and right edges, but I won’t be going
+I stood back and admired my work. Hey, 
+They grew even better than I had expect
+I dug them up, being careful to leave t
+ supply of digital
+LOG ENTRY: SOL 66
+Sirius 1 wil be tomorrow.
+ome al times.
+More accurately, Sirius 1 was aborted a
+py test. After a few laps, I had compre
+stic test.
+ warm and the rover’s insulation is t
+ I could do a long trip like this. The 
+uld turn it down, I guess. Be a little 
+Wel shit.
+Plutonium is way more dangerous!
+urns it in to electricity. It’s not a
+ht; it’s entirely internal, so you do
+I'm exaggerating a little. The Plutoniu
+an’t be replaced or
+en just kind of hangs out until its cre
+has 2.6kg of Plutonium-238, which makes
+ to tear insulation out of the rover to
+The mission parameters don’t give a s
+ meter pole with a bright green flag on
+ have to use my Mutant Rover for the tr
+It wasn’t hard to find. I drove 4km s
+It’s a large cylinder with heat-sinks
+f the heater, then
+d beautifuly in place while traversing 
+c (hammer), then carefuly removed the s
+I cautiously removed more insulation (h
+I brought the insulation pieces with me
+s 1 again, but without freezing)
+After a quick EVA to switch the cables,
+I could have gone further, but I need l
+y aren’t heavy, but they’re awkward
+hours to recharge, after al.
+e time. Why not use it?
+Time to make plans for Sirius 4. And I 
+’t want to screw with it right now. S
+e used 131 hours of filter on various E
+ressure. The inside of the rover has 1 
+ two 25L oxygen tanks and brought it in
+That may seem a bit long, but I have a 
+Regulator, so it doesn’t pul water ou
+ circle of nature!”
+at once and run away.
+So that’s everything. Once I vent the
+�� Cathy said to the camera. “Today o
+Dr. Kapoor, thank you for coming.”
+ his site’s in
+“Tel us about these latest EVAs.”
+n’t he?” Cathy prompted.
+“Hmm,” Cathy said, “Most analysts
+oon? He seems to be getting ready for a
+“Communication,” Venkat said. “On
+“He can’t stay put forever, right?�
+s being too dangerous,” Cathy said.
+remember, we made a lunar lander from s
+��t say things like ‘Bring him home a
+“Guys,” said Bruce Ng, Director of 
+rk. I work in SatCon.”
+“Bob’s got more to deal with than j
+rough?”
+late. Let’s get started,” He took h
+c, but we have no obligation to tel the
+wer. It’s a good idea, realy.”
+plans coming along?”
+need to lighten the MDV.
+“Keep me posted,” Teddy said. He tu
+“You had an immediate answer,” Tedd
+a how to do it.
+“Mitch,” Venkat said. “We discuss
+��They deserve to know. You don’t thi
+After a few moments of silence, al eyes
+ his arms. “Total bulshit,”
+t it would be part of Ares 4. How does 
+ they arise. But
+ies a year from now.
+ That means we need to
+ow we’re asking a lot, but you have t
+butt-load of fuel. We only have one boo
+heir mission if JPL gets the payload do
+pm. Now it
+getting away with it
+ct that’s being staffed up. Hopefully
+“Sorry to bother you,” Mindy said.
+her two. We
+n it. We’ve had teams run every conce
+ 4,” Mindy said. “If he is, he’s 
+e he did that, it took 12 hours. I was 
+Washington, from the US Postal Service.
+y. 20,000 were printed, and sent to pos
+“Has this ever happened before?” Ca
+a. “We’ve been speaking with Marcus
+ons. Dr. Shields, welcome to the progra
+“Wel,” Irene said, “He’s very i
+He’s quick with a joke.
+“He realy is,” Irene said. “He wa
+“And they stil think he’s dead, rig
+t’s going through his head right now?
+trying.”
+Irene carefuly formed her answer before
+e’l probably take an easier way out t
+“Bruce, Hi,” said Venkat. “Thanks
+“I’m al ears,” Venkat said.
+he signal origin was presumed to be wit
+ get it.”
+d on it. We’re working on a release m
+aid Bruce.
+� Venkat said. “One thing at a time. 
+ndy said, pointing to her monitor.
+“Yeah,” Mindy said. “He did the u
+ocation of the Hab.”
+“Um,” Mindy stammered, folowing aft
+mputer-“
+ance caught
+“I’l buy you a new one,” Venkat s
+’s location and beyond. Then took a s
+“Yup!” Venkat said. “Now we’re 
+municate. It might
+Watney’s headed for Pathfinder. Yeah!
+It’s the evening of my 8th day on the
+ater as possible, and shave with an ele
+eks like a truck-stop men’s room. I c
+hen you spend a lot
+total fucking darkness isn’t fun. I l
+n it gets too hot I detach the insulati
+iage of the rover is taler than any of 
+ I plop them wherever, trying to keep t
+rward to tending my potato farm in the 
+o survive a 3,200km trip in this thing?
+Eventualy, it gets dark and I get tired
+LOG ENTRY: SOL 80
+g-ass trips are my
+The computer has detailed maps, so I fi
+ve dragged rock and soil samples from t
+a magnetic field.
+st needed to folow the edge of the hils
+bos is the god of fear, and I’m letti
+new exactly where I was.
+I better get started!
+time ago. I’m wel into Ares Valis now
+ to go around some of them or risk dama
+the past few sols are intact. I should 
+It’s a strange feeling. Everywhere I 
+o grow crops on
+Mars Numbers.”
+Man, I miss those guys.
+two smal hils are under a kilometer fro
+loons absorbed the impact of landing. O
+ with me, but the important part is the
+uick and careful digging, I exposed the
+red a contingency mode and started circ
+ical engineer hat.
+punishment.
+Over the decades, the baloons had rippe
+strips of Hab material, then braided th
+It may not be fast, but it has great to
+ The damn thing is stil heavy as hel. I
+with mostly-ful batteries, I had set up
+ing it they’l be a pain in the ass to
+nd I was almost out of daylight.
+e to me. It can’t communicate with Ea
+ have to stay pointed at Earth) and the
+could draw letters on the wheels, and h
+Oh god I’m sore.
+ rocks near the Lander, I dragged it up
+lmost 4 meters long. I got to work.
+ realy helped a lot. Probably shouldn�
+ got the ramp made. Nothing more than a
+n a big single stack (why waste the ram
+ly put each rock in a stable place. I j
+days closer to home.
+going tracks are long gone. It’s been
+ing that damn ramp… ugh.
+ing soil and rock samples every time I 
+t farmer, not an electrical engineer, n
+a miracle I got any signal at al. Must 
+ustin fights a Russian Venus probe that
+n refuse to obey directives, choosing i
+24718 meters away.
+the one I miss most right now is Beck. 
+ dreaded “Missed Orbit” scenario. I
+l out of there before Hermes caught too
+Once we got out, Commander Lewis declar
+d trip, I’ve been too busy to mope. B
+The first thing I did when I got in was
+First, I fired up the Oxygenator and At
+ile. Lovely smel, I can tel you. But on
+nt the next few hours doing ful systems
+belonged, wiring them into the Hab’s 
+I should have brought that strut with m
+I were exposed to it, I’d get so much
+It pained me to climb back into the rov
+Now, to enjoy a good, long sleep in an 
+er, they had no
+rgeable. I figured
+But the panels might
+Landers can’t just shut down and wait
+ with dust. Then winter brings colder t
+nics get too cold to operate, and the w
+o retain charge.
+ave been torture.
+back then.
+as a breeze. I have voltage controlers 
+The battery was big and easy to identif
+r rover so much, it looks
+unctional Lander, but no such luck. Its
+st in case their long dead probe is rep
+They’d tel the Lander where Earth is,
+mosphere. The thin
+Sojourner’s also showing no signs of 
+d for now.
+EXT. TEMPERATURE: NONFUNCTIONAL
+SOLAR A: NONFUNCTIONAL
+Chapter 11
+s to piece together antiquated computer
+ce room; JPL had no space ready for the
+Venkat turned to Bruce. “God damn, Br
+mmunications console, Venkat asked “W
+transmissions. So it’l be 22 minutes 
+“Just the bare bones. A hardware self
+LOG ENTRY: SOL 97
+They know I’m alive!
+Pathfinder to take a panoramic image. H
+�The Lander hasn’t been able to conne
+he Hab. The Lander’s signal wouldn’
+ camera. He can write notes and hold th
+o tel Watney about them. He’l have to
+conversation, won’t it?”
+Quickly leaving the press room, Venkat 
+es from Mars.”
+ed through the room as the image slowly
+The vertical stripes revealed a handwri
+e – Are you receiving?’”
+r,” said Bruce.
+er question up.”
+n use both sides,
+e it would boil off in 1/90th of an atm
+ just use the letters A through Z. With
+racter has a numerical code between 0 a
+top is a wealth of information. I knew 
+easier to deal with.
+every hour.
+t by decompression. Landed face down, b
+Ares 4 landing. Modified rover for long
+�O…U…T
+W…O…R…K…I…N…G…O…N…I�
+man before Venkat. “I work in softwar
+they used to find a problem that almost
+“Ok, how does this help us?”
+rk’s rover?”
+ can’t get the rover talking back.”
+“Not directly,” Jack said. “But w
+’ It’d take three years of constant
+“Here’s the clever part,” Jack sa
+“It means there’s a spot in the cod
+acement OS. Then, we tel Watney exactly
+Venkat furrowed his brow, taking in far
+e files.”
+“Hi, Annie. Nice to hear from you, to
+“So tel him to be around when you tak
+“I need something, Venkat,” Annie s
+ess is crawling down my throat for this
+n the world. You see what I’m getting
+I have to be watching the camera when i
+and scraping it in the dirt takes a cou
+breakfast, did some unnecessary checks 
+ld get that set up, we’d only be limi
+ould reach in to the smooth area withou
+HSDONE”
+ Fair enough.
+a short note and came back out. Usualy 
+“You got your picture, quit bitching,
+want a pic of his face ASAP.”
+t urgent.”
+ke your time, do it right.”
+utes away. Beth
+“What is with you? Why won’t you ju
+net. They’re in space.”
+the sand. But this time, I needed a way
+ the short term, and it doesn’t need 
+So I used a camera. I’ve got lots of 
+“Come on up here, Jack,” said Venka
+ earlier today, and we confirmed it wor
+ Venkat said.
+“You’re a very unpleasant man, Tim,
+The whole world’s been rooting for yo
+[11:29]WATNEY: Glad to hear it. Really 
+ill your crops affect that number? As t
+ut food around Sol 900. Also: Tell the 
+e is being broadcast live all over the
+“This a good time?” Mitch asked.
+You probably know why I’m here.”
+he flight director. It should have been
+Mitch paused. “Just like that?”
+tars. “Hang in
+pt deeper and better than he had in a l
+Martinez was first out of his bunk. An 
+never her forte.
+e go away,” he mumbled.
+cle Sam paid $100,000 for every second 
+ the comm station to check overnight me
+“Beck, what’l you have?” Watney c
+ replied, taking the proffered breakfas
+hot water, she
+ts are bumped up to
+Beck shrugged. “Just be careful.”
+“The storm.” Vogel said in his acce
+centimeters and get soil samples. At le
+ much more freedom of motion. Digging, 
+ep up with the Air Force, now can we?�
+“Back to base,” Lewis said.
+“Jesus, we’re gonna end up in Oz,�
+ said, staring at her screen. “It’s
+or the best. If the wind gets too high,
+ suit’s telemetry. The wind’s gonna
+“We could use cables from the solar f
+“What happened?” Lewis said.
+e lost telemetry, his decompression ala
+e else, home in on Johanssen.”
+anded. “Smal steps. He’s probably p
+ in to the pilot’s couch and booted t
+’s got a 7 degree tilt. It’l tip at
+��It didn’t finish transmitting. Some
+es ago,” Martinez continued, “while
+“Copy,” Beck said morosely. “Bloo
+ammered. “It takes a while to cool.�
+ fals completely over?”
+d prep for launch.”
+They reluctantly obeyed Lewis’s order
+quipment that morning, anticipating geo
+ wind pushed her off course. The sheer 
+ rover IR camera do any good?”
+ing the inner door. “We must get to t
+e’re tilting 11.6 degrees. One good g
+“Commander,” said Beck, putting on 
+r it to complete a self check. Glaring 
+radar.”
+faster and faster.
+rtinez said, his hands flying over the 
+Bringing the Orbital Maneuvering System
+aid. “I think it’s slowing down…�
+“What’s going on up there?” Lewis
+. “How much do you need to dock with 
+“There is danger of damage to the ven
+“Stil tipping back,” Johanssen said
+The four crewmates awaited their comman
+nosecone OMS thrusters. They were no lo
+ietly. “Ready for launch.”
+onds later, preignition pyros fired, ig
+ter, and the acceleration more pronounc
+ Martinez and the
+ next stage began. Outside, the now-emp
+rthought.
+ gentle sobbing.
+ul reason he was doing zero-g plant gro
+cone-A ladder.
+ly able to walk.
+ in the adjacent seat while Vogel and M
+” Beck said.
+ur laptops. Also there’s a telemetry 
+“Henderson?” Martinez said, puzzled
+on swept across his face.
+ut two months ago and decided not to te
+t happened, but it’s definitely not y
+ence to the bridge.
+The celebrations ceased immediately as 
+no words to say.
+the press, which sandwiched it between 
+They want constant updates on every Hab
+One big bonus: Email! Just like the day
+The coolest one is from my alma-mater, 
+another 10 meters to
+es 4’s crew plus me) al the way to Sc
+If Pathfinder craps out, I’l spel mes
+All chemical reactions complete, the sh
+, independently verifying the measureme
+At first, they were working on a desper
+arrive around Sol
+ guess they’re afraid I’l say somet
+Dear Watney: Sorry we left you behind, 
+ lonely I think of that steamy night I
+a sticker,
+Upon arrival, the package was carefully
+I wish I had a straw hat and some suspe
+st ten days they’l be ripe!
+ to eating them.
+In other news, I got email from Venkat 
+tom of the NL Central.
+want to see if there were any avoidable
+ame Commander Lewis, be advised I’ll
+s was uneventful, needing only two mino
+30 meters from the ground, it cut loose
+LOG ENTRY: SOL 117
+dity inside the Hab is a lot higher tha
+ it, I’m sure. Thing is, the water ca
+no backup, and they
+nd report the results back.
+rking as best they could in their bulky
+the patches ensured air-tight mating.
+ pressure for the first time. They wait
+out I take the it apart and check the i
+they spend al day working on how to sav
+heir own initiative,
+hing out on a table. I have the schemat
+rals built up in the
+Me: “I took it apart, found the probl
+rips together, acting as a single sheet
+AL102 stretched.
+Designed for a mission of 31 sols, AL10
+. Every time the astronaut used the air
+about. Stil, it’s bit disconcerting t
+When I head outside, I’l confirm Path
+y dad credit; he never claimed it was t
+d. For starters, I need to make a hoe. 
+sure the storm didn’t hurt it. Then I
+ gone. Now it was merely a boring chore
+ould have prevented the rip from growin
+to the seal-strip. It propagated al the
+the force of the expulsion.
+gainst the inside of the helmet, knocki
+d on its side amid a cloud of dust.
+Hab rippled in the distance, a junkyard
+He listened intently to the hiss. Then 
+. I should be more upset, but I took a 
+aking or there are snakes in here. Eith
+ed and colapsed. So even if I had a fun
+RECORDING:
+n’t worn my own since Sol 6 when I go
+shaped valve with super sticky resin on
+gone, the EVA suit is effectively manag
+, but… it’s down here somewhere, bu
+isp of it.
+y clothes are fireproof as wel, even th
+mmable: My own hair. It’l have to do.
+en flow. Al I can do is muck with the E
+ectronics. I need it working to get fro
+at at building up static charge. Once I
+On my first try, the fire lit, but the 
+. So I shut the suit down, held my brea
+off, held my breath, and when the time 
+0.9 atmospheres during my little experi
+I’l need to do some kind of repair to
+ just take a little to fix the crack.
+to do it without using the patch kit.
+s slap some on and see if it slows the 
+RECORDING:
+ off the suit’s heating systems and l
+pressure against the size of my broken 
+Looking around, the only thing I see th
+an control the shape and location of.
+Material designed to withstand atmosphe
+y side while I’m in the suit, but the
+Anyway, one problem at a time. Right no
+nlikely it would puncture EVA suit mate
+e faceplate. Then, I took what was left
+It seemed to work wel. The seal looked 
+. Once I got a screwdriver I chiseled m
+airtight things were.
+uit leaks, that’s what it backfils wi
+atmospheres to 1 cubic meter. That’s 
+breathing turned some oxygen in to carb
+ suit wil only last 4 minutes.
+ your pick; al of those problems are fa
+EVA suit is shit.
+iny little gal, our
+e, after that sudden decompression, it 
+nutes. I’ve got to bring that down.
+. I can’t press against some other pa
+The third time, I got it right. The tri
+The airlock is a meter wide, so… sigh
+ It only worked one out of every 10 tri
+“al-terrain” airlock. I can’t rol
+ze the airlock. Get out and hurry to th
+think and materials to work with.
+y to move in this
+of time. So they mounted a smal camera 
+at was going on.
+e arm to work with. My left arm was pin
+ Entire tables and bunks are meters awa
+“Yay!” I naively thought. “Proble
+met. Setting it aside, I reached past t
+wonderful 1-atmosphere air.
+k move back to the Hab, so they know I�
+ng my brief, panicked scramble outside,
+The stumpy arm is stil an issue, but th
+al progress today.
+I’d lost most of my air yesterday, bu
+The tank-refil is an emergency measure.
+r-related emergencies would be outdoors
+ trust my handiwork, I wanted a two-arm
+I got it.
+m there, I can work on fixing stuff tha
+have to re-couple a few of them, but th
+anything I can’t figure out on my own
+ that. Some of the crops were in pop-te
+So are earthworms and soil bacteria. I�
+cted by the explosion. And the potatoes
+ probably averaging 5 potatoes each: 20
+[08:25]JPL: Received! You gave us quite
+ then yeah.
+systems while I wait for your next repl
+ing perfectly. Water Reclaimer is
+it failed. From now on, alternate Airlo
+ Including the remaining mission ration
+ead of schedule,” Bruce continued. �
+s to make this probe.”
+nside. Say goodbye to the al the other 
+booster.”
+He looked around the room and let that 
+high velocity, food is stil food.
+[08:02]JPL: We've spun up a project to 
+I've got all Hab systems up and running
+ mechanical or electronic problems. By 
+ building. Only his cubicle iluminated 
+e exact orbits and course corrections n
+isn't chalenging, but it does require t
+Iris might launch. He calculated one co
+in of calculating orbits for Hermes. I 
+identical for the orbits and is well wi
+ break room for a refil.
+Ares-3 guys said they should run it, ca
+ey won't have time to be pissy.”
+“I'm giving daily updates to the pres
+. “It'l help get us emergency funding
+ we'l remove before launch. It's easier
+“We're behind,” Bruce said with a t
+“We've been at it 29 days; so we only
+ more problems, it'l be two weeks late.
+ght Surgeon, Teddy asked “Dr. Keler, 
+s only going to get worse. Soon his ent
+typical hunger strike but remember he'l
+“Within 4 days of running out of food
+es 3 days to actualy mount it. The folo
+ with set intervals between them to see
+“No,” said Teddy. “Right now I'm 
+“That's 2.5%,” Venkat said, steepin
+ stared back.
+pections.
+ures. Skipping those procedures means r
+Rich Purnel concentrated on his compute
+“Just a little side project. Somethin
+“You need supercomputer time to calcu
+u to take a vacation.”
+“I'm on vacation,” Rich said withou
+Maintenance only takes you 12 hours per
+ mostly of EVAs, geological samples, so
+s technicians sealed Iris in to the spe
+ miss this moment.
+oom. “Iris is ready to go. The schedu
+progress over the folowing months. It w
+ed with music from al ages.”
+oblems. The weather at the Cape is clea
+��It's about a human life in immediate 
+“Sure, lots of 'em,” Venkat said. �
+He put his headset on and said. “This
+“Go.” came the response.
+from the cooling process, stil had Eagl
+d on the far
+“Go.”
+“PTO.”
+holding its breath.
+TV with rapt attention. It was 6:13am i
+ Johanssen's station. The 2-minute tran
+n saw no reason to hide it. Commander L
+“Roger,” Mitch said checking the co
+countdown. “15,” She said. “14...
+calculations, had lost track of time. H
+“3... 2... 1...”
+e to watch the spectacle on the main sc
+ship could crash harmlessly into the At
+s handling it.”
+cubed protein bar material. Even if Iri
+ done so with a simultaneous lateral vi
+e shimmy rattled it. An effect similar 
+ad, forcing the sludge toward the edge 
+ulated the new center of mass. The guid
+r job admirably.
+stage engines prepared to ignite.
+e. No longer contending with the dead-w
+rely to a single one. The bolt was desi
+considerably easier than that of their 
+ perfect replacement.
+“Woah!” exclaimed the Ascent Flight
+tch demanded.
+tions Director.
+��Entirely lost the probe?” Mitch ask
+“LOS here, too.”
+“No satelite acquisition of signal.�
+Mitch put his head in his hands. “Rog
+nter. He took a deep breath, then let i
+st been lost in thought so long it got 
+[16:03]WATNEY: How'd the launch go?
+ents. They'll want to hear about our ti
+Guo Ming, Director of the China Nationa
+ himself, that did not apply to the Uni
+He snorted at the last requirement. “
+Yet, the State Council insisted al laun
+“Good evening, Sir,” said Under-Dir
+of the Gobi Desert.”
+Guo Ming looked expectantly back at him
+“Possibly,” Zhu Tao said. “Possib
+“Have you ever known me to 'kid,' Sir
+r too heavy. The massive heat shielding
+“Hmm,” Guo Ming said, “I bet NASA
+“So they don't know we can help them,
+s remaining, any such
+id. “Our end would be providing the b
+“Reimbursement would be pointless,”
+ental, but their government is not. The
+among scientists. Space agency to space
+thing we can't get without them.”
+our State Council?”
+at it had to say, then fel silent as it
+r the world.
+switchblade. Aspire to a level of cooln
+“Ok, here we are again,” said Bruce
+ payload wil get to Mars on Sol 624, si
+dulous faces.
+ts to Mars, it's
+“As long as the food doesn't burn up 
+safest possible
+ed them edible after impact.
+ around a sheaf disorganized papers. �
+Venkat stared forlornly at his once cle
+“A summary for what?”
+“Oh sorry, am I being difficult?” R
+Rich snatched a paper from the desk. �
+“I don't know, Venkat said. “Friend
+Being your backup has backfired.
+You started my training by buying me a 
+Frankly, I suspect you're a super villa
+“Because it's a secret meeting?” Mi
+“Exactly,” Venkat said.
+“Good morning,” Teddy said as he wa
+und a way to get Hermes back to Mars. T
+nkat said. “Hermes has a constant-thr
+ runs out of food. That would solve eve
+would come close enough to use a gravit
+ in to orbit. The rest of the maneuver 
+“Schiapareli Crater!?” Mitch gaped.
+Schiapareli-”
+would be on a flyby, so the MAV would h
+oned a supply probe for Hermes. We have
+d Hermes back to get
+he did some quick
+“It should be Commander Lewis' cal,�
+“Bulshit,” Mitch said. “You guys 
+“The crash-lander?” Mitch said. “
+ew may have to fix things here and ther
+the Ares Program with them.”
+n about what's safest.”
+h-lander is high-risk. It could miss Ma
+ys, we can control the probe directly f
+ntry; the
+he decision,” Venkat said. “Not sur
+t said. “We're not deciding right now
+“Al right,” Teddy said. “Everyone
+ I don't have to follow social rules an
+But wait till the mission’s over. You
+connotation, veiled in secrecy. Many pe
+ said to the assembled elite. “But I'
+” he said. “Iris 2 only risks one l
+just want to cut your losses. You're on
+ best.”
+“They're too emotionaly involved. Cle
+u're hanging him out to dry, you chicke
+Annie quietly gathered her things and p
+, but he's right. You are a fucking cow
+rio and made a tough decision. That’s
+the worst thing that can happen. Not
+ion of Hermes against the projected pat
+ the location
+Completing the check, he ran a diagnost
+Sorting through the messages NASA deeme
+image attachment. He raised an eyebrow.
+He walked down the narrow halway. The c
+ up from her computer.
+ computer can not view.”
+ said. “Probably
+Does any of this make sense to you?”
+He froze. “Sol 549!?” he exclaimed.
+ their seats as they pondered what Voge
+hearing it for the first time. She gave
+ in the message,” she began. “The m
+ey'd rather take a big risk on Watney t
+aneuver, they'l have to send the supply
+talking about mutiny. And that's not a 
+“If we do everything perfectly, we ad
+and I are military. There's a good chan
+“If we do this,” Vogel said. “It 
+“Ok,” Lewis said. “If we go for i
+“But we're right here,” Lewis said.
+mes has four redundant flight computers
+I'l have to disable the Remote Override
+inst malicious code.”
+that time, anyone can change their mind
+ld selves. She knew right then no one w
+leadership qualities were plain to al h
+the top job for
+actical. Other than media relations, He
+“Message reads: 'Houston, be advised:
+ready-”
+m reply time 3 minutes, 4 seconds.”
+told us.”
+“Working on that now, Flight.”
+'d make a good movie title. 'The Hermes
+“Realy?” Mitch said. “Is that rea
+ thing.”
+acting NASA policy. Allegedly enacting 
+n it. If she let
+ “Wel, I guess I'd be you.”
+hen they pass by, al they can do is wav
+ compared to the epic journey that's co
+. Once I get there, I'l need to set up 
+k (in my fevered imagination). “Won't
+ates, the mission plan had Martinez fil
+xygenator, and Water Reclaimer. I cal t
+ my tools, some spare parts, and Pathfi
+t the idea is to use both rovers. One t
+ize the rover, but it'l hold.
+ than carbon composite). You can cut ho
+r construction projects. They were
+ our other ideas hinge on this cut work
+comfortable with you modifying one.
+ though I was working with high voltage
+I had to make my own a 9 Amp breaker. I
+time it was a lot easier.
+ily. It's only a meter tal, and shaped 
+t's new cord outside, I connected it to
+[10:07] Watney: Power line modification
+� Rover 2
+trailer, and position the trailer where
+same reason, rovers can share air via h
+Venkat told me to “draw” the shape 
+when making stuff to send to Mars.
+e're not going to mess with. The cut is
+something out.
+xplosively launched at my face.
+s a meter long and only safe to hold by
+ could keep driling in one place. As NA
+he overheat and warned me. So I leaned 
+leasant side effect is the dril cools e
+can't reach from the ground. For that I
+onight is about eating a full ration fo
+t includes the occasional breather to l
+used a geological sample container (als
+way through the whole cut. At least, ¼
+days of (boring-ass) work to finish the
+journals, and Martinez didn't bring any
+by Elton John, Alone Again (Naturally) 
+[17:12] Watney: 145 holes today. 357 to
+n't the same without them.
+ 24 hours.
+ want to die anymore than I do.
+the ass to make a chip before each dril
+ Repeat that process over and over til 
+The worst moments in life are heralded 
+ing fine. I had finished a hole and set
+The power light being off meant there w
+h amperage. No big deal. I reset the br
+[17:08] Watney: 131 holes today. 488 to
+eply came.
+acknowledge.
+[18:09] SYSTEM: Last message sent 00h31
+The same time the dril died.
+other rover's computer, try from there.
+Pathfinder's connections and the negati
+I pondered this development. Melted ins
+ldn't be burnt or singed. That's a resu
+The internal electronics for Pathfinder
+hfinder the Mars. The other 3 sides are
+At 13:30, I leaned the dril against the
+itive, through the workbench, through t
+ing everything along the way. The break
+Mars keeps trying to kil me.
+ rocks. “PATHFINDER FRIED WITH 9AMPS.
+ut a plan. I'm sure NASA had al kinds o
+ and brought enough oxygen and water fo
+l” is a pain in the ass to say. I'm g
+needs 3.6 of that.)
+n the attempt).
+I've had a breakthrough with the Oxygen
+made for six. 1/6th the quantity of CO2
+problem. Too much CO2? Take it out. Not
+cooling this much air would take ridicu
+ays can turn air to liquid for free. Th
+r temperatures. The regulator gets the 
+have juice to drive.
+you'l start to get drowsy. At 2% it's l
+have 50 liters of liquid oxygen in two 
+out for a day and use all my power to r
+es, but they're -75C. If the regulator 
+my exciting trip to Pathfinder. A lovel
+I ran the numbers. The regulator uses 7
+again. Jesus Christ that return air was
+king my numbers and running more tests.
+owing the trailer and al the other shit
+I had to guess at the weight. The heavi
+d it 1200kg.
+t's not an action-packed thril ride. Bu
+having to power the regulator (which wo
+math I worked
+m lifting rocks and whining about lifti
+First, I loaded up on Vicodin for my ba
+t break. If I can't trust NASA, who can
+und the heat baffles. Using a funnel ma
+is driven by the weather outside. So th
+ comes in. And I won't have to deal wit
+I took Johanssen's cot and cut out the 
+eclaimer. (I can go quite a while witho
+RTG anyway. A few more won't hurt. That
+I spent the last week recovering from b
+ do. I was reduced to watching reruns.
+ts roof wil be missing because of the h
+re oxygen it'l liberate, and the longer
+s. That's much more reasonable.
+es; they're not smal or portable. They'
+In other news, It occurred to me that N
+ “INJURED
+ No internal lights, al nonessential sy
+The only way to get al 28 on the roof w
+I haven't removed the chunk of hul from
+ea and it's too big to fit in the rover
+des of the rover and trailer.
+iler whence it came. In fact, it'l save
+them aside. They may be handy down the 
+ing up. Two brackets per side to make a
+panels, I could store 8 additional pane
+ad to leave the Hab in low-power mode. 
+n I can turn the
+the Hab to save myself the hassle of wo
+murdering dril made short work of that 
+I tested the brackets by hitting them w
+ trailer, then two per shelf. They al f
+to the farm. No Chicago morning for me 
+ty damn aggressive about it, too. Space
+ passengers. Bye!
+he rover, there'l be two redundant life
+ I'l bring it with me. If something goe
+ mass per kwh of storage. Yeah, it's co
+y, things should be fine.
+hit out earlier today, I'd never have g
+had done the wiring correctly.
+na in two days (if there were no delays
+dying would be way worse. And I won't f
+“They say I have 5 minutes,” Robert
+Lewis sighed, “Me too, babe.”
+“Why not?”
+“Oh hey!” Robert said. “I found a
+“Wow! Good find!”
+uan til tomorrow,” Venkat moaned. “
+Gathering their carry-on luggage, they 
+As Venkat took his place in line, Teddy
+ Bin Bao,” he said in perfect English
+“We need sleep,” Venkat said immedi
+e you to your hotel immediately.”
+“Sorry. ”
+nable to pipe the signal to Bremen? ”
+ recognize me. In a way, it's a blessin
+“Alex, ” Helena said, “Will you b
+“Welcome to Jiuquan,” Guo Ming said
+nice touch.”
+ al cultures.”
+�� he said. “I cannot.”
+“Can't you just move Hermes to dock w
+multiple roles. I'm the doctor, the bio
+ou lecherous homewrecker.”
+ nerds,” Mitch said. “But they make
+“Yeah. I'm concerned about what I ate
+t said. “A total dick. To everyone.�
+“Just think of the playground cred he
+“So,” Martinez said. “You're piss
+“Your son wil be in kindergarten when
+“Yeah,” he said. “Sorry.”
+“So Dr. Kapoor, tel us about the Taiy
+he Taiyang Shen has enough power to do 
+'s it.”
+z. As the probe approaches Hermes, he'l
+“Sounds kind of unscientific,” Cath
+“Exactly like that,” Venkat said. �
+y need those supplies.”
+“What if the probe doesn't get to you
+feels sick al the time. I'm not much be
+ be more selfish.”
+-A student. Hanging around nerdy guys t
+ booster only took me in to orbit. It w
+“I know,” Johanssen mumbled. “But
+� Johanssen said.
+ying out of your business, let me nose 
+“They picked me to survive. I'm young
+y'l do it right away so they don't use 
+. If I was the only one, it would last 
+Taiyang Shen's con-trail wafted in the 
+�� Venkat said. “And we're grateful!�
+her researchers, scientists, and engine
+ that.”
+knowledge.”
+ther a constant
+would alow him free motion in space sho
+EVA if Beck needed rescue.
+ocity is 0.05rps.”
+“Slowing her down a little,” Martin
+“Then we're in line for auto-capture,
+ the computer reported success.
+“Airlock pressure to 100%” Beck rep
+oard and inspected.”
+“So,” he said, “who would you hav
+ the hal.
+I haven't been good at keeping the log 
+om being too sharp.
+The pressurized area is easily big enou
+ough a valve in the Hab's wal. The retu
+d happen on a normal mission if the reg
+There's stil a lot to do.
+ple wil probably read it. I'l be more d
+tainer (or “plastic box” to people 
+ss through the water as a bunch of litt
+g. I can't alow any air in there. Inste
+ressurized to a ful vacuum. I plopped t
+s a good 40C. Then I hooked up the regu
+t keep up with the total loss from the 
+Yeah, I know, it's a stupid thing to th
+zation, and it owns the Hab. So while I
+permission to do this, and they can't u
+You may be wondering what I do with my 
+i wil mean going
+reli. But between them it goes up and d
+eological reason, there's a valey caled
+ of the valey.
+as being trapped in the rover. I had to
+ear to fucking God I'l rip my own face 
+So today, I started making a tent. Some
+ts original purpose was a lifeboat for 
+able to walk right in. No EVA.
+ plan is to double the floor area and d
+ that won't open beyond 180 degrees so 
+his happen.
+eed to cut canvas pieces to the right s
+Anyway, my bedroom wil take 30 square m
+I'l have to depressurize the Hab, cut c
+ng canvas down and re-seal it. The Hab 
+were right.
+I have enough to last til launch, so I 
+I'l eat “Half-way” when I reach the
+with Fatal Hemorrhoids or I'l run in to
+at's my name for “hot water with a ca
+hing in the Hab had a crash course in d
+The rest was just colecting knickknacks
+Hab. The critical components are design
+sed to happen.
+, I opened both doors of Airlock 2. I l
+angles and corners (pressure vessels do
+t? From the
+s, they just hang around. The top layer
+ere quickly drawn to where the leaks we
+aited an hour. No leaks.
+Time to get a sleeping pil from the med
+Anyway, as you can tel from how not dea
+'s just canvas. I can rol it up and tak
+NASA is good at making things. I am not
+w canvas pieces in
+o bump the pressure up to 1.2 atm.
+el. I watched the suit readouts careful
+pical Martian astronaut does, what, 40 
+. The open airlock hatchway led directl
+Originaly I planned to let it sit overn
+It's a little scary. The first time I t
+Water: 620L.
+Heat: 1400W RTG. Homemade reservoir to 
+plot a route to Schiapareli using a gra
+myself: “What would an Apolo astronau
+I'm working out how to pack. It's harde
+ver breaches I'm dead. No point in plan
+pate that, but you
+It'l be cramped, but there wil be some 
+The rover wil be pretty packed, too. Wh
+lant, the other rover's main computer (
+g an EVA?”
+9:10. He showed up in one of them.”
+“Wait, What?” Venkat stammered. “
+“What's Watney doing here?”
+ing rocks to spel a message takes time 
+satelites around Mars, your sole respon
+rning me in to a glorified Peeping Tom.
+“He's running out of time,” Venkat 
+ple of times.
+This presents a problem. Unlike my Path
+t is managing carbon dioxide. When the 
+el). So it's safe to move the Regulator
+nks to the trailer. I brought each chun
+ a way, that's what it was. I hauled it
+eeds a pressure
+e could fix things in the field easier 
+I moved to the rover, which means I had
+. Everything seemed ok.
+urned to the Hab. It'l be on its own al
+ to know I had no life support other th
+ome name for a James Bond movie.
+on rather than CO2 removal, and I have 
+As intended, the pressure from the rove
+Live Another Sol! (Starring Mark Watney
+ps of spare canvas to place over the se
+an Coffee for me.
+ng is I don't have to suffer.
+you never know.
+ other side of the airlock door, stil f
+knew. I'l bee-line to Mawrth Valis, the
+ have to adjust the course when I'm act
+“What's up, Venk?” Mitch asked. “
+“Any idea how stable it is?” Teddy 
+ion out of the Hab to make it. I don't 
+to do as much as he can in that room.�
+“It's the external component of the A
+“Don't celebrate yet, Mitch,” Venka
+ra. Not a big deal in terms of magnitud
+ thing is, they last for months, they c
+“Shit,” Mitch said, rubbing his eye
+5 sol trip in to 225 sols. He'l miss th
+aid “We'l just have to hope he finds 
+he comes out the other side.”
+l aspects of it working together.
+t around or break things I want to know
+er to boil off if that happens.
+I'm doing one more little test tonight.
+ it's attached to the Hab and there wer
+,” Vogel reported. “It was our last
+said. “It's the cooling vanes. They a
+g. The tarnish is
+hanssen said. “We'd need a lab. Usual
+ in space way longer than it was design
+“We knew this would happen,” Lewis 
+l trying to cook me. The climate contro
+can be without people tripping over me.
+Johanssen blushed and looked down awkwa
+ring with your duties and I'm happy.”
+Things went wel. I spent five sols driv
+I ran in to a little problem with the t
+s al the heat I need.
+I fel in to a routine pretty quickly. I
+fast. Then, I deflate the bedroom from 
+e airlock to depressurize. It thinks it
+airlock with the entire folded up bedro
+ rover has al my
+t want to make sure nothing's obviously
+Then I set up the bedroom. Pretty much 
+d inflation puts a lot of shock and pre
+indistinguishable from an unemployed gu
+gh the backlog of CO2 the Regulator had
+hiapareli.
+r cels, rover computer, airlocks, and e
+'ve robbed it of al critical components
+ the trip to
+o the MAV when it launched, so they add
+now it was dead quiet. It's a creepy, e
+here to convey
+Chapter 22
+ being used ten
+edroom, stack the solar cels, drive fou
+ady out from the day before. Everything
+erday. But I only knew that by looking 
+arving it away. It was made by a mega-f
+be happy to endure a little nostalgia i
+�But he's got a real chalenge ahead of 
+“Can his makeshift rover operate at 2
+. That's 12 days
+e of the storm isn't a magic line. It's
+l efficiency is going down, before he's
+n we think and turn around in time. May
+mera. “Al of Earth is watching, but p
+obstacles. Just smooth sand with rocks 
+y “map” (such as it is) consists of
+e way to fix my position on Mars.
+a weight, and something with degree mar
+th, the earliest way to work out longit
+Fortunately, I have accurate clocks. Th
+I spend 13 hours every sol just sitting
+uires it to be night so I can sight Den
+s encampment was visible in the center,
+ver when rocks were in abundance, usual
+“ON TRACK FOR SOL 495 ARRIVAL.”
+ pretty obvious the terrain is changing
+ia Terra is 500m below. So I've gone up
+e I am right now.
+r rover doors locked, and never come to
+an make 90km per day. On a steep slope,
+ater I'l have to backtrack to somewhere
+art. Even I can't
+ording to my maps,
+w my location a hel of a lot more accur
+ed to get to orbit. The only way to get
+ring samples. But leave them behind. An
+It'l cost me a hundred kilometers or so
+Carefuly opening the steaming package, 
+stil have a long way to go before we ge
+recover soon.”
+him, and he's stil alive. He'l survive 
+“I'd never bet on a crewmate dying,�
+I'm in the middle of a bunch of craters
+problem at al, but with my extremely ro
+ely smal and going around them won't co
+is in the southwest part of Schiapareli
+nother MAV and wait for the next window
+be looking for. To the southwest of tha
+xpiration date. For the past two sols, 
+igated badly and ended up at the ridge 
+way around if I can avoid it. Originaly
+ usualy do. So it's not too much wasted
+ng to play it safe.
+they stil just aren't 100%.
+Craaaaap.
+ little walk this morning. It was over 
+little shit! Ya hear me? Mars!”
+was a haze in the air. It's not uncommo
+very few car thieves on Mars). But the 
+on the horizon. But looking east, I can
+f everything.
+From this, I concluded the folowing:
+ Sitting stil means I'l likely get over
+minute conversation with NASA. Now that
+ched Watney's every day. She slept when
+not broken camp yet. Usualy he drove in
+sual place (north of the campsite). Rea
+I'm on the very edge of a storm. I don'
+d it was 97% of optimal. So right now, 
+wer to it. That's the fatal scenario. B
+get 90km per sol this way. So Right now
+ I can maneuver around it without being
+ percent power loss.
+So here's my plan:
+ cels and get the data. By comparing th
+a lot of time to my total trip.
+n different places.
+It took al day yesterday and today, but
+ and the wattage of the solar cel. The 
+ft corner of the image, just like the s
+didn't want to ruin the suit. It's my o
+For testing, I used rover power. How wi
+hereof. As soon as I take this thing ou
+ar cel can make. So I'm dumping the res
+ower loggers. I let them log happily fo
+ up on O2 and good to go.
+Everything went as planned today. No hi
+er. Now I've
+toes? Because, by God, I am sick of pot
+m 29 sols ago when I left for Schiapare
+the storm and doomed to die, I'm totaly
+here I started yesterday morning. Yuk.
+I had solar efficiency readings from th
+o southeast. And I already worked out i
+Having traveled along Mars Highway 1 al
+Hopefuly.
+ 100%. One I reach
+apareli because Pythagoras is a dick. I
+before then, too.
+I'm stil going due south every day; and
+pretty important. But I decided against
+www.watch-mark-watney-die.com. So there
+, it means I'm south of the southernmos
+Mind you, it hasn't been that bad. I'm 
+0km of travel per sol, I should arrive 
+I got pushed so far off course, I'm act
+ver to use as a
+torical sites for now.
+, I won't have to drive around anymore.
+l do after I get to the MAV. Like it wa
+But I can seal the bedroom entirely. I 
+Unfortunately, as an emergency device, 
+s it to theirs. Then they cut through t
+So here's my briliant plan: I won't use
+ Not a lot of floor space, but stil lot
+ASA wanted to make sure the emergency s
+. The rover wil serve as storage (becau
+Of course, if the Atmospheric Regulator
+Presuming nothing goes wrong, that is. 
+from the entrance to the MAV, but hot d
+eli Basin via the “Entrance Ramp.” 
+Lemme rephrase that...
+a river cuts through a mountain range. 
+ The sand had piled up high enough to b
+ce Ramp had been born.
+hers remained as soft as talc.
+her terrain he routinely navigated.
+The rover, while descending down a seem
+l completely off the ground. This in tu
+The trailer, attached to the rover with
+The rover was not so lucky. It continue
+drop and closed.
+upside down. Those rectangles scattered
+ear. If he'd come out there'd be visibl
+ent wrong. Judging by where that ditch 
+"The rover's designed to handle a rol,"
+e rover is probably ok."
+LOG ENTRY: SOL 498
+el-honed machine in times of crisis. As
+And that means the trailer junction sna
+The driving controls are ok, and the Na
+e baloon roof it has isn't exactly dura
+I've got 20L of oxygen (enough to keep 
+to get things working again.
+more sols. That's it.
+holding out much hope. I did come in to
+mething to get a leverage advantage. Ot
+nflated roof. I'm not sure which god sm
+ay as wel, right?
+Mindy read the Morse code aloud. “Rol
+plies?”
+ guess I'd have to use my Master's degr
+I had a busy day today and I got a lot 
+s feeling much
+p, figuring I'd need them for the MAV m
+Good thing, too. Because it doubles as 
+Once I found it, I kept going until I'd
+perpendicular to the rover.
+n my side. The
+gave it a ful system's check. That's a 
+Beers for fucking everyone if I get bac
+the sun sets realy early from my point 
+not enough to work with. Deimos is a li
+to use the bedroom again! It's the simp
+sterday's little leverage trick.
+ to make it do a somersault to land on 
+So I dug a hole. A hole one by three me
+h a huge plume of dust.
+I'l spend tonight without the trailer t
+I started the day with some Nothin' Tea
+ airlock.
+th. The atmosphere in the trailer was p
+at just built up. Eventualy, things rea
+s no surprise. It was an open top, not 
+omething for the returning air to bubbl
+ without breaking. I simply snapped the
+er and reconnected the two vehicles for
+as on soft powder.
+ it would be for the green-skinned yet 
+me, a Botanist /
+Up til now I've been driving 25kph, so 
+ bee-lining toward
+“So it looks like he's fixed everythi
+ through the speakerphone.
+“Good, good,” Venkat said. “Any s
+“Can I spread the word?” Annie aske
+� Mindy said, “he should get there on
+“Mitch, who's handling Ares 4 MAV com
+rive from Chicago to Sandusky, an 8-hou
+mirrors before each outing, you name it
+ve that speed for eight hours.
+ed out. I've already overdone my drivin
+l occasion. I ate the meal pack labeled
+ driving time, I only recharged to 70% 
+LOG ENTRY: SOL 504
+NASA has the MAV broadcasting the Ares 
+on't have to wander around looking for 
+aring what the MAV
+ would have added “AWESOME FUCKING
+at top speed. It
+He leaped in to the air several times, 
+Now fatigued, the astronaut stood with 
+Wel, right this second, I'm back in the
+al part of the MAV's design. It doesn't
+ be able to work comfortably inside.
+[13:21]MAV: Thanks! No health or physic
+you know, the MAV will need to lose som
+somewhere. Turn the rover's radio on an
+rs of work, testing, and
+Orbit, which is 4.1kps. But the Hermes 
+ of fuel, as it was designed to do. If 
+ the desk and flipped a few pages, poin
+“I see. And what does 780kg of fuel b
+ograms from the ship.”
+aves 500kg when you consider their weig
+itching al life support. The tanks, pum
+said. “Major Martinez wil pilot the M
+he ship.”
+“Wow,” Venkat said. “We're realy 
+get rid of those.
+ong to do any good. The
+ndows, and Hul Panel 19.”
+ole in the front of the ship?”
+nough that there's practicaly no air. W
+anel of the pressure vessel. It's the o
+ne if one engine goes out. It'l save us
+ the estimated odds of failure?”
+its supposed to.”
+hydrogen for the fuel plant. We'll send
+On the way here, in my copious free tim
+It's a stupid idea and I'm not doing it
+ the bedroom to the airlock from the in
+by. And looking at the procedure NASA h
+hairs and control panels and the like. 
+oesn't have total faith in my kludged-t
+and the trailer leaks some air every da
+ew hardware even looks like.
+ cut out too early. It's a deadly combi
+“Wil do,” Martinez said.
+“Aye, Commander.” Martinez said.
+as she reached the core. Vogel looked u
+launching training. So perhaps I do thi
+Floating to the other side of the core,
+ering Mark.”
+top in time.”
+“So, including the MMU safe speed, we
+utes. As soon as
+s isn't a hard limit, per se.”
+wis said sternly.
+e any pesky back-
+t up to make things as easy as possible
+ and dump it outside. The area around t
+Urine is mostly water. Separating hydro
+ in to a bomb) I burned it to turn it i
+xygen at one fourth of an atmosphere. T
+ and oxygen from each other. Over time,
+ the air. I broke
+d al the air in to the airlock's holdin
+Once I fed it the hydrogen, I fired up 
+ I electrolyze urine over time because 
+We're only 35 light-seconds apart, so w
+no chance of survival?
+work. That's not to say they're easy. I
+console for like 10 seconds!
+ an engine, after al. I could have fuck
+ssing they're the highest in history. Y
+“I'm ready,” Martinez said. “Joha
+ourse.”
+ I could find and spooled them up in Ai
+ou'l have to wait 52 minutes, but I don
+unconscious and may even have internal 
+“I wish there was more we could do ri
+y wil be right here in this room.”
+“Copy that. Al stations: Flight Direc
+Venkat watched from the observation boo
+triple checks everything.”
+ another.”
+ them to get the answer to any question
+I'd be lying if I said I wasn't shittin
+�awaiting launch instructions.” Realy
+I carefuly colected samples from my ent
+hy make one? We can't delay the launch.
+around in space until I run out of air.
+ve had my last EVA on the surface. I'm 
+und computer
+sheer terror. The NASA representative k
+“Go,” Johanssen responded.
+Mitch sat at his station in mission con
+“Recovery,” she continued.
+“Did you get that, Timekeeper?” Mit
+ there?”
+“Copy that, MAV,” Lewis said.
+ng to be squashed against the back my s
+” Beck said.
+“If I can't reach Mark, I want you to
+“It's my own life at risk, and I say 
+..8...”
+ the MAV rumbled in anticipation of lif
+a folded up shirt behind his head in th
+difficult, but something in the back of
+oing on?”
+. “Watney, do you read? Can you repor
+ sides. He wondered why NASA decided th
+As the MAV flew higher, the atmosphere 
+“I'm getting more response now,” Ma
+, “but the intercept course may be co
+“How far below?” Lewis said.
+d “3... 2... 1... Shutdown.”
+“I have interval pings. Working out o
+“Intercept velocity wil be 11 meters 
+“Did she say 68 kilometers!?” Beck 
+“Then we'l have to go to him. Johanss
+ez, what if we point our attitude thrus
+ercent-”
+“Use 75.5 percent of remaining attitu
+“Then we have 39 minutes to figure ou
+ion booth. Through the glass he saw Mit
+“What do attitude adjusters usualy do
+ second when they get there.”
+enough to slow down.” Venkat frowned.
+wearing a surface EVA suit, right?”
+to look up the frequencies in the tech 
+“There's got to be something,” Lewi
+Blissful unconsciousness became foggy a
+Mars from orbit. The great red planet's
+AV to Hermes.”
+“My chest hurts. I think I broke a ri
+“That's consistent with what we saw d
+“Wel shit.”
+could get to 42, I'd
+ and poke a hole in the glove of my EVA
+“No idea,” Watney said.
+“We'l keep working on ideas,” Lewis
+�� she said. “Using atmosphere as thr
+“Vogel's got software for calculating
+Johanssen and Martinez looked at each o
+“Also, al the air would leave,” Joh
+e same problem as Watney, but on a larg
+“Ok I have the numbers,” Martinez s
+been hearing al this?”
+“18 minutes, Commander.”
+“Houston,” Lewis's voice rang throu
+Any parting knowledge before I go?”
+rby when it
+el replied.
+� Vogel said pragmaticaly.
+orted. “How wil we activate this bomb
+nel 41,” Johanssen said. “It's next
+“Yes Commander,” Johanssen said, ki
+“Roger, Commander.”
+d. “I'd rather we kil the inner one. 
+in place to keep it
+to crawl along the hul
+ck 2, suit up,
+plied. “You mentioned a plan?”
+ust go with my Iron Man idea.”
+'t let us then- wait... wait a minute..
+ to the fatal danger of fire. But food,
+maximizing surface area. In a pure oxyg
+ strength of the
+, then stripped a section of wire. He r
+He floated out of the lab and made his 
+ay, embarrassed. “That was stupid. Do
+r in view, then returned to the lightin
+ held in both hands.
+ wil be sufficient.”
+Martinez floated back in to the bridge.
+drifting to his station. “It'l take m
+Lewis said. “And don't execute til I 
+Airlock 2 and opened the outer door.
+ck. It's going to be about one g for fo
+e attitude adjustment.
+ion,” Lewis said.
+“Copy,” Lewis said. “Time to inte
+“Dead-on, Commander,” Martinez repo
+“On the phone with the President,” 
+“5... 4... 3...” Johanssen said.
+ignition temperature of the sugar. What
+The internal air of Hermes rushed throu
+th's surface gravity. But it was incons
+“Not sure yet,” Johanssen said. “
+er second. We actualy got better than e
+ “Should get me another two or three 
+ould not see from inside the airlock.
+s that he'd be
+“Hey Beck,” Watney said. “The fro
+“Going to coast for a bit,” Beck sa
+he MAV loomed before him. “Velocity?�
+. Beck reached, extending as best he co
+ now getting further away. You have 169
+“How ya doin', man?” Beck said, pul
+re he clumsily colided with Watney. The
+ected,” he said.
+“We're out,” Beck reported.
+. “Velocity?”
+losed his hands over the tether to crea
+hey matched speeds, then it would have 
+ he slowly puled his crewmates toward t
+way around them and closed the outer do
+. Leaping from their seats, they cheere
+cheering wildly. He looked at Venkat an
+“Honestly, I didn't make one.” As h
+hat? It doesn't matter what time it is 
+didn't pan out that way.
+It's true, you know. In space, no one c
+hich serve as the ship's “sick bay”
+y long-range ship if it couldn't recove
+It's been a while since I washed... any
+o shower as soon as I could freely move
+This is the happiest day of my life.
+her file, but had never met her in pers
+“Hey, I know you!” Came a voice fro
+“Sure did,” Watney said. “Almost 
+ed you to go, would
+ his face. It was a nice, boring aftern
