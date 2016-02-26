@@ -91,12 +91,19 @@ Now we look away from general purpose Arduino and aim our focus on wireless comm
 
 One node has not much of a use, it's strength is in large quantities. Nevertheless, it is recommended to get familiarized with just two node network and advanced applications with large amounts of nodes leave for later. With one node you can try communication with computer, use functions from common Arduino libraries and experiment with serial port communication for initial setup.
 
-With two nodes you can experiment with basic radio communication, send, receive messages, and experiment with other functions from
-     \subsection{JeeNode HW }
-        \paragraph{General specs}
-        \paragraph{Radio}
-        \paragraph{Pins}
+With two nodes you can experiment with basic radio communication, send, receive messages, and experiment with other functions from JeeLib library.
 
+     \subsection{JeeNode HW }
+JeeNode US and JeeLink are Arduino clones; in addition they come with radio module. In contrast to the most common Arduino boards; which are 5V powered; these run on only 3.3V and their components layout is quite a bit different, thus you cannot connect majority of common Arduino accessories (i.e. expansion boards). On top of that, JeeLink is protected with plastic cover, so you cannot really connect anything.
+
+The difference between JeeNode USB and JeeLink is in already mentioned plastic cover and in used USB connector. While JeeNode USB uses mini USB connector, JeeLink uses much more convenient USB type A, which you can connect directly to your computer.
+
+Both versions are based on Arduino mini with ATmega328P processor.\footnote{This is the board you have to select in the Arduino IDE, if you wish to upload code}
+JeeLink also contains 16 Mbit of flash memmory, witch can be used for storing application data.
+
+Radio on the board can communicate on three different frequencies, these are 433, 868 or 915 MHz. Frequency is important mainly because of antenna, which can be adjusted for the best performance by selecting the right length for selected frequency, as they are dependent. Although it is important, for most applications you do not need to worry much about it, it will be fine as it is.  JeeLink has frequency set during manufacturing, you can recognize these from color marking on the radio chip. Yellow color means 868 MHz and green color means 433 MHz.\footnote{HW used for lab testbed has frequency set to 868 MHz}
+\paragraph{Pins}
+  These are contacts, which can be used to connect additional components to the Arduino. It can be anything from simple LED up to light or gravity sensor. These can be connected only to the JeeNode USB.
     \subsection{JeeLib basics}
         \paragraph{How to add to IDE}
         \paragraph{Header format}
