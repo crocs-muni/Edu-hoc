@@ -104,7 +104,10 @@ JeeLink also contains 16 Mbit of flash memmory, witch can be used for storing ap
 Radio on the board can communicate on three different frequencies, these are 433, 868 or 915 MHz. Frequency is important mainly because of antenna, which can be adjusted for the best performance by selecting the right length for selected frequency, as they are dependent. Although it is important, for most applications you do not need to worry much about it, it will be fine as it is.  JeeLink has frequency set during manufacturing, you can recognize these from color marking on the radio chip. Yellow color means 868 MHz and green color means 433 MHz.\footnote{HW used for lab testbed has frequency set to 868 MHz}
 \paragraph{Pins}
   These are contacts, which can be used to connect additional components to the Arduino. It can be anything from simple LED up to light or gravity sensor. These can be connected only to the JeeNode USB.
-    \subsection{JeeLib basics}
+
+
+    \subsection{JeeLib}
+    JeeLib is an Arduino library aimed specifically for JeeLink and JeeNode USb nodes and other compatible hardware. It allows us to control radio and few other modules, more information about it can be found directly on project website \url{http://jeelabs.net/projects/jeelib/wiki} or from documentation for the library, which you can obtain in various ways, either generate it yourselves directly from source code you are using with Doxygen tool, or use official documentation available on JeeLabs website \url{http://jeelabs.net/pub/docs/jeelib/}.
         \paragraph{How to add to IDE}
         \paragraph{Header format}
         \paragraph{Send unicast msg}
