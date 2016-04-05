@@ -44,8 +44,8 @@ public class SerialPortWriter implements Runnable {
 
     private boolean silent = false;
     private boolean verbose = false;
-    private File filePath;
-    private SerialPort port;
+    private final File filePath;
+    private final SerialPort port;
     private Long delay;
     
     public SerialPortWriter( SerialPort port, File filePath) {
@@ -91,12 +91,14 @@ public class SerialPortWriter implements Runnable {
                 }
                 //BUGBUG new line supported by scenarios but not by UploadApp
                 port.writeString(line+"\n");
-                
-                Thread.sleep(TimeUnit.SECONDS.toMillis(delay));
+                int jitter = 0;
+                if(delay != 0){
+                    jitter = (int) (Math.random() * 10) - 5;
+                }
+                Thread.sleep(TimeUnit.SECONDS.toMillis(delay) + jitter);
                 line = br.readLine();
             }
             br.close();
-            return;
 
         } catch (FileNotFoundException ex) {
             if (!silent) {

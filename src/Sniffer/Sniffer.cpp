@@ -42,8 +42,8 @@ void loop () {
         rf12_recvDone();
         // release lock on info for next reception
         if (saveCrc != 0) {
-            su.print("CRC error #", output);
-            su.println(saveLen, DEC, output);
+            //su.print("CRC error #", output);
+            //su.println(saveLen, DEC, output);
             /*
             for (byte i = 0; i < saveLen; ++i) {
 
@@ -71,10 +71,11 @@ void loop () {
             su.print(saveHdr & RF12_HDR_MASK, output);
             su.print(" #", output);
             Serial.print(saveLen,DEC);
-            Serial.print(" # HEX:");
+            //Serial.print(" # HEX:");
             // print out all data bytes, wrapping long lines byte pos = 0;
-	          int pos = 0;
 
+	          int pos = 0;
+/*
             for (byte i = 0; i < saveLen; ++i) {
 
                 Serial.print(saveData[i], HEX);
@@ -85,7 +86,7 @@ void loop () {
                     pos = 0;
                 }
             }
-
+*/
             Serial.print(" # ASCII:");
             pos = 0;
             for (byte i = 0; i < saveLen; ++i) {

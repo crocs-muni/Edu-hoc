@@ -20,34 +20,29 @@ int main (void)
          i++;
       }
   }
-  if (ferror(stdin)) {
-    fprintf(stderr,"Oops, error reading stdin\n");
-    abort();
-  }
   fclose(nodes);
 
-  
+
   long counter = 0;
   FILE *f;
   f = fopen("messageText.txt", "r");
-  char buf[256];
+  char buf[40];
   while (fgets (buf, sizeof(buf), f)) {
-      if(strlen(buf) >2 && buf[0] != '\n'){
-         
-         fprintf( inputFiles[counter % i],"line: %s", buf);
+      if(strlen(buf) > 10 && buf[0] != '\0'){
+        if(buf[strlen(buf)-1] == '\n'){
+          fprintf( inputFiles[counter % i],"%s", buf);
+        } else {
+          fprintf( inputFiles[counter % i],"%s\n", buf);
+        }
          counter++;
       }
   }
-  if (ferror(stdin)) {
-    fprintf(stderr,"Oops, error reading stdin\n");
-    abort();
-  }
-  
+
   fclose(f);
-  
+
   for(int j = 0; j < i; j++){
       fclose(inputFiles[j]);
   }
-  
+
   return 0;
 }
