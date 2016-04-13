@@ -16,7 +16,7 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 void setup () {
   Serial.begin(SERIAL_FREQUENCY);
-  Serial.println("\n[Scenario 02], node started");
+  Serial.println("\n[Scenario 03], node started");
 
   ru.initialize();
   ru.enableDynamicRouting();
@@ -49,7 +49,7 @@ void loop () {
 
     }
   }
-  /*
+
   //if incoming message received
 
   if(rf12_recvDone()){
@@ -83,5 +83,5 @@ void loop () {
       rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
       counter = 0;
     }
-  }*/
+  }
 }

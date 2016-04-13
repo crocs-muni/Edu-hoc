@@ -49,7 +49,7 @@ void loop () {
 
     }
   }
-  /*
+
   //if incoming message received
 
   if(rf12_recvDone()){
@@ -83,5 +83,5 @@ void loop () {
       rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
       counter = 0;
     }
-  }*/
+  }
 }

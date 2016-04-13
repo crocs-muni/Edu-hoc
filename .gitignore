@@ -16,3 +16,4 @@ bin*
 
 /src/UploadTool/JeeTool/nbproject/private/
 /src/UploadTool/JeeTool/build/
+/src/WebPage/JeeToolWeb/nbproject/private/
