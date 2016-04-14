@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../common.h"
 int main (void)
 {
   FILE *nodes;
-  FILE *inputFiles[26];
+  FILE *inputFiles[MAX_NODES];
   int i = 0;
   nodes = fopen("motePaths.txt", "r");
   char filename[256];
@@ -26,7 +27,7 @@ int main (void)
   long counter = 0;
   FILE *f;
   f = fopen("messageText.txt", "r");
-  char buf[40];
+  char buf[MAX_MESSAGE_LENGTH + 2];
   while (fgets (buf, sizeof(buf), f)) {
       if(strlen(buf) > 10 && buf[0] != '\0'){
         if(buf[strlen(buf)-1] == '\n'){
