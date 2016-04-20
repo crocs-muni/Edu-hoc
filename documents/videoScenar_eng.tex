@@ -105,14 +105,42 @@ Radio on the board can communicate on three different frequencies, these are 433
 \paragraph{Pins}
   These are contacts, which can be used to connect additional components to the Arduino. It can be anything from simple LED up to light or gravity sensor. These can be connected only to the JeeNode USB.
 
+  \subsection{JeeLib}
+    JeeLib is an Arduino library aimed specifically for JeeLink and JeeNode USB nodes and other compatible hardware. It allows us to control radio and few other modules, more information about it can be found directly on project website \url{http://jeelabs.net/projects/jeelib/wiki} or from documentation for the library, which you can obtain in various ways, either generate it yourselves directly from source code you are using with Doxygen tool, or use official documentation available on JeeLabs website \url{http://jeelabs.net/pub/docs/jeelib/}.
 
-    \subsection{JeeLib}
-    JeeLib is an Arduino library aimed specifically for JeeLink and JeeNode USb nodes and other compatible hardware. It allows us to control radio and few other modules, more information about it can be found directly on project website \url{http://jeelabs.net/projects/jeelib/wiki} or from documentation for the library, which you can obtain in various ways, either generate it yourselves directly from source code you are using with Doxygen tool, or use official documentation available on JeeLabs website \url{http://jeelabs.net/pub/docs/jeelib/}.
+    From the content of JeeLib is radio communication the most important part and we can find it under RF12 controller \url{http://jeelabs.net/pub/docs/jeelib/md_intro_rf12.html}. It contains all necessary from initial node setup, message sending and receiving, up to the simple encryption mode.
+
         \paragraph{How to add to IDE}
+        JeeLib requires Arduino IDE version 1.5 and higher, it is not compatible with older versions. It this condition is satisfied, the addition to the IDE is few simple clicks. Fist we have to obtain the library itself, ideally directly from a webpage of JeeLabs \url{http://jeelabs.net/projects/jeelib/wiki}.
+
+        In the menu we can then find \textbf{Sketch} option, Under it is option to \textbf{Import Library} and then we select \textbf{Manage Libraries} (in newer versions of IDE), or \textbf{Add Library} (for older versions). Then it is just a simple task of finding a folder with our downloaded library and its addition. Library can be also added directly in the form of ZIP archive.
+
         \paragraph{Header format}
-        \paragraph{Send unicast msg}
-        \paragraph{Receive msg}
-        \paragraph{2 motes network}
+        The header is first 8 bits of each message. It contains a type of the message and its sender or recipient. First three bits determine the type of the message, it can either mean if an acknowledgment is required and then distinguishment between unicast and broadcast message. Remaining five bits determine ID of the node, it can either be a recipient, if a node is sending this message, or sender, if node received this message (the change is done by radio driver in the moment of sending the message).
+
+        We have only 5 bits for ID of the node, therefore, we can assign only 32 different node IDs. We assign them in the range 0 to 31 and border values are special dedicated ID. ID 0 is universal for sending out broadcast and a node with ID 31 will receive all messages in the network, without distinguishing its recipient.
+
+        \paragraph{Send unicast message}
+        In order to send the message, you fist need to make sure that no other node is transmitting since only one node can transmit a message at given time. JeeLib library makes this relatively easy, because it itself deals with access control.
+        It is sufficient to call \texttt{rf12\_canSend()} and result is boolean variable, if we can begin trasmission or not.
+
+        After that we can send message with function \texttt{rf12\_sendStart()} with its parameters (header, payload and payload length). More details to both functions can be found in the documentation. In case of simple application, where we expect small ammount of traffic, we can use \texttt{rf12\_canSend()} in cycle, until the result is positive. Moreover we can simplify this with function \texttt{rf12\_sendNow()} which does exactly the same. Thus it contains waiting cycle and then it sends the message. Parameters are the same as for  \texttt{rf12\_sendStart()}.
+
+        \paragraph{Receive message}
+        In order to receive a message we have to periodically (in short intervals) ask with function \texttt{rf12\_recvDone()}, which returns positive answer, in case of incoming message. However, if node receives two or more messages in the interval, then node is able to process only the last one, because message properties are stored in the global variables.
+
+        If the message is received, it is recomended to check for required acknowledgment, and if it is present, then the ideal solution is following condition:
+
+        \codetitle{Example condition for ACK checking}
+        \begin{cppcode*}{firstnumber=1}
+        if(RF12_WANTS_ACK){
+            f12_sendStart(RF12_ACK_REPLY,0,0);
+        }
+        \end{cppcode*}
+        \hrule
+        \bigskip
+
+        \paragraph{network with two motes}
 
 \section{WSN network}
     \subsection{Simple apps}

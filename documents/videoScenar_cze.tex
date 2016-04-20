@@ -125,7 +125,7 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		V záložce \textbf{Sketch}, nalezneme část \textbf{Import Library} a následně zvolíme buď novější variantu \textbf{Manage Libraries}, nebo starší verzi \textbf{Add Library}. Poté se již jedná o nalezení složky obsahující kód knihovny a její přidání. Knihovnu je taktéž možné přidat přímo ve formě ZIP archivu.
 
 		\paragraph{Formát hlavičky}
-		Hlavička je prvních 8 bitů každé zprávy. Určuje typ zprávy a jejího příjemce či odesílatele. První tři bity určují typ, tedy požadavek na ověření doručení zprávy a rozlišení unicast - broadcast. Zbylých 5 bitů určuje ID uzlu, buď se jedná o adresáta, pokud uzel tuto zprávu odesílá, nebo o odesílatele, pokud uzel tuto zprávu přijal (ke změně dochází při odeslání zprávy).
+		Hlavička je prvních 8 bitů každé zprávy. Určuje typ zprávy a jejího příjemce či odesílatele. První tři bity určují typ, tedy požadavek na ověření doručení zprávy a rozlišení unicast - broadcast. Zbylých 5 bitů určuje ID uzlu, buď se jedná o adresáta, pokud uzel tuto zprávu odesílá, nebo o odesílatele, pokud uzel tuto zprávu přijal (změnu provádí ovladač rádia při odeslání zprávy).
 
 		Jelikož máme na ID uzlu pouze 5 bitů, tak máme pouze 32 různých adres. Přidělujeme je v rozsahu 0-31 a krajní hodnoty jsou vyhrazeny pro speciální použití. ID 0 slouží jako univerzální ID pro broadcast při odesílání a uzel s ID 31 bude přijímat všechny zprávy v síti bez ohledu na adresáta.
 
@@ -135,7 +135,7 @@ Jelikož se budeme zabývat ad-hoc sítěmi a senzorovými sítěmi, tak z celé
 		Zprávu následně odesíláme pomocí zavolání funkce \texttt{rf12\_sendStart()}, kde jako parametry použijeme, hlavičku, ukazatel na odesílaná data a délku odesílaných dat. Podrobnější informace k oběma funkcím naleznete v dokumentaci. V případě že se nejedná o náročnou aplikaci a nepředpokládá se velká frekvence posílaných zpráv, je možné použít volání funkce \texttt{rf12\_canSend()} v cyklu, dokud nevrátí pravdivou hodnotu. Celý tento kód je ještě možné zjednodušit pomocí funkce \texttt{rf12\_sendNow()} která již nekonečný čekací cyklus obsahuje uvnitř a parametry má stejné jako \texttt{rf12\_sendStart()}.
 
 		\paragraph{Přijetí zprávy}
-		Pro přijetí zprávy je třeba se pravidelně v krátkých intervalech dotazovat pomocí funkce \texttt{rf12\_recvDone()}, která vrátí pravdivou hodnotu, pokud uzel přijal paket. V případě, že v časovém intervalu mezi dvěma dotazy uzel přijme více paketů, pak je možné zpracovat pouze ten poslední a obsah paketu nalezneme v globálních proměnných.
+		Pro přijetí zprávy je třeba se pravidelně v krátkých intervalech dotazovat pomocí funkce \texttt{rf12\_recvDone()}, která vrátí pravdivou hodnotu, pokud uzel přijal paket. V případě, že v časovém intervalu mezi dvěma dotazy uzel přijme více paketů, pak je možné zpracovat pouze ten poslední, protože obsah paketu nalezneme v globálních proměnných.
 
 		Po přijetí zprávy  je vhodné ověřit, zda-li odesílatel vyžaduje potvrzení o doručení, ideální řešení je pomocí následující podmínky:
 
