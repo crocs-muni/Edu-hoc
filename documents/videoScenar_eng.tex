@@ -140,7 +140,99 @@ Radio on the board can communicate on three different frequencies, these are 433
         \hrule
         \bigskip
 
-        \paragraph{network with two motes}
+        \paragraph{Network with two motes}
+        With two motes we have to periodically check, whether any message was received and periodically send own messages, or wait for external command (e.g. mote can send message as a reaction to serial port command). As an example we can use application from JeeLib library, in particular RF12demo, which allows control almost all node and radio functions (including message send) with serial port commands.
+
+        It is sufficient to connect two motes and to bost of them upload RF12demo application and then use Serial Monitor to post commands to bost of the motes. Ideally it is good idea to have both connection open at the same time, so that you can see output of both nodes at the same time.
+
+
+
+        \codetitle{Mote setup example as used in RF12demo}
+        \begin{cppcode*}{firstnumber=537}
+
+        void setup () {
+            ...
+
+            Serial.begin(SERIAL_BAUD);
+            Serial.println();
+            displayVersion();
+
+            if (rf12_configSilent()) {
+                loadConfig();
+            } else {
+                memset(&config, 0, sizeof config);
+                config.nodeId = 0x81;       // 868 MHz, node 1
+                config.group = 0xD4;        // default group 212
+                config.frequency_offset = 1600;
+                config.quiet_mode = true;   // Default flags, quiet on
+                saveConfig();
+                rf12_configSilent();
+            }
+
+            rf12_configDump();
+            df_initialize();
+
+            ...
+        }
+        \end{cppcode*}
+        \hrule
+        \bigskip
+
+        In the example of \texttt{setup} function you can see initial setup of serial port, where we can set up frequency to predefined constant. Then we cechk for saved configuration and if there is such thing saved, then we load configuration from memmory. If the values had not been saved yet, then they are set up manually and then saved to memmory. This is not neccessary for small amount of nodes (which are easy to set up manually each time), but for larger networks it is recommended to save configurations and then speed up later changes in the network.
+
+
+        \newpage
+        \codetitle{Simplified example of message receive in RF12demo}
+        \begin{cppcode*}{firstnumber=582}
+        if (rf12_recvDone()) {
+            byte n = rf12_len;
+            if (rf12_crc == 0)
+                showString(PSTR("OK"));
+            else {
+                if (config.quiet_mode)
+                    return;
+                showString(PSTR(" ?"));
+                if (n > 20) // print at most 20 bytes if crc is wrong
+                    n = 20;
+            }
+            ...
+            printOneChar(' ');
+            showByte(rf12_hdr);
+            for (byte i = 0; i < n; ++i) {
+                printOneChar(' ');
+                showByte(rf12_data[i]);
+            }
+
+            Serial.println();
+            ...
+        }
+        \end{cppcode*}
+        \hrule
+        \bigskip
+
+        In the example we can see how the message receive is actually done in the application. First, the condition than message was received has to be satisfied. After that we check the CRC value, to eliminate any errors in the transmission, if the CRC check passes, then we can continue in message processing, otherwise we indicate an error and write out first 20 bytes for debugging purposes. In the case of correct message we write out all contents of the message. In the example is left out hexadecimal output and signalization with LED. If you happen to be interested in complete code, you can find it directly in the application code (line numbers should match, so that it is easier to find).
+
+        \codetitle{Simplified example of message send in RF12demo}
+        \begin{cppcode*}{firstnumber=641}
+        if (cmd && rf12_canSend()) {
+            activityLed(1);
+
+            showString(PSTR(" -> "));
+            Serial.print((word) sendLen);
+            showString(PSTR(" b\n"));
+            byte header = cmd == 'a' ? RF12_HDR_ACK : 0;
+            if (dest)
+                header |= RF12_HDR_DST | dest;
+            rf12_sendStart(header, stack, sendLen);
+            cmd = 0;
+
+            activityLed(0);
+        }
+
+        In the example we can see initial condition (only one mote can transmit at the time). Follows the indication with LED and sending the message itself, including writing out the information about a message over serial port.
+
+        These two examples show almost all basic functionality of the application (contents of the \texttt{loop} function), without any description are additional functions which deal with parsing received commands. These are basically plain C language, or very simmilar to it, so these is no need to explain it here. Also most of the advanced functions are left without any description, since their functionality is not intended for this introductory study text. In case of interest you can always find more in the official documentation for JeeLib library \url{http://jeelabs.net/pub/docs/jeelib/}.
+
 
 \section{WSN network}
     \subsection{Simple apps}
