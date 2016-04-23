@@ -309,7 +309,7 @@ Odesílání zprávy je poté již jednoduchý úkon, kde je využita knihovna r
 
 
 		\subsubsection{Sniffer}
-		Druhá aplikace slouží k zachycení veškerého provozu v síti. velmi dobře nám poslouží, když potřebujeme ladit vlastní aplikaci a pozorovat, co který uzel zasílá za zprávy. Zároveň ji taktéž můžeme použít v roli útočníka a velmi jednoduše pasivně odposlouchávat veškerou komunikaci v síti. Jediným omezením je dosah rádia. Aplikace používá trochu pokročilejší koncepty oproti Alive aplikaci, protože se předpokládá její nasazení i při testování sítě s velkým množstvím provozu. Ve funkci \texttt{setup} nastavíme ID rádia na hodnotu 31, tedy uzel, který přijímá všechny zprávy v síti. Toto je klíčová část této aplikace, ostatní je pouze již zpracování a výpis zpráv. Sniffer jako takový je speciální aplikací, protože jako jeden z mála neodesílá žádné zprávy. Opět se podíváme na obsah funkce \texttt{loop}.
+		Druhá aplikace slouží k zachycení veškerého provozu v síti. Velmi dobře nám poslouží, když potřebujeme ladit vlastní aplikaci a pozorovat, co který uzel zasílá za zprávy. Zároveň ji taktéž můžeme použít v roli útočníka a velmi jednoduše pasivně odposlouchávat veškerou komunikaci v síti. Jediným omezením je dosah rádia. Aplikace používá trochu pokročilejší koncepty oproti Alive aplikaci, protože se předpokládá její nasazení i při testování sítě s velkým množstvím provozu. Ve funkci \texttt{setup} nastavíme ID rádia na hodnotu 31, tedy uzel, který přijímá všechny zprávy v síti. Toto je klíčová část této aplikace, ostatní je pouze již zpracování a výpis zpráv. Sniffer jako takový je speciální aplikací, protože jako jeden z mála neodesílá žádné zprávy. Opět se podíváme na obsah funkce \texttt{loop}.
 \newpage
 \codetitle{Funkce \texttt{loop} v aplikaci Sniffer}
 \begin{cppcode*}{firstnumber=32}
@@ -362,7 +362,7 @@ void loop () {
 
 Můžeme opět vidět ověření přijetí zprávy, nicméně protože zpráva nebyla určena tomuto uzlu, tak již neodesíláme potvrzení o doručení. Kvůli požadavku na rychlost nejdříve zkopírujeme všechny informace o přijaté zprávě do vlastních proměnných a umožníme příjem další zprávy co nejdříve. Následuje ověření správnosti doručení (CRC - cyclic redundancy check) a poté samotné zpracování zprávy.
 
-Můžeme vidět, že hlavička je zpracována bit po bitu tak, aby bylo vidět všech 8 bitů jednotlivě. Následně jsou zpracovány všechny další položky zprávy. můžeme vidět, že na výstup není použita běžná knihovní funkce, ale knihovna serialUtils, která nám umožňuje jednotlivým výpisům přiřadit prioritu a tak například v pozdějších fázích vynechat ladící výpisy.
+Můžeme vidět, že hlavička je zpracována bit po bitu tak, aby bylo vidět všech 8 bitů jednotlivě. Následně jsou zpracovány všechny další položky zprávy. Můžeme vidět, že na výstup není použita běžná knihovní funkce, ale knihovna serialUtils, která nám umožňuje jednotlivým výpisům přiřadit prioritu a tak například v pozdějších fázích vynechat ladící výpisy.
 
 
 

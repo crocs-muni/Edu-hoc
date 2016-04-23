@@ -233,17 +233,124 @@ Radio on the board can communicate on three different frequencies, these are 433
 
         These two examples show almost all basic functionality of the application (contents of the \texttt{loop} function), without any description are additional functions which deal with parsing received commands. These are basically plain C language, or very similar to it, so there is no need to explain it here. Also, most of the advanced functions are left without any description since their functionality is not intended for this introductory study text. In the case of interest, you can always find more in the official documentation for JeeLib library \url{http://jeelabs.net/pub/docs/jeelib/}.
 
+        \section{WSN network}
+          Wireless sensor network is composed of a large number of small and autonomous devices, which communicate one with another over a radio. Every device, called sensor mote, is battery powered and equipped with all the necessary sensors for monitoring the environment. A typical application of such network is a random placement of thousands of motes and following a collection of data from sensors. As an example of fields, where such approach is applicable, we can mention military, agriculture and health applications and much more.
 
-\section{WSN network}
-    \subsection{Simple apps}
-        \paragraph{Alive}
-        \paragraph{Sniffer}
+            \subsection{Sample applications}
+            We have two sample applications, which can be used to run such network. First, one periodically sends data (counter) from each node, while the other does not communicate at all, but has a rather special purpose. It is a sniffer, which allows to one mote to receive all messages in the network, which is useful for debugging own applications and also for basic recognition of network we know nothing about.
+                \paragraph{Alive}
 
-    \subsection{Network}
-        \paragraph{General options}
-        \paragraph{Fixed routing}
+                Application with static network topology, every node has fixed ID and parent ID. Each message is sent to the parent node and in this manner is message routed through the whole network to the central node (base station). With such simple fixed routing tree we can achieve multihop communication, therefore, cover much longer distances compared to the radio range of the single node.
+
+                For correct operation of this simple routing, we have to take care, that every node has its parent within radio range, otherwise, we could not route some of the messages to their destination. On the other hand, we have to design the routing tree balanced\footnode{It is not always possible to make the tree balanced, but we should try to make it as balanced as we can}, because we do not want overload some motes more than others.
 
 
+                The application itself is very simple, important parts of the code are described in the following example of \texttt{loop} function.
+
+
+                \codetitle{\texttt{loop} function in Alive application}
+                \begin{cppcode*}{firstnumber=26}
+                void loop () {
+                  //if incoming message received
+
+                  if(rf12_recvDone()){
+                    if(RF12_WANTS_ACK){
+                      rf12_sendStart(RF12_ACK_REPLY,0,0);
+                    }
+
+                    if(rf12_crc == 0){ //packet checksum is correct
+                      //propagate to parent
+                      byte header = B00000000;
+                      //fill header using radioUtils
+                      ru.resetAck(&header);
+                      ru.setID(&header, parent);
+                      rf12_sendNow(header, (const void*)rf12_data, rf12_len);
+                    }
+                  }
+                \end{cppcode*}
+
+                \begin{cppcode*}{firstnumber=43}
+
+                  delay(10);
+                  counter++;
+
+                  if(counter%100 == 0){
+                    msgCounter++;
+                    //send still alive msg
+                    byte header;
+                    //fill header using radioUtils
+                    ru.resetAck(&header);
+                    ru.setID(&header, parent);
+                    rf12_sendNow(header, (const void*) &msgCounter, sizeof(msgCounter));
+                    counter = 0;
+                  }
+
+                }
+                \end{cppcode*}
+                \hrule
+                \bigskip
+
+                In the \texttt{loop} function we can see first see the ACK check so that the sender has information about correct transmission.  Then there is CRC check and in a case of correct CRC check, there is the imediate reaction to the message, which means forwarding such message to the node parent.
+
+                Follows short delay, so that the node is overloaded, and incrementation of the counter. The counter makes sure, that the loop function goes around much more times (to check received messages) but only once per 100 revolutions it sends message itself. Ideal is, when mote can receive message anytime, but sending the message should be slowed down, so we need to perform it only once per certain number of cycles.
+
+                Sending the message itself is simple task, we use radioUtils library for setting up the recipient of the message and all other necessary parameters. After then the message is send using \texttt{rf12\_sendNow} function. In case of this application we can afford active waiting while the message is being send, because we do not expect heavy load on the node or network. In different case we should combine this waiting with checks on received messages, because we do not want to block mote from any other activity (using sensors, receiving messages ...) just because it is waiting to send a message.
+
+                \paragraph{Sniffer}
+                Second application is capable of capturing any traffic in the network. It will be of a great help, if we need to debug our own application, when we need to monitor what is which mote transmitting and when. The same application can be without any modification used in the role of attacker and very easily passively eavesdrop any communication in the network. Only limitation is the radio range. Application uses little bit more advanced approach because we suppose usage for heavy load and large networks. In the \texttt{setup} function we set the ID of mote to 31 (mote which can receive all messages in the network). This is the most important part, other is just message processing and serial output. Sniffer itself is special application, because it does not send any messages.
+
+        \newpage
+        \codetitle{\texttt{loop} function in the Sniffer application}
+        \begin{cppcode*}{firstnumber=32}
+        void loop () {
+
+            if (rf12_recvDone()) {
+                // quickly save a copy of all volatile data saveLen = rf12_len;
+                saveCrc = rf12_crc;
+                saveHdr = rf12_hdr;
+                memcpy(saveData, (const void*) rf12_data, sizeof saveData);
+                rf12_recvDone();
+                // release lock on info for next reception
+                if (saveCrc != 0) {
+                    su.print("CRC error #", output);
+                    su.println(saveLen, DEC, output);
+                }
+                else {
+                    su.print("OK (", output);
+                    String header = "";
+                    for (byte i = 0; i < 8; ++i) {
+                        header.concat(bitRead(saveHdr, 7-i)); // read bytes of header
+                    }
+                    su.print(header, output);
+                    su.print("b) ", output);
+                    su.print(saveHdr & RF12_HDR_ACK ? "REQ " : " ", output);
+                    su.print(saveHdr & RF12_HDR_CTL ? "ACK " : " ", output);
+                    su.print(saveHdr & RF12_HDR_DST ? "DST:" : "SRC:", output);
+                    su.print(saveHdr & RF12_HDR_MASK, output);
+                    su.print(" #", output);
+                    su.println(saveLen,DEC, output);
+                    // print out all data bytes, wrapping long lines byte pos = 0;
+                    int pos = 0;
+                    for (byte i = 0; i < saveLen; ++i) {
+                        su.print(' ', output);
+                        su.print(saveData[i],HEX, output);
+                        pos += 2;
+                        if (saveData[i] >= 16) ++pos;
+                        if (pos > 75) {
+                            su.println();
+                            pos = 0;
+                        }
+                    }
+                    if (pos > 0) su.println();
+                }
+            }
+        }
+        \end{cppcode*}
+        \hrule
+        \bigskip
+        We can again see check after the message is received, but because this message was not meant for this node, we do not send any acknowledgments. Because we care about the fast processing of received messages, we first copy the contents of the message to local variables and we allow the radio to receive a new message as soon as possible. After that, we can check CRC value (cyclic redundancy check) and then we process the message itself.
+
+        We can see, that the header is processed bit after bit so that we can see all 8 bits individually. After we process all other parts of the message. We can see, that we do not use a usual function for serial output, but our own from the serialUtils library, because it allows us to set the priority for individual outputs and for example leave out debugging outputs when we run the application later.
 
 
 
