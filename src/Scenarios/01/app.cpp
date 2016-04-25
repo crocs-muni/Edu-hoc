@@ -24,8 +24,7 @@ void setup () {
   su.println("\n[Scenario 01], node started", debug);
 
   nodeID = EEPROM.read(NODE_ID_LOCATION);
-  groupID = EEPROM.read(GROUP_ID_LOCATION);
-
+  groupID = EEPROM.read(GROUP_ID_LOCATION);  
 
   rf12_initialize(nodeID, FREQUENCY, 10);
 }
@@ -45,7 +44,7 @@ void loop () {
     msgCounter++;
 
     su.print("message send: ", debug);
-    su.print(payload, debug);
+    su.print(payload, output);
     su.print(" ", debug);
     su.println(msgCounter, debug);
 

@@ -106,7 +106,7 @@ Radio on the board can communicate on three different frequencies, these are 433
   These are contacts, which can be used to connect additional components to the Arduino. It can be anything from simple LED up to light or gravity sensor. These can be connected only to the JeeNode USB.
 
   \subsection{JeeLib}
-    JeeLib is an Arduino library aimed specifically for JeeLink and JeeNode USB nodes and other compatible hardware. It allows us to control radio and few other modules, more information about it can be found directly on project website \url{http://jeelabs.net/projects/jeelib/wiki} or from documentation for the library, which you can obtain in various ways, either generate it yourselves directly from source code you are using with Doxygen tool, or use official documentation available on JeeLabs website \url{http://jeelabs.net/pub/docs/jeelib/}.
+    JeeLib is an Arduino library aimed specifically for JeeLink and JeeNode USB nodes and other compatible hardware. It allows us to control radio and few other modules, more information about it can be found directly on project website  or from documentation for the library, which you can obtain in various ways, either generate it yourselves directly from source code you are using with Doxygen tool, or use official documentation available on JeeLabs website \url{http://jeelabs.net/pub/docs/jeelib/}.
 
     From the content of JeeLib is radio communication the most important part and we can find it under RF12 controller \url{http://jeelabs.net/pub/docs/jeelib/md_intro_rf12.html}. It contains all necessary from initial node setup, message sending and receiving, up to the simple encryption mode.
 
@@ -149,7 +149,6 @@ Radio on the board can communicate on three different frequencies, these are 433
 
         \codetitle{Mote setup example as used in RF12demo}
         \begin{cppcode*}{firstnumber=537}
-
         void setup () {
             ...
 
@@ -171,7 +170,6 @@ Radio on the board can communicate on three different frequencies, these are 433
 
             rf12_configDump();
             df_initialize();
-
             ...
         }
         \end{cppcode*}
@@ -181,7 +179,6 @@ Radio on the board can communicate on three different frequencies, these are 433
         In the example of \texttt{setup} function you can see initial setup of a serial port, where we can set up the frequency to predefined constant. Then we check for saved configuration and if there is such thing saved, then we load configuration from memory. If the values had not been saved yet, then they are set up manually and then saved to memory. This is not necessary for a small amount of nodes (which are easy to set up manually each time), but for larger networks it is recommended to save configurations and then speed up later changes in the network.
 
 
-        \newpage
         \codetitle{Simplified example of message receive in RF12demo}
         \begin{cppcode*}{firstnumber=582}
         if (rf12_recvDone()) {
@@ -212,6 +209,7 @@ Radio on the board can communicate on three different frequencies, these are 433
 
         In the example, we can see how the message receive is actually done in the application. First, the condition than message was received has to be satisfied. After that we check the CRC value, to eliminate any errors in the transmission, if the CRC check passes, then we can continue in message processing, otherwise, we indicate an error and write out first 20 bytes for debugging purposes. In the case of correct message, we write out all contents of the message. In the example is left out hexadecimal output and signalization with LED. If you happen to be interested in the complete code, you can find it directly in the application code (line numbers should match so that it is easier to find).
 
+        \newpage
         \codetitle{Simplified example of message send in RF12demo}
         \begin{cppcode*}{firstnumber=641}
         if (cmd && rf12_canSend()) {
@@ -228,6 +226,9 @@ Radio on the board can communicate on three different frequencies, these are 433
 
             activityLed(0);
         }
+      \end{cppcode*}
+      \hrule
+      \bigskip
 
         In the example, we can see initial condition (only one mote can transmit at the time). Follows the indication with LED and sending the message itself, including writing out the information about a message over a serial port.
 
@@ -242,7 +243,7 @@ Radio on the board can communicate on three different frequencies, these are 433
 
                 Application with static network topology, every node has fixed ID and parent ID. Each message is sent to the parent node and in this manner is message routed through the whole network to the central node (base station). With such simple fixed routing tree we can achieve multihop communication, therefore, cover much longer distances compared to the radio range of the single node.
 
-                For correct operation of this simple routing, we have to take care, that every node has its parent within radio range, otherwise, we could not route some of the messages to their destination. On the other hand, we have to design the routing tree balanced\footnode{It is not always possible to make the tree balanced, but we should try to make it as balanced as we can}, because we do not want overload some motes more than others.
+                For correct operation of this simple routing, we have to take care, that every node has its parent within radio range, otherwise, we could not route some of the messages to their destination. On the other hand, we have to design the routing tree balanced\footnote{It is not always possible to make the tree balanced, but we should try to make it as balanced as we can}, because we do not want overload some motes more than others.
 
 
                 The application itself is very simple, important parts of the code are described in the following example of \texttt{loop} function.

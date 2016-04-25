@@ -76,6 +76,8 @@ int RadioUtils::routePerformOneStep(){
         if(result == 1){
           //TODO print
         }
+        //make it deterministic, so that nodes send messages in same order
+        delay(nodeID * 100);
         routeBroadcastLength();
         return 1;
       }

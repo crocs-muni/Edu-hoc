@@ -53,7 +53,7 @@ void SerialUtils::print(byte b, int format, Priority priority){
         Serial.print(b);
     }
 }
-    
+
 void SerialUtils::println(String text, Priority priority){
     print(text, priority);
     Serial.println();

@@ -35,7 +35,7 @@
 // 0 - debug
 // 1 - output
 // 2 - error
-#define OUTPUT_LEVEL 0
+#define OUTPUT_LEVEL 1
 
 
 #endif //COMMON_H
