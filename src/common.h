@@ -17,7 +17,7 @@
 #define SERIAL_FREQUENCY 57600
 
 //maximum length for RF12 message format
-#define MAX_MESSAGE_LENGTH 50
+#define MAX_MESSAGE_LENGTH 30
 
 #define MAX_NODES 30
 
