@@ -39,7 +39,7 @@ public class S01 implements Scenario {
         //listen + write
         SerialMain serial = new SerialMain(motes, (long) 15);
         serial.connect();
-        seed = serial.getG().getHexSeed();
+        //seed = serial.getG().getHexSeed();
         serial.write(WRITE_FILES, (long) 1);
         //display results
     }

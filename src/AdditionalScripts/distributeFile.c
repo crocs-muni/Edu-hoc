@@ -27,7 +27,7 @@ int main (void)
   long counter = 0;
   FILE *f;
   f = fopen("messageText.txt", "r");
-  char buf[MAX_MESSAGE_LENGTH + 2];
+  char buf[MAX_MESSAGE_LENGTH + 2 -10];
   while (fgets (buf, sizeof(buf), f)) {
       if(strlen(buf) > 10 && buf[0] != '\0'){
         if(buf[strlen(buf)-1] == '\n'){

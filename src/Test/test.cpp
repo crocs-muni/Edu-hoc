@@ -23,9 +23,9 @@ static void led (bool on) {
 void setup () {
 
   // this is node 1 in net group 10 on the 868 MHz band
-  rf12_initialize(2, RF12_868MHZ, 10);
+  rf12_initialize(20, RF12_868MHZ, 10);
   // !mp,90kHz,last byte=power level: 0=highest, 7=lowest
-byte txPower=7; //LOWEST possible
+byte txPower=0; //LOWEST possible
 rf12_control(0x9850 | (txPower > 7 ? 7 : txPower));
 
 }

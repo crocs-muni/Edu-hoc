@@ -15,8 +15,6 @@
 //#include "SerialUtils.h"
 
 
-#define GROUP 5
-
 byte saveHdr, saveLen;
 word saveCrc;
 char saveData[RF12_MAXDATA];
@@ -28,7 +26,7 @@ void setup () {
     //saveLen = 255;
     Serial.begin(SERIAL_FREQUENCY);
     su.println("\n[sniffer] 868 MHz group 10", output);
-    rf12_initialize(31, FREQUENCY, 10);
+    rf12_initialize(31, FREQUENCY,10);
 }
 
 void loop () {
