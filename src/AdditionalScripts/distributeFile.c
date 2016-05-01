@@ -5,9 +5,11 @@
 int main (void)
 {
   FILE *nodes;
+  FILE *check;
   FILE *inputFiles[MAX_NODES];
   int i = 0;
   nodes = fopen("motePaths.txt", "r");
+  check = fopen("check.txt", "w");
   char filename[256];
   while (fgets (filename, 256, nodes)) {
       if(strlen(filename) >2 && filename[0] != '\n'  && filename[0] != '#'){
@@ -22,25 +24,27 @@ int main (void)
       }
   }
   fclose(nodes);
-
-
+  char c=getchar();
+  srand(c);
   long counter = 0;
   FILE *f;
   f = fopen("messageText.txt", "r");
   char buf[MAX_MESSAGE_LENGTH + 2 -10];
-  while (fgets (buf, sizeof(buf), f)) {
-      if(strlen(buf) > 10 && buf[0] != '\0'){
-        if(buf[strlen(buf)-1] == '\n'){
-          fprintf( inputFiles[counter % i],"%s", buf);
+  while (fgets (buf, sizeof(buf)-2, f)) {
+      if(strlen(buf) > 15 && buf[0] != '\0'){
+        if(buf[strlen(buf)-1] == '\n' ){
+          fprintf( inputFiles[counter % i],"#%ld#%ld#%s",counter,rand()%100000, buf);
+          fprintf( check,"#%ld#%ld#%s#",counter,rand()%100000, buf);
         } else {
-          fprintf( inputFiles[counter % i],"%s\n", buf);
+          fprintf( inputFiles[counter % i],"#%ld#%ld#%s\n",counter,rand()%100000,buf);
+          fprintf( check,"#%ld#%ld#%s#\n",counter,rand()%100000,buf);
         }
          counter++;
       }
   }
 
   fclose(f);
-
+  fclose(check);
   for(int j = 0; j < i; j++){
       fclose(inputFiles[j]);
   }
