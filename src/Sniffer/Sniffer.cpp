@@ -93,7 +93,7 @@ void loop () {
                 pos += 2;
                 if (saveData[i] >= 16) ++pos;
                 if (pos > 75) {
-                    su.println();
+                    //su.println();
                     pos = 0;
                 }
             }
