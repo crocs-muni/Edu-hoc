@@ -51,7 +51,7 @@ void loop () {
     ru.resetAck(&hdr);
     rf12_sendNow(hdr, payload, message.length());
     msgCounter++;
-
+    delay(1000);
     //su.print("message send: ", debug);
     //su.print(payload, output);
     //su.print(" ", debug);
