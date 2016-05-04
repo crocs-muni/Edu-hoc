@@ -29,15 +29,15 @@ int main (void)
   long counter = 0;
   FILE *f;
   f = fopen("messageText.txt", "r");
-  char buf[MAX_MESSAGE_LENGTH + 2 -10];
+  char buf[MAX_MESSAGE_LENGTH + 2];
   while (fgets (buf, sizeof(buf)-2, f)) {
       if(strlen(buf) > 15 && buf[0] != '\0'){
         if(buf[strlen(buf)-1] == '\n' ){
-          fprintf( inputFiles[counter % i],"#%ld#%ld#%s",counter,rand()%100000, buf);
+          fprintf( inputFiles[counter % i],"#%ld%ld#%s",counter,rand()%10, buf);
           fprintf( check,"#%ld#%ld#%s#",counter,rand()%100000, buf);
         } else {
-          fprintf( inputFiles[counter % i],"#%ld#%ld#%s\n",counter,rand()%100000,buf);
-          fprintf( check,"#%ld#%ld#%s#\n",counter,rand()%100000,buf);
+          fprintf( inputFiles[counter % i],"#%ld%ld#%s\n",counter,rand()%10,buf);
+          fprintf( check,"#%ld%ld#%s#\n",counter,rand()%10,buf);
         }
          counter++;
       }
