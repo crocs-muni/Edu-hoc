@@ -9,15 +9,14 @@ RadioUtils::RadioUtils(){
     dynamicRouting = false;
     distance = 100;
 
-
-    int nodeID = 0;
-    int groupID = 0;
-    int parentID = 0;
+    nodeID = 10;
+    groupID = 42;
+    parentID = 10;
 }
 
 void RadioUtils::initialize(){
   nodeID = EEPROM.read(NODE_ID_LOCATION);
-  groupID = EEPROM.read(GROUP_ID_LOCATION);
+  //groupID = EEPROM.read(GROUP_ID_LOCATION);
   parentID = EEPROM.read(PARENT_ID_LOCATION);
 
   rf12_initialize(nodeID, FREQUENCY, groupID);
