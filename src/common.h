@@ -22,9 +22,9 @@
 #define MAX_NODES 30
 
 //count of routing algorithm cycles
-#define ROUTING_CYCLES 1000
+#define ROUTING_CYCLES 300
 
-#define TIMEOUT 10000
+#define TIMEOUT 1000
 
 //EEPROM values locations
 #define NODE_ID_LOCATION    0

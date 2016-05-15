@@ -19,3 +19,5 @@ bin*
 /src/WebPage/JeeToolWeb/nbproject/private/
 /src/WebPage/JeeToolWeb/build/
 /src/UploadTool/JeeTool/dist/
+/src/MsgComparator/nbproject/private/
+/src/MsgComparator/build/

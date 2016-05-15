@@ -56,7 +56,7 @@ int RadioUtils::routeGetLength(){
 }
 
 int RadioUtils::routePerformOneStep(){
-  for(int i = 0; i < TIMEOUT; i++) {
+  for(int i = 0; i < TIMEOUT/10; i++) {
     if(rf12_recvDone()){
       if(RF12_WANTS_ACK){
         rf12_sendStart(RF12_ACK_REPLY,0,0);
@@ -82,7 +82,7 @@ int RadioUtils::routePerformOneStep(){
         return 1;
       }
     }
-    delay(90);
+    delay(10);
   }
   routeBroadcastLength();
   return -1;
