@@ -195,8 +195,10 @@ void bs(){
         message = "#";
         message += secret[index];
         message += "#";
-        message += random(100,999);
+        message += intHead/11;
         message += "#";
+        message += random(100,999);
+        
 
         byte hdr = createHeader(false, rf12_hdr | RF12_HDR_DST);
         message.toCharArray(payload, message.length()+1);
