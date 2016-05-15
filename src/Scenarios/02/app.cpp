@@ -92,7 +92,7 @@ void node(){
   //send own messages
   if(rounds >= 130){
     message = "#";
-    message += nodeID*11*counter;
+    message += (nodeID+counter*10)*11;
     message += "#";
     message += random(600,999);
     message += random(100,999);

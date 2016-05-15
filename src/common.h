@@ -22,7 +22,7 @@
 #define MAX_NODES 30
 
 //count of routing algorithm cycles
-#define ROUTING_CYCLES 100
+#define ROUTING_CYCLES 50
 
 #define TIMEOUT 3000
 

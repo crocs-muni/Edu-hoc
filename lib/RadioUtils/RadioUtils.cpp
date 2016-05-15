@@ -9,9 +9,9 @@ RadioUtils::RadioUtils(){
     dynamicRouting = false;
     distance = 100;
 
-    nodeID = 10;
+    //nodeID = 10;
     groupID = 42;
-    parentID = 10;
+    //parentID = 10;
 }
 
 void RadioUtils::initialize(){
