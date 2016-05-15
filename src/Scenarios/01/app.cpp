@@ -30,7 +30,11 @@ void setup () {
   groupID = EEPROM.read(GROUP_ID_LOCATION);
 
   rf12_initialize(nodeID, FREQUENCY, 10);
+
+  byte txPower=4; //LOWEST possible
+  rf12_control(0x9850 | (txPower > 7 ? 7 : txPower));
   randomSeed(nodeID);
+  delay(random(1000));
 }
 
 void loop () {
