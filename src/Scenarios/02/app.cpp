@@ -11,7 +11,7 @@
 int counter = 1; //
 int msgCounter = 0;
 int led = HIGH;
-int nodeID = 0;
+int nodeID;
 
 RadioUtils ru = RadioUtils();
 SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
@@ -27,10 +27,15 @@ void setup () {
   ru.enableDynamicRouting();
 
   nodeID = ru.getNodeID();
+  Serial.println(ru.getNodeID());
+  Serial.println(ru.getGroupID());
+  Serial.println(ru.getParentID());
+
 
   if(ru.getNodeID() == ru.getParentID()){//root node - BS - send info message n+1 times
+    Serial.println("this is BS");
     ru.routeUpdateDistance(0, ru.getNodeID());
-    for(int i = 0; i < ROUTING_CYCLES; i ++){
+    for(int i = 0; i < ROUTING_CYCLES; i++){
       if(led == HIGH){
         digitalWrite(9, LOW);
         led = LOW;
@@ -40,6 +45,7 @@ void setup () {
       }
       delay(TIMEOUT);
       ru.routeBroadcastLength();
+      Serial.println("length broadcasted");
     }
   } else {//regular node - perform n+1 routing cycles
     while(millis() < (long)TIMEOUT * (long)ROUTING_CYCLES){ //
@@ -198,7 +204,7 @@ void bs(){
         message += intHead/11;
         message += "#";
         message += random(100,999);
-        
+
 
         byte hdr = createHeader(false, rf12_hdr | RF12_HDR_DST);
         message.toCharArray(payload, message.length()+1);
