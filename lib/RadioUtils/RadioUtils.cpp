@@ -43,6 +43,8 @@ int RadioUtils::routeUpdateDistance(int d, byte p){
       distance = d;
       parentID = p;
       return 1;
+    } else if(d == distance){
+      return 2;
     } else {
       return 0;
     }
@@ -72,12 +74,15 @@ int RadioUtils::routePerformOneStep(){
         saveHdr = rf12_hdr;
         getID(&saveHdr, &id);
         int result = routeUpdateDistance(d+1, id);
-        if(result == 1){
+        if(result >= 1){
           //TODO print
+
+          //make it deterministic, so that nodes send messages in same order
+	  delay(nodeID * 100);
+          routeBroadcastLength();	
         }
-        //make it deterministic, so that nodes send messages in same order
-        delay(nodeID * 100);
-        routeBroadcastLength();
+        
+        
         return 1;
       }
     }
@@ -96,7 +101,7 @@ void RadioUtils::routeBroadcastLength(){
     message.toCharArray(payload, message.length()+d.length()+1);
 
     setBroadcast(&hdr);
-    setAck(&hdr);
+    //setAck(&hdr);
     rf12_sendNow(hdr, payload, message.length());
 }
 

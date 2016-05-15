@@ -35,6 +35,7 @@ void setup () {
 
   if(ru.getNodeID() == ru.getParentID()){//root node - BS - send info message n+1 times
     Serial.println("this is BS");
+    delay(10000);
     ru.routeUpdateDistance(0, ru.getNodeID());
     for(int i = 0; i < ROUTING_CYCLES; i++){
       if(led == HIGH){
