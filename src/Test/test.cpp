@@ -23,7 +23,7 @@ static void led (bool on) {
 void setup () {
   Serial.begin(57600);
 
-  rf12_initialize(31, RF12_868MHZ, 42);
+  rf12_initialize(28, RF12_868MHZ, 42);
 
 
 
@@ -39,7 +39,7 @@ void setup () {
 
 void loop () {
   led(true);
-  Serial.print("loop ");
+  //Serial.print("loop ");
 
 
 
@@ -51,7 +51,7 @@ void loop () {
     if(rf12_crc == 0){
 
       //not a distance message
-    //  if(rf12_data[0] == '#'){
+      if(rf12_data[0] == '#'){
 
         char text[60] = "";
         int count = 0;
@@ -66,11 +66,11 @@ void loop () {
         Serial.print("received: ");
         Serial.println(text);
       //}
-    }
-  } else {
-      /*
+    //}
+  //} else {
+
         String head = msg.substring(1,msg.lastIndexOf('#'));
-*/
+
         delay(500);
 
         String message = "#";
@@ -89,8 +89,8 @@ void loop () {
           rf12_sendStart(0, payload, message.length());
         }
 
-      //}
+      }
       led(false);
     }
-  //}
+  }
 }

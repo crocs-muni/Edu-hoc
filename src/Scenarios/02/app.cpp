@@ -24,7 +24,7 @@ void setup () {
   pinMode(9, OUTPUT);
 
   ru.initialize();
-  /*
+
   ru.enableDynamicRouting();
 
   nodeID = ru.getNodeID();
@@ -63,7 +63,7 @@ void setup () {
   }
   randomSeed(nodeID);
   delay(nodeID * 100);
-  */
+  
 }
 
 byte createHeader(boolean requireACK, byte destID){
