@@ -24,6 +24,7 @@ void setup () {
   pinMode(9, OUTPUT);
 
   ru.initialize();
+
   ru.enableDynamicRouting();
 
   nodeID = ru.getNodeID();
@@ -62,6 +63,7 @@ void setup () {
   }
   randomSeed(nodeID);
   delay(nodeID * 100);
+  
 }
 
 byte createHeader(boolean requireACK, byte destID){
@@ -162,17 +164,19 @@ void bs(){
       saveLen = rf12_len;
       saveCrc = rf12_crc;
       saveHdr = rf12_hdr;
-      memcpy(saveData, (const void*) rf12_data, sizeof saveData);
+      memcpy(saveData, (const void*) rf12_data, rf12_len);
       rf12_recvDone();
 
       char text[MAX_MESSAGE_LENGTH] = "";
       int count = 0;
-      for (byte i = 0; i < rf12_len; ++i) {
-        text[i] = rf12_data[i];
+      for (byte i = 0; i < saveLen; ++i) {
+        text[i] = saveData[i];
         if(text[i] == '#'){
           count++;
         }
       }
+      Serial.print("received: ");
+      Serial.println(text);
       //correct message
       if(count == 2){
         String msg = String(text);
@@ -207,9 +211,10 @@ void bs(){
         message += random(100,999);
 
 
-        byte hdr = createHeader(false, rf12_hdr | RF12_HDR_DST);
+        byte hdr = createHeader(false, saveHdr & RF12_HDR_DST);
         message.toCharArray(payload, message.length()+1);
         rf12_sendNow(hdr, payload, message.length());
+        Serial.println(payload);
       }
     }
   }
