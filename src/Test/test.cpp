@@ -9,7 +9,7 @@
 
 
 const byte LED = 9;
-byte counter;
+int counter;
 
 //RadioUtils ru = RadioUtils();
 
@@ -23,7 +23,7 @@ static void led (bool on) {
 void setup () {
   Serial.begin(57600);
 
-  rf12_initialize(28, RF12_868MHZ, 42);
+  rf12_initialize(29, RF12_868MHZ, 42);
 
 
 
@@ -46,7 +46,7 @@ void loop () {
   //rf12_sendWait(1);
 
   if(rf12_recvDone()){
-    Serial.print("new msg ");
+    //Serial.print("new msg ");
 
     if(rf12_crc == 0){
 
@@ -63,33 +63,38 @@ void loop () {
         }
 
         String msg = String(text);
-        Serial.print("received: ");
-        Serial.println(text);
-      //}
-    //}
-  //} else {
-
-        String head = msg.substring(1,msg.lastIndexOf('#'));
-
-        delay(500);
-
-        String message = "#";
-        message += "1111";
-        message += "#";
-        message += "394036";
-
-        char payload[14] = "";
-
-        message.toCharArray(payload, message.length()+1);
-        Serial.print("send: ");
-        Serial.println(payload);
-        //5 is BS
-        Serial.println(message.length());
-        if(rf12_canSend){
-          rf12_sendStart(0, payload, message.length());
+        if(rf12_data[1] == 'a'){
+          Serial.print("received: ");
         }
+        Serial.println(text);
+        //}
+        //}
+        counter++;
+        //if(counter > 0){
+          counter = 0;
+          String head = msg.substring(1,msg.lastIndexOf('#'));
 
-      }
+          //delay(500);
+
+          String message = "#";
+          message += "1200";
+          message += "#";
+          message += "394036";
+
+          char payload[14] = "";
+
+          message.toCharArray(payload, message.length()+1);
+          Serial.print("send: ");
+          Serial.println(payload);
+          //5 is BS
+          Serial.println(message.length());
+          if(rf12_canSend){
+            rf12_sendStart(5 | RF12_HDR_DST, payload, message.length());
+            rf12_sendWait(1);
+          }
+
+        }
+      //}
       led(false);
     }
   }

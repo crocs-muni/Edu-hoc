@@ -56,7 +56,7 @@ endif
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
-MONITOR_PORT      = /dev/ttyUSB1
+MONITOR_PORT      = /dev/ttyUSB0
 
 ### don't touch this
 CURRENT_DIR       = $(shell basename $(CURDIR))
@@ -67,4 +67,3 @@ OBJDIR            = $(PROJECT_DIR)/bin/$(BOARD_TAG)/$(CURRENT_DIR)
 
 ### path to Arduino.mk, inside the ARDMK_DIR, don't touch.
 include $(ARDMK_DIR)/Arduino.mk
-

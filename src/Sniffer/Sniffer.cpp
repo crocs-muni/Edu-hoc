@@ -25,8 +25,8 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 void setup () {
     //saveLen = 255;
     Serial.begin(SERIAL_FREQUENCY);
-    su.println("\n[sniffer] 868 MHz group 42", output);
-    rf12_initialize(31, FREQUENCY,42);
+    su.println("\n[sniffer] 868 MHz group 123", output);
+    rf12_initialize(31, FREQUENCY,123);
 }
 
 void loop () {
