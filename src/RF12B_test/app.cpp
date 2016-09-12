@@ -11,8 +11,8 @@
 
 RFM12B radio;
 
-byte nodeID = 20;
-byte pairID = 10;
+byte nodeID = 10;
+byte pairID = 20;
 int counter;
 
 void setup(){
@@ -26,7 +26,7 @@ void setup(){
   Serial.println(F("RFM12B Detection FAIL!"));
 
   //init rssi measurement - pin and iddle voltage
-  radio.SetRSSI( 0, 400);
+  radio.SetRSSI( 0, 450);
 
   //init radio (node id, freq., group id)
   radio.Initialize(nodeID, FREQUENCY, 200);
@@ -86,13 +86,14 @@ void loop(){
 
     if (radio.CRCPass())
     {
-      if(radio.ACKRequested()){
-        radio.SendACK();
-      }
-      Serial.println("msg received");
 
-      //byte theNodeID = radio.GetSender();
+      //if(radio.ACKRequested()){
+      //  radio.SendACK();
+      //}
+      Serial.println("msg received");
       int8_t rssi = radio.ReadARSSI(BOARD_VOLTAGE);
+      //byte theNodeID = radio.GetSender();
+
       displayRSSI(rssi);
       //Serial.println(rssi);
       blink(9,10);

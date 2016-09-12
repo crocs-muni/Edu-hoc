@@ -486,9 +486,6 @@ uint16_t RFM12B::Control(uint16_t cmd) {
     _arssi = arssi;
     _arssi_bytes = arssi_bytes;
 
-    arssi = 0;
-    arssi_bytes=0;
-
     // we done, all is now fine
     sei();
 
@@ -700,10 +697,10 @@ void RFM12B::ReceiveStart() {
 
   #ifdef RF12_ARSSI_ANALOG
     // Initialize RSSI readings
-    /*
+
     arssi = 0;
     arssi_bytes=0;
-    */
+
   #endif
 
   rxstate = TXRECV;
