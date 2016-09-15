@@ -1,6 +1,5 @@
-#include <Arduino.h>
 #include "RFM12B_arssi.h"
-#include "../common.h"
+//#include "../common.h"
 
 //radio module pins
 #define RFM_CS_PIN  10 // RFM12B Chip Select Pin
@@ -8,10 +7,20 @@
 
 //jeenodes run on 3.3 V, this value is in mV
 #define BOARD_VOLTAGE 3300
-
+#define UINT16_MAX 1000
 RFM12B radio;
 
-byte nodeID = 10;
+byte nodeID = 20;
+byte pairID = 10;
+uint16_t counter;
+typedef struct {
+  int           nodeId; //store this nodeId
+  uint16_t      seqNum;    // current sequence number
+
+} Payload;
+Payload theData;
+
+byte rssiValues[UINT16_MAX];
 
 void setup(){
   Serial.begin(57600);
@@ -27,7 +36,7 @@ void setup(){
   radio.SetRSSI( 0, 450);
 
   //init radio (node id, freq., group id)
-  radio.Initialize(nodeID, FREQUENCY, 200);
+  radio.Initialize(nodeID, 5, 200);
 }
 
 void displayRSSI(int8_t rssi){
@@ -78,54 +87,89 @@ void blink(byte PIN, int DELAY_MS)
 }
 
 //function for responder node
-void receiveRSSI(){
+int receiveRSSI(){
   //wait for msg
   //save rssi
   //respond
   //repeat
 
+  if (radio.ReceiveComplete()){
+    if (radio.CRCPass()){
+      int8_t rssi = radio.ReadARSSI(BOARD_VOLTAGE);
+      byte thisNodeID = radio.GetSender();
+      if(thisNodeID != pairID){
+        //not the messsage we are waiting for
+        return 0;
+      }
+      if (*radio.DataLen != sizeof(Payload)){
+        return 0;
+      }
+      theData = *(Payload*)radio.Data; //assume radio.DATA actually contains our struct and not something else
+      rssiValues[theData.seqNum] = rssi;
+
+      //send same data back
+      theData.nodeId = nodeID;
+      radio.Send(pairID, (const void*)(&theData), sizeof(theData), true);
+      if(theData.seqNum >= UINT16_MAX -1){
+        return -1;
+      }
+  }
+  return 0;
+}
 }
 
+
 //function for initiating node
-void sendRSSI(){
+int sendRSSI(){
+  if(counter == UINT16_MAX){
+    return -1;
+  }
   //send
   //wait for response
   //save rssi
   //repeat or resend
+  theData.nodeId = nodeID;
+  theData.seqNum = counter;
+  radio.Send(pairID, (const void*)(&theData), sizeof(theData), true);
 
+  for(int i = 0; i < 100; i++){
+    if (radio.ReceiveComplete()){
+      if (radio.CRCPass()){
+        int8_t rssi = radio.ReadARSSI(BOARD_VOLTAGE);
+        byte thisNodeID = radio.GetSender();
+        if(thisNodeID != pairID){
+          //not the messsage we are waiting for
+          continue;
+        }
+        if (*radio.DataLen != sizeof(Payload)){
+          continue;
+        }
+        theData = *(Payload*)radio.Data; //assume radio.DATA actually contains our struct and not something else
+        rssiValues[theData.seqNum] = rssi;
+        counter++;
+        Serial.println(counter);
+        Serial.println(rssi);
+        return 0;
+    }
+  }
+  delay(10);
+}
+return 0;
 }
 
 void loop(){
 
-  if (radio.ReceiveComplete())
-  {
-
-    if (radio.CRCPass())
-    {
-
-      //if(radio.ACKRequested()){
-      //  radio.SendACK();
-      //}
-      Serial.println("msg received");
-      int8_t rssi = radio.ReadARSSI(BOARD_VOLTAGE);
-      //byte theNodeID = radio.GetSender();
-
-      displayRSSI(rssi);
-      //Serial.println(rssi);
-      blink(9,10);
+  if(nodeID < 15){
+    byte result = sendRSSI();
+    Serial.println(result);
+    if( result != 0){
+      for(uint16_t i = 0; i < UINT16_MAX; i++){
+        Serial.print(rssiValues[i]);
+      }
+      while(true){
+        delay(1000);
+      }
     }
-  }
-
-  if(counter >= 100){
-    counter = 0;
-    char* msg = "msg";
-
-    radio.Send(pairID, &msg, sizeof(msg),true);
-    blink(9,10);
-  }
-
-  counter++;
-  delay(10);
-
-
+  } else {
+    receiveRSSI();
 }
