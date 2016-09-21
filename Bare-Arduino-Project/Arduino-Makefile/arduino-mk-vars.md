@@ -40,7 +40,7 @@ ARDUINO_QUIET = 1
 
 Directory where the `*.mk` files are stored.
 
-Usually can be auto-detected as `AUTO_ARDUINO_DIR` (parent of `Arduino.mk`).
+Usually can be auto-detected as parent of `Arduino.mk`.
 
 **Example:**
 
@@ -96,7 +96,7 @@ RESET_CMD = ~/gertduino/reset
 
 **Description:**
 
-Directory where the Arduino IDE and/or core files are stored.
+Directory where the Arduino IDE and/or core files are stored. Usually can be auto-detected as `AUTO_ARDUINO_DIR`.
 
 **Example:**
 
@@ -105,6 +105,25 @@ Directory where the Arduino IDE and/or core files are stored.
 ARDUINO_DIR = /usr/share/arduino
 # Mac OS X
 ARDUINO_DIR = /Applications/Arduino.app/Contents/Resources/Java
+# Mac OSX with IDE 1.5+
+ARDUINO_DIR = /Applications/Arduino.app/Contents/Java
+```
+
+**Requirement:** *Optional*
+
+----
+
+### ARDUINO_PLATFORM_LIB_PATH
+
+**Description:**
+
+Directory where the Arduino platform dependent libraries are stored.
+(Used only for Arduino 1.5+)
+
+**Example:**
+
+```Makefile
+ARDUINO_PLATFORM_LIB_PATH = /usr/share/arduino/hardware/arduino/avr/libraries
 ```
 
 **Requirement:** *Optional*
@@ -133,9 +152,9 @@ ARDUINO_VERSION = 105
 
 **Description:**
 
-Architecture for Arduino 1.5
+Architecture for Arduino 1.5+
 
-Defaults to unset for 1.0 or `avr` for 1.5
+Defaults to unset for 1.0 or `avr` for 1.5+
 
 **Example:**
 
@@ -191,8 +210,10 @@ Path to Arduino `preferences.txt` file.
 
 Usually can be auto-detected as `AUTO_ARDUINO_PREFERENCES` from the defaults:
 
-*	on Linux : `~/.arduino/preferences.txt`
-*	on Mac OS X : `~/Library/Arduino/preferences.txt`
+*	on Linux (1.0):     `~/.arduino/preferences.txt`
+*	on Linux (1.5+):    `~/.arduino15/preferences.txt`
+*	on Mac OS X (1.0):  `~/Library/Arduino/preferences.txt`
+*	on Mac OS X (1.5+): `~/Library/Arduino15/preferences.txt`
 
 **Example:**
 
@@ -260,7 +281,7 @@ BOARD_TAG = uno or mega2560
 
 **Description:**
 
-1.5 submenu as listed in `boards.txt`
+1.5+ submenu as listed in `boards.txt`
 
 **Example:**
 
@@ -272,7 +293,7 @@ BOARD_TAG=diecimila
 BOARD_SUB=atmega168
 ```
 
-**Requirement:** *Mandatory for 1.5 if using a submenu CPU*
+**Requirement:** *Mandatory for 1.5+ if using a submenu CPU*
 
 ----
 
@@ -296,6 +317,25 @@ MONITOR_PORT = com3
 ```
 
 **Requirement:** *Mandatory*
+
+----
+
+### FORCE_MONITOR_PORT
+
+**Description:**
+
+Skip the MONITOR_PORT existance check.
+
+**Example:**
+
+```Makefile
+# Enable
+FORCE_MONITOR_PORT = true
+# Disable (default)
+undefine FORCE_MONITOR_PORT
+```
+
+**Requirement:** *Optional*
 
 ----
 
@@ -375,6 +415,29 @@ ARDUINO_VAR_PATH = ~/sketchbook/hardware/arduino-tiny/cores/tiny
 
 ----
 
+### CORE
+
+**Description:**
+
+Name of the core *inside* the ALTERNATE_CORE or the standard core.
+
+Usually can be auto-detected as `build.core` from `boards.txt`.
+
+**Example:**
+
+```Makefile
+# standard Arduino core (undefine ALTERNATE_CORE)
+CORE = arduino
+# or
+CORE = robot
+# tiny core (ALTERNATE_CORE = arduino-tiny)
+CORE = tiny
+```
+
+**Requirement:** *Optional*
+
+----
+
 ### VARIANT
 
 **Description:**
@@ -387,6 +450,32 @@ Usually can be auto-detected as `build.variant` from `boards.txt`.
 
 ```Makefile
 VARIANT = leonardo
+```
+
+**Requirement:** *Optional*
+
+----
+
+### USB_TYPE
+
+**Description:**
+
+Define Teensy 3.1 usb device type. Default is USB_SERIAL
+
+**Example:**
+
+```Makefile
+USB_TYPE = USB_SERIAL
+# or
+USB_TYPE = USB_HID
+# or
+USB_TYPE = USB_SERIAL_HID
+# or
+USB_TYPE = USB_MIDI
+# or
+USB_TYPE = USB_RAWHID
+# or
+USB_TYPE = USB_FLIGHTSIM
 ```
 
 **Requirement:** *Optional*
@@ -435,7 +524,8 @@ USB_PID = 0x8039
 
 CPU speed in Hz
 
-Usually can be auto-detected as `build.f_cpu` from `boards.txt`
+Usually can be auto-detected as `build.f_cpu` from `boards.txt`, except in
+some 1.5+ cores like attiny where there is a clock submenu.
 
 **Example:**
 
@@ -1178,7 +1268,7 @@ AVRDUDE_ISP_BAUDRATE = 19200
 
 Options to pass to `avrdude`.
 
-Defaults to `-q -V -D` (quiet, don't verify, don't auto-erase). User values are not *ANDed* to the defaults, you have to set each option you require.
+Defaults to `-q -V` (quiet, don't verify). User values are not *ANDed* to the defaults, you have to set each option you require.
 
 **Example:**
 
