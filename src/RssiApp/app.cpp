@@ -7,7 +7,7 @@
 
 //jeenodes run on 3.3 V, this value is in mV
 #define BOARD_VOLTAGE 3300
-#define UINT16_MAX 1000
+#define MAX 1000
 RFM12B radio;
 
 byte nodeID = 20;
@@ -20,7 +20,7 @@ typedef struct {
 } Payload;
 Payload theData;
 
-byte rssiValues[UINT16_MAX];
+byte rssiValues[MAX];
 
 void setup(){
   Serial.begin(57600);
@@ -110,18 +110,19 @@ int receiveRSSI(){
       //send same data back
       theData.nodeId = nodeID;
       radio.Send(pairID, (const void*)(&theData), sizeof(theData), true);
-      if(theData.seqNum >= UINT16_MAX -1){
+      if(theData.seqNum >= MAX -1){
         return -1;
       }
+    }
+
   }
   return 0;
-}
 }
 
 
 //function for initiating node
 int sendRSSI(){
-  if(counter == UINT16_MAX){
+  if(counter == MAX){
     return -1;
   }
   //send
@@ -163,7 +164,7 @@ void loop(){
     byte result = sendRSSI();
     Serial.println(result);
     if( result != 0){
-      for(uint16_t i = 0; i < UINT16_MAX; i++){
+      for(uint16_t i = 0; i < MAX; i++){
         Serial.print(rssiValues[i]);
       }
       while(true){
@@ -172,4 +173,5 @@ void loop(){
     }
   } else {
     receiveRSSI();
+  }
 }
