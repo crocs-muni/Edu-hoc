@@ -10,8 +10,8 @@
 #define MAX 1000
 RFM12B radio;
 
-byte nodeID = 20;
-byte pairID = 10;
+byte nodeID = 10;
+byte pairID = 20;
 uint16_t counter;
 typedef struct {
   int           nodeId; //store this nodeId
@@ -28,9 +28,9 @@ void setup(){
 
   //radio present check
   if ( radio.isPresent( RFM_CS_PIN, RFM_IRQ_PIN) )
-  Serial.println(F("RFM12B Detected OK!"));
-  else
-  Serial.println(F("RFM12B Detection FAIL!"));
+  //Serial.println(F("RFM12B Detected OK!"));
+  //else
+  //Serial.println(F("RFM12B Detection FAIL!"));
 
   //init rssi measurement - pin and iddle voltage
   radio.SetRSSI( 0, 450);
@@ -148,8 +148,8 @@ int sendRSSI(){
         theData = *(Payload*)radio.Data; //assume radio.DATA actually contains our struct and not something else
         rssiValues[theData.seqNum] = rssi;
         counter++;
-        Serial.println(counter);
-        Serial.println(rssi);
+        //Serial.println(counter);
+        //Serial.println(rssi);
         return 0;
     }
   }
@@ -158,20 +158,27 @@ int sendRSSI(){
 return 0;
 }
 
-void loop(){
+void printAndStop(){
+  for(uint16_t i = 0; i < MAX; i++){
+    Serial.print(rssiValues[i]);
+    Serial.print(";");
+  }
+  Serial.println("&&");
+  while(true){
+    delay(1000);
+  }
+}
 
+void loop(){
+  byte result = 0;
   if(nodeID < 15){
-    byte result = sendRSSI();
-    Serial.println(result);
-    if( result != 0){
-      for(uint16_t i = 0; i < MAX; i++){
-        Serial.print(rssiValues[i]);
-      }
-      while(true){
-        delay(1000);
-      }
-    }
+    result = sendRSSI();
   } else {
-    receiveRSSI();
+    result = receiveRSSI();
+  }
+  blink(9,10);
+  //Serial.println(result);
+  if( result != 0){
+    printAndStop();
   }
 }
