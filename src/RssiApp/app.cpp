@@ -1,5 +1,5 @@
 #include "RFM12B_arssi.h"
-//#include "../common.h"
+#include "../common.h"
 
 //radio module pins
 #define RFM_CS_PIN  10 // RFM12B Chip Select Pin
@@ -36,7 +36,7 @@ void setup(){
   radio.SetRSSI( 0, 450);
 
   //init radio (node id, freq., group id)
-  radio.Initialize(nodeID, 5, 200);
+  radio.Initialize(nodeID, FREQUENCY, 200);
 }
 
 void displayRSSI(int8_t rssi){
@@ -137,6 +137,7 @@ int sendRSSI(){
     if (radio.ReceiveComplete()){
       if (radio.CRCPass()){
         int8_t rssi = radio.ReadARSSI(BOARD_VOLTAGE);
+
         byte thisNodeID = radio.GetSender();
         if(thisNodeID != pairID){
           //not the messsage we are waiting for

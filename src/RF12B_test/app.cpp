@@ -11,8 +11,8 @@
 
 RFM12B radio;
 
-byte nodeID = 20;
-byte pairID = 10;
+byte nodeID = 10;
+byte pairID = 20;
 int counter;
 
 void setup(){
