@@ -7,7 +7,7 @@
 #include "RF12.h"
 
 #include "SerialUtils.h"
-#include <../common.h>
+#include "../common.h"
 
 //#include <Ports.h>
 //#include <RF12.h>
@@ -25,8 +25,8 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 void setup () {
     //saveLen = 255;
     Serial.begin(SERIAL_FREQUENCY);
-    su.println("\n[sniffer] 868 MHz group 123", output);
-    rf12_initialize(31, FREQUENCY,123);
+    su.println("\n[sniffer] 868 MHz group 5", output);
+    rf12_initialize(31, FREQUENCY,5);
 }
 
 void loop () {
@@ -40,9 +40,9 @@ void loop () {
         rf12_recvDone();
         // release lock on info for next reception
         if (saveCrc != 0) {
-            //su.print("CRC error #", output);
-            //su.println(saveLen, DEC, output);
-            /*
+            su.print("CRC error #", output);
+            su.println(saveLen, DEC, output);
+
             for (byte i = 0; i < saveLen; ++i) {
 
                 Serial.print(saveData[i], HEX);
@@ -53,7 +53,7 @@ void loop () {
                 Serial.print(saveData[i]);
             }
             Serial.println();
-            */
+            
         }
         else {
             su.print("OK (", output);

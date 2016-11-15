@@ -2,7 +2,7 @@
 #include "RF12.h"
 #include "RadioUtils.h"
 #include "SerialUtils.h"
-#include <../common.h>
+#include "../common.h"
 
 int counter = 0; //
 int msgCounter = 0;
@@ -24,7 +24,7 @@ void setup () {
 #endif
 }
 
-void loop () {  
+void loop () {
   //if incoming message received
 
   if(rf12_recvDone()){
