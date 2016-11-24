@@ -1,3 +1,6 @@
 [submodule "JeeTool"]
 	path = JeeTool
 	url = git@github.com:crocs-muni/JeeTool.git
+[submodule "Bare-Arduino-Project"]
+	path = Bare-Arduino-Project
+	url = https://github.com/ladislas/Bare-Arduino-Project.git
