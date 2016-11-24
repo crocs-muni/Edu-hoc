@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -10,3 +11,28 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+=======
+# GitIgnore 
+#TODO
+
+*.o
+build-cli
+build-*
+
+bin*
+*.out
+*.toc
+*.log
+*.aux
+/src/UploadTool/UploadTool/nbproject/private/
+/src/UploadTool/UploadTool/build/
+
+
+/src/UploadTool/JeeTool/nbproject/private/
+/src/UploadTool/JeeTool/build/
+/src/WebPage/JeeToolWeb/nbproject/private/
+/src/WebPage/JeeToolWeb/build/
+/src/UploadTool/JeeTool/dist/
+/src/MsgComparator/nbproject/private/
+/src/MsgComparator/build/
+>>>>>>> a0c3ef0bc13f9fe8f096608c1895c04c9f70e2f3
