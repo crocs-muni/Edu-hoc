@@ -1,0 +1,3 @@
+[submodule "JeeTool"]
+	path = JeeTool
+	url = git@github.com:crocs-muni/JeeTool.git
