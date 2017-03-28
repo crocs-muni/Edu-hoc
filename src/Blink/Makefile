@@ -17,7 +17,7 @@ ARDMK_DIR         = $(PROJECT_DIR)/Bare-Arduino-Project/Arduino-Makefile
 
 ### ARDUINO_DIR
 ### Path to the Arduino application and ressources directory.
-ARDUINO_DIR       = $(PROJECT_DIR)/arduino
+ARDUINO_DIR       = /opt/arduino-1.6.12/
 
 ### USER_LIB_PATH
 ### Path to where the your project's libraries are stored.
@@ -62,7 +62,7 @@ endif
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
-MONITOR_PORT      = /dev/ttyUSB0
+MONITOR_PORT      = /dev/mote_jeelink108
 
 ### don't touch this
 CURRENT_DIR       = $(shell basename $(CURDIR))

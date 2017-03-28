@@ -40,17 +40,18 @@ String getValue(String data, char separator, int index){
 void loop () {
 
     while (Serial.available() > 0) {
-        String input = Serial.readStringUntil('\n');
+        //String input = Serial.readStringUntil('\n');
 
-        nodeID = getValue(input, ' ', 0).toInt();
+        nodeID = Serial.parseInt();
+	//getValue(input, ' ', 0).toInt();
         if(nodeID > MAX_NODE_ID ){
             su.println("Parser error, node ID out of bounds", error);
         }
-        groupID = getValue(input, ' ', 1).toInt();
+        groupID = 10;//getValue(input, ' ', 1).toInt();
         if(groupID > MAX_GROUP_ID || groupID < MIN_GROUP_ID){
             su.println("Parser error, group ID out of bounds", error);
         }
-        parentID = getValue(input, ' ', 2).toInt();
+        parentID = 10;//getValue(input, ' ', 2).toInt();
         if(parentID > MAX_NODE_ID ){
             su.println("Parser error, parent ID out of bounds", error);
         }

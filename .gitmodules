@@ -1,0 +1,3 @@
+[submodule "Arduino"]
+	path = Arduino
+	url = git@github.com:arduino/Arduino.git

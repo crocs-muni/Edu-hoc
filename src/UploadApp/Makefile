@@ -40,10 +40,10 @@ AVR_TOOLS_DIR     = /usr
 AVRDDUDE          = /usr/bin/avrdude
 
 ### CFLAGS_STD
-CFLAGS_STD        = -std=c99
+CFLAGS_STD        = -std=gnu11
 
 ### CXXFLAGS_STD
-CXXFLAGS_STD      = -ansi
+CXXFLAGS_STD      = -std=gnu++11
 
 ### CPPFLAGS
 ### Flags you might want to set for debugging purpose. Comment to stop.
@@ -67,4 +67,3 @@ OBJDIR            = $(PROJECT_DIR)/bin/$(BOARD_TAG)/$(CURRENT_DIR)
 
 ### path to Arduino.mk, inside the ARDMK_DIR, don't touch.
 include $(ARDMK_DIR)/Arduino.mk
-

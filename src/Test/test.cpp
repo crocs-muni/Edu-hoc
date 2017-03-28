@@ -5,7 +5,7 @@
 #include "RadioUtils.h"
 #include "SerialUtils.h"
 
-#include <../common.h>
+#include "../common.h"
 
 
 const byte LED = 9;
@@ -21,7 +21,7 @@ static void led (bool on) {
 }
 
 void setup () {
-  Serial.begin(57600);
+  Serial.begin(9600);
 
   rf12_initialize(29, RF12_868MHZ, 42);
 
@@ -39,7 +39,7 @@ void setup () {
 
 void loop () {
   led(true);
-  //Serial.print("loop ");
+  Serial.print("loop ");
 
 
 

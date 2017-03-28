@@ -15,8 +15,8 @@ SerialUtils su = SerialUtils(SERIAL_FREQUENCY);
 
 
 void setup () {
-  Serial.begin(SERIAL_FREQUENCY);
-  delay(10000);
+  Serial.begin(57600);
+  delay(1000);
   su.println("App started", debug);
 
 }
