@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+=======
 # GitIgnore 
 #TODO
 
@@ -21,3 +35,4 @@ bin*
 /src/UploadTool/JeeTool/dist/
 /src/MsgComparator/nbproject/private/
 /src/MsgComparator/build/
+>>>>>>> a0c3ef0bc13f9fe8f096608c1895c04c9f70e2f3
