@@ -1,0 +1,14 @@
+OK (00000001b)         SRC:1 #16
+ # 2 9 2 1 # t h i n g   y e a r
+OK (00000010b)         SRC:2 #14
+ # 4 8 4 2 # e y e   j u m p
+CRC error #16
+OK (00001100b)         SRC:12 #14
+ # 7 7 7 1 # y e a r   u s e
+OK (00000111b)         SRC:7 #17
+ # 5 4 4 8 # e a r l y   l e a v e
+CRC error #16
+OK (00010000b)         SRC:16 #14
+ # 6 4 5 6 # h a n d   t r y
+OK (00001011b)         SRC:11 #14
+ # 5 8 5 0 # j u m p   w a y

@@ -1,0 +1,8 @@
+
+Use PySerial to communicate with node
+
+use RF12 demo app for node configuration (permanent in flash memmory) later this can be used by sketch, or sketch can set up its own values
+    uint8_t rf12_configSilent - loads node id, frequency and other setting from flash
+    void rf12_configDump - writes current config to serial
+    
+    maybe more easy way is to implement EEPROM acces on our own - write small app just to upload node id etc over serial to EEPROM, normal app just reads EEPROM and doesn not wait for serial

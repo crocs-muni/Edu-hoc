@@ -1,0 +1,19 @@
+CRC error #117
+CRC error #227
+ # 2 1 9 3 # d a y   s t a r t
+CRC error #19
+ # 9 6 5 7 # c a s e   e y e
+# 5 5 5 4 # p l a c e   l i v e
+ # 4 0 1 9 # s t a r t   p a r t
+ # 8 9 1 5 # l i v e   c a l l
+ # 7 3 8 0 # w a y   p e r s o n
+CRC error #16
+ # 4 4 7 0 # w o r l d   t h i n g
+ # 6 6 3 8 # l o v e   h a n d
+CRC error #46
+ # 1 7 4 2 # c a l l   l o v e
+ # 1 7 7 1 # w a y   t i m e
+CRC error #16
+CRC error #16
+ # 7 7 0 3 # h a n d   w o r l d
+# 6 1 7 8 # c a s e   c a s e

@@ -1,0 +1,282 @@
+[sniffer] 868 MHz group 0
+CRC error #13
+OK (00000010b)         SRC:2 #1
+ 2
+ 
+CRC error #17
+CRC error #227
+CRC error #55
+OK (00000110b)         SRC:6 #16
+ 35 57 57 49 53 35 108 97 114 103 101 32 102 114 111 109
+ # 9 9 1 5 # l a r g e   f r o m
+CRC error #107
+CRC error #0
+OK (00001111b)         SRC:15 #14
+ 35 53 54 52 57 35 99 97 108 108 32 119 97 121
+ # 5 6 4 9 # c a l l   w a y
+CRC error #205
+CRC error #140
+CRC error #47
+OK (00000001b)         SRC:1 #1
+ 88
+ X
+CRC error #45
+OK (00001010b)         SRC:10 #15
+ 35 49 54 55 50 35 112 97 114 116 32 121 101 97 114
+ # 1 6 7 2 # p a r t   y e a r
+CRC error #8
+CRC error #132
+CRC error #150
+OK (00001110b)         SRC:14 #18
+ 35 52 48 56 52 35 115 116 97 114 116 32 112 101 114 115 111 110
+ # 4 0 8 4 # s t a r t   p e r s o n
+CRC error #30
+CRC error #170
+CRC error #239
+CRC error #3
+CRC error #198
+CRC error #72
+CRC error #227
+OK (00001101b)         SRC:13 #18
+ 35 57 56 48 49 35 116 104 105 110 103 32 114 97 110 100 111 109
+ # 9 8 0 1 # t h i n g   r a n d o m
+CRC error #33
+CRC error #114
+CRC error #243
+CRC error #85
+CRC error #16
+CRC error #191
+OK (00001011b)         SRC:11 #16
+ 35 52 57 53 52 35 116 105 109 101 32 112 108 97 99 101
+ # 4 9 5 4 # t i m e   p l a c e
+OK (00010000b)         SRC:16 #17
+ 35 56 57 51 49 35 112 101 114 115 111 110 32 99 97 115 101
+ # 8 9 3 1 # p e r s o n   c a s e
+CRC error #241
+OK (00001100b)         SRC:12 #17
+ 35 54 53 49 57 35 101 97 114 108 121 32 112 111 105 110 116
+ # 6 5 1 9 # e a r l y   p o i n t
+CRC error #125
+CRC error #64
+OK (00001001b)         SRC:9 #1
+ 73
+ I
+OK (00000101b)         SRC:5 #1
+ 73
+ I
+CRC error #122
+CRC error #137
+CRC error #143
+CRC error #17
+CRC error #19
+OK (00000110b)         SRC:6 #15
+ 35 56 50 53 57 35 98 114 101 97 107 32 101 121 101
+ # 8 2 5 9 # b r e a k   e y e
+OK (00000101b)         SRC:5 #1
+ 255
+ �
+CRC error #165
+CRC error #13
+CRC error #13
+CRC error #155
+OK (00000101b)         SRC:5 #14
+ 35 52 53 48 52 35 100 97 121 32 104 97 110 100
+ # 4 5 0 4 # d a y   h a n d
+OK (00001010b)         SRC:10 #16
+ 35 56 48 48 56 35 104 97 110 100 32 108 101 97 118 101
+ # 8 0 0 8 # h a n d   l e a v e
+CRC error #229
+CRC error #203
+CRC error #192
+CRC error #135
+OK (00001110b)         SRC:14 #16
+ 35 54 52 52 50 35 112 101 114 115 111 110 32 101 121 101
+ # 6 4 4 2 # p e r s o n   e y e
+CRC error #96
+CRC error #5
+CRC error #240
+CRC error #108
+CRC error #77
+CRC error #65
+OK (00001101b)         SRC:13 #14
+ 35 56 54 53 52 35 106 117 109 112 32 111 108 100
+ # 8 6 5 4 # j u m p   o l d
+CRC error #78
+OK (00000011b)         SRC:3 #13
+ 35 49 54 52 54 35 111 108 100 32 119 97 121
+ # 1 6 4 6 # o l d   w a y
+CRC error #249
+CRC error #225
+OK (00000010b)         SRC:2 #14
+ 35 51 56 53 56 35 116 114 121 32 99 97 115 101
+ # 3 8 5 8 # t r y   c a s e
+OK (00000111b)         SRC:7 #14
+ 35 55 51 54 50 35 111 108 100 32 102 114 111 109
+ # 7 3 6 2 # o l d   f r o m
+CRC error #78
+CRC error #157
+CRC error #77
+OK (00010000b)         SRC:16 #15
+ 35 57 51 48 48 35 108 101 97 118 101 32 116 114 121
+ # 9 3 0 0 # l e a v e   t r y
+CRC error #107
+OK (00001100b)         SRC:12 #15
+ 35 51 53 56 52 35 108 101 97 118 101 32 117 115 101
+ # 3 5 8 4 # l e a v e   u s e
+CRC error #148
+OK (00001001b)         SRC:9 #1
+ 74
+ J
+OK (00000101b)         SRC:5 #1
+ 74
+ J
+OK (00000001b)         SRC:1 #17
+ 35 54 48 55 48 35 112 108 97 99 101 32 101 97 114 108 121
+ # 6 0 7 0 # p l a c e   e a r l y
+OK (00000001b)         SRC:1 #2
+ 2 0
+ 
+ [sniffer] 868 MHz group 0
+ OK (00000100b)         SRC:4 #15
+  35 56 52 52 53 35 116 104 105 110 103 32 101 121 101
+  # 8 4 4 5 # t h i n g   e y e
+ CRC error #45
+ OK (00000001b)         SRC:1 #1
+  220
+  �
+ CRC error #227
+ CRC error #106
+ CRC error #0
+ CRC error #17
+ CRC error #164
+ CRC error #143
+ CRC error #157
+ CRC error #56
+ CRC error #103
+ OK (00000010b)         SRC:2 #16
+  35 51 56 54 52 35 101 97 114 108 121 32 102 114 111 109
+  # 3 8 6 4 # e a r l y   f r o m
+ OK (00000111b)         SRC:7 #17
+  35 49 56 49 56 35 108 97 114 103 101 32 108 97 114 103 101
+  # 1 8 1 8 # l a r g e   l a r g e
+ CRC error #21
+ OK (00010010b)         SRC:18 #15
+  35 52 53 49 54 35 100 97 121 32 108 101 97 118 101
+  # 4 5 1 6 # d a y   l e a v e
+ CRC error #132
+ CRC error #74
+ CRC error #45
+ OK (00001100b)         SRC:12 #14
+  35 56 55 55 49 35 116 114 121 32 108 111 118 101
+  # 8 7 7 1 # t r y   l o v e
+ CRC error #127
+ CRC error #2
+ CRC error #132
+ CRC error #144
+ CRC error #87
+ OK (00000110b)         SRC:6 #16
+  35 52 48 50 55 35 115 116 97 114 116 32 116 105 109 101
+  # 4 0 2 7 # s t a r t   t i m e
+ CRC error #244
+ CRC error #14
+ CRC error #56
+ OK (00001001b)         SRC:9 #1
+  205
+  �
+ OK (00000101b)         SRC:5 #1
+  205
+  �
+ CRC error #143
+ CRC error #159
+ OK (00000101b)         SRC:5 #15
+  35 53 57 54 52 35 108 97 114 103 101 32 101 121 101
+  # 5 9 6 4 # l a r g e   e y e
+ OK (00001010b)         SRC:10 #17
+  35 49 57 50 57 35 98 114 101 97 107 32 112 111 105 110 116
+  # 1 9 2 9 # b r e a k   p o i n t
+ OK (00000101b)         SRC:5 #1
+  237
+  �
+ CRC error #0
+ CRC error #4
+ CRC error #94
+ OK (00000100b)         SRC:4 #18
+  35 54 55 55 49 35 112 101 114 115 111 110 32 115 116 97 114 116
+  # 6 7 7 1 # p e r s o n   s t a r t
+ CRC error #81
+ CRC error #67
+ OK (00000001b)         SRC:1 #1
+  221
+  �
+ CRC error #16
+ CRC error #163
+ CRC error #227
+ CRC error #231
+ OK (00001101b)         SRC:13 #16
+  35 56 53 48 55 35 112 111 105 110 116 32 108 105 118 101
+  # 8 5 0 7 # p o i n t   l i v e
+ CRC error #145
+ OK (00000011b)         SRC:3 #15
+  35 55 53 55 56 35 102 101 101 108 32 99 97 115 101
+  # 7 5 7 8 # f e e l   c a s e
+ CRC error #74
+ CRC error #106
+ OK (00000111b)         SRC:7 #14
+  35 52 51 53 48 35 116 114 121 32 104 97 110 100
+  # 4 3 5 0 # t r y   h a n d
+ CRC error #134
+ CRC error #63
+ CRC error #18
+ CRC error #165
+ OK (00001011b)         SRC:11 #16
+  35 49 49 50 50 35 108 101 97 118 101 32 106 117 109 112
+  # 1 1 2 2 # l e a v e   j u m p
+ OK (00010000b)         SRC:16 #15
+  35 54 48 56 54 35 106 117 109 112 32 108 105 102 101
+  # 6 0 8 6 # j u m p   l i f e
+ OK (00001100b)         SRC:12 #17
+  35 57 51 49 52 35 115 116 97 114 116 32 112 108 97 99 101
+  # 9 3 1 4 # s t a r t   p l a c e
+ CRC error #181
+
+
+ [sniffer] 868 MHz group 0
+ CRC error #223
+ OK (00001111b)         SRC:15 #15
+  35 56 51 52 49 35 104 97 110 100 32 102 101 101 108
+  # 8 3 4 1 # h a n d   f e e l
+ CRC error #117
+ OK (00000101b)         SRC:5 #15
+  35 53 51 48 50 35 108 105 118 101 32 108 105 102 101
+  # 5 3 0 2 # l i v e   l i f e
+ OK (00001010b)         SRC:10 #16
+  35 50 51 50 50 35 112 111 105 110 116 32 102 101 101 108
+  # 2 3 2 2 # p o i n t   f e e l
+ CRC error #3
+ CRC error #165
+ CRC error #129
+ CRC error #230
+ OK (00001110b)         SRC:14 #16
+  35 52 57 57 52 35 112 97 114 116 32 115 116 97 114 116
+  # 4 9 9 4 # p a r t   s t a r t
+ OK (00000100b)         SRC:4 #15
+  35 49 57 53 53 35 115 116 97 114 116 32 111 108 100
+  # 1 9 5 5 # s t a r t   o l d
+ CRC error #228
+ CRC error #38
+ OK (00001001b)         SRC:9 #1
+  111
+  o
+ OK (00000101b)         SRC:5 #1
+  111
+  o
+ CRC error #111
+ CRC error #16
+ CRC error #17
+ CRC error #7
+ OK (00001101b)         SRC:13 #14
+  35 49 54 52 55 35 101 121 101 32 104 97 110 100
+  # 1 6 4 7 # e y e   h a n d
+ OK (00000001b)         SRC:1 #5
+  2 0 0 0 0
+   
