@@ -1,3 +1,0 @@
-/dev/ttyUSB1
-/dev/ttyUSB2
-/dev/ttyUSB3
