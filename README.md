@@ -1,4 +1,4 @@
-#Edu-hoc project
+# Edu-hoc project
 
 Edu-hoc project is an educational platform for ad-hoc networking with a focus on wireless sensor networks and security of these. It aims to provide easy to use environment for anyone interested, but with minimal experience in the area of an ad-hoc network, since these tend to have rather a specific approach to problems like routing, encryption etc. 
 
